@@ -12,7 +12,7 @@ El público objetivo es cualquier persona del publico en general, interesado en 
 
 ### Integrantes:
 
-- Juan Migone. 
+- Juan Migone. 29 años, Ingeniero Industrial, trabajando hace poquito en el rubro del desarrollo Web y con muchas ganas aprender. Me gusta el futbol y los deportes en general para cortar la semana. Vivo en San Isidro, zona norte. Me copa juntarme en alguna casa para hacer el tp si se pone muy inteso asi lo hacemos mas leve.
 - Juan Salas. 
 - Nicolás Marmo.
 - Marco Checa.
