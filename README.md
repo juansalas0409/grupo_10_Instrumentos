@@ -14,7 +14,7 @@ El público objetivo es cualquier persona del publico en general, interesado en 
 
 - Juan Migone. 29 años, Ingeniero Industrial, trabajando hace poquito en el rubro del desarrollo Web y con muchas ganas aprender. Me gusta el futbol y los deportes en general para cortar la semana. Vivo en San Isidro, zona norte. Me copa juntarme en alguna casa para hacer el tp si se pone muy inteso asi lo hacemos mas leve.
 - Juan Salas. 21 años, nuevo en el mundo de la programación, con muchisimas ganas de aprender. Me gusta mucho la música. Vivo en Capital Federal y siempre prefiero el trabajo en equipo antes que el individual, siempre desde la interdependencia.
-- Nicolás Marmo.
+- Nicolás Marmo. 21 años, nuevo en el mundo de la programación, buscando aprender sobre este mundo. Soy de San Martín y soy fan de los deportes. 
 - Marco Checa. 19 años, nuevo en el mundo de la programacíon,busco aprender continuamente. Me gusta la ciencia y los autos. Vivo en Capital Federal. Me gusta el trabajo en equipo y el trabajo organizado. 
 
 ### Sitios de Referencia:
