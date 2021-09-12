@@ -74,25 +74,27 @@ footer {
     padding-left: 10px;
     padding-right: 10px;
     background-color: rgb(217, 233, 233);
-        }
-    .productos-carro img{
-       width: 15%;
-       
-        }
-    div .detalle {
-        display: flex;
-        flex-direction: column;
-        justify-content: right;
-    }
+}
 
-    section {
-        align-items: center;
-        /*border: 1px solid gray;*/
-        padding-top: 50px;
-        padding-bottom: 50px;
-       /* width: 50%;*/
+.productos-carro img{
+    width: 15%;
+       
+}
+
+div .detalle {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+}
+
+section {
+    align-items: center;
+    /*border: 1px solid gray;*/
+    padding-top: 50px;
+    padding-bottom: 50px;
+    /* width: 50%;*/
         
-    }
+}
 
     .boton-carro {
         display: flex;
@@ -184,4 +186,70 @@ footer {
 
     .datos {
         font-size: 8px;
+    }
+
+    .product-details{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .reference-images{
+        width: 100px;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-around ;
+        border: 1px solid gray;
+        margin: 10px;
+        border-radius: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        background-color: rgb(217, 233, 233)
+    }
+
+    
+    .main-image img{
+        width: 600px;
+        height: 600px;
+        box-sizing: border-box;
+    }
+    .product-title{
+        background-color: rgb(217, 233, 233);
+        border: 1px solid gray;
+        margin: 10px;
+        border-radius: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        text-align: center;
+    }
+    
+    .price-cuotas-shipping-garanty{
+        display: flex;
+    }
+
+    .price{
+        display: flex;
+        align-items: center;
+        background-color: rgb(217, 233, 233);
+        border: 1px solid gray;
+        margin: 10px;
+        border-radius: 5px;
+        padding-left: 10px;
+        padding-right: 10px
+    }
+
+    .cuotas-shipping-garanty{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(217, 233, 233);
+        border: 1px solid gray;
+        margin: 10px;
+        border-radius: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-weight: bold;
+    }
+
+    .benefits{
+        align-self: center;
     }

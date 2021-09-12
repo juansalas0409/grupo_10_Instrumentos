@@ -4,7 +4,9 @@
   "description": "- Instrumentos de Percusión.\r - Intrumentos de Cuerda.\r - Instrumentos de Viento.\r - Accesorios.\r - Componentes para Producción Musical.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./app.js",
+    "devstart": "nodemon ./app.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +20,8 @@
   "homepage": "https://github.com/juansalas0409/grupo_10_Instrumentos#readme",
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
   }
 }
