@@ -25,3 +25,8 @@ El público objetivo es cualquier persona del publico en general, interesado en 
 - Habeshian: Elegimos esta página por tener una dinámica diferente, en vez de ir a un carrito de compras lleva a un formulario de contacto. (http://habeshian.com/)
 - Sounds Market: Elegimos esta página por la barra de categorias. (https://soundsmarket.com/servicios/compraventa)
 - Yamaha: Elegimos esta pagina por el diseño y por la inteligencia en los botones de las categorias. (https://yamahamusical.co/)
+
+--------------------SPRINT 2 ----------------------
+
+ENLACE A TRELLO: https://trello.com/b/LyXZJ4ky/full-stack-instrumentos
+
