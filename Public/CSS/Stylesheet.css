@@ -120,7 +120,7 @@ section {
         
     }
 
-    main {
+    .main-carrito {
         display: flex;
         
     }
@@ -252,4 +252,14 @@ section {
 
     .benefits{
         align-self: center;
+    }
+
+    .description{
+        box-sizing: content-box;
+        width: 90%;
+        border: 1px solid gray;
+        border-radius: 5px;
+        padding: 20px;
+        margin: 20px;
+        box-sizing: border-box;
     }
