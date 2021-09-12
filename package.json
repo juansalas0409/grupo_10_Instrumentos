@@ -1,0 +1,22 @@
+{
+  "name": "tp-final",
+  "version": "1.0.0",
+  "description": "- Instrumentos de Percusión.\r - Intrumentos de Cuerda.\r - Instrumentos de Viento.\r - Accesorios.\r - Componentes para Producción Musical.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juansalas0409/grupo_10_Instrumentos.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juansalas0409/grupo_10_Instrumentos/issues"
+  },
+  "homepage": "https://github.com/juansalas0409/grupo_10_Instrumentos#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
