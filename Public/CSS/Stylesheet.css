@@ -263,3 +263,85 @@ section {
         margin: 20px;
         box-sizing: border-box;
     }
+    .body_home{
+        background-color: #7e828727;
+    }
+    .body_home main{
+        width: 100vw
+    }   
+    .banner{
+        width: 100%;
+    }
+
+    .abajo_banner{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .botones_populares_ofertras{
+        background-color: #802a00;
+        border-radius: 5px;
+        padding: 1px;
+        width: 20%;
+        margin: 4px;
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .productos_home{
+        display: flex;
+        justify-content: center;
+        padding: 0%;
+        align-items: stretch;
+        flex-wrap: wrap;
+    }
+    
+    .productos_home article{
+        background-color: #fff;
+        width: 140px;
+        border: #7e8287 2px solid;
+        border-radius: 5px;
+        padding: 15px;
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .productos_home article img{
+        
+        border-bottom: #7e8287 solid 1px;
+    }
+
+    .titulo_productos{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    .titulo_productos p{
+        background-color: #802a00;
+        border-radius: 5px;
+    }
+
+    .nuestros_productos{
+        display: flex;
+        padding: 0%;
+        width: 100%;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 25px;
+    }
+    
+    .nuestros_productos article{
+        background-color: #fff;
+        width: 100px;
+        border: #7e8287 2px solid;
+        border-radius: 5px;
+        padding: 15px;
+        margin: 2px;
+        display: flex;
+        flex-direction: column;
+    }
+    
