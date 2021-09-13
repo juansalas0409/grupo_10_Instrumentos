@@ -5,6 +5,7 @@
    /* border: 1px solid gray;*/
    font-family: 'Roboto', sans-serif;
 }
+
 header img, footer img{
     width: 13%;
     padding-left: 10px;
@@ -12,6 +13,7 @@ header img, footer img{
     
      
 }
+
 header p {
     font-size: 14px ;
     font-weight: bold;
@@ -25,6 +27,7 @@ header, footer{
     
     
 }
+
 footer {
     align-items: flex-start;
 }
@@ -36,6 +39,7 @@ footer {
    justify-content: space-around;
    width: 90%;
 }
+
 .footer
 {
     padding-left: 20px;
@@ -62,7 +66,6 @@ footer {
 .fa-shopping-cart {
     padding-right: 10px;
 }
-
 
 .productos-carro {
     display:flex;
@@ -96,170 +99,174 @@ section {
         
 }
 
-    .boton-carro {
-        display: flex;
-        align-items: center;
-    }
+.boton-carro {
+    display: flex;
+    align-items: center;
+}
 
-    .num {
-        background-color: white;
-        border: 1px solid gray;
-        border-radius: 5px;
-        margin-left: 5px;
-        margin-right: 5px;
-    }
+.num {
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
 
-    section.resumen{
-        width: 50%;
-        
-       /* border: 1px solid gray;*/
-        
-        justify-content: center;
-        align-items: center;
-        padding-right: 20px;
-        
-    }
-
-    .main-carrito {
-        display: flex;
-        
-    }
-
-    .caja { 
-        /*margin-top: 10px;*/
-        margin-bottom: 10px;
-        background-color: lightgrey;
-        border: 1px solid gray;
-        padding-top: 10px;
-        padding-bottom: 20px;
-        border-radius: 10px;
-        
-    }   
-
-    .boton {
-        background-color: lightblue;
-        border: 1px solid gray;
-        border-radius: 5px;
-        text-align: center;
-        font-weight: bolder;
-                margin-left: 5px;
-        margin-right: 5px;
-        margin-top: 15px;
-    }
-
-    .a1, .a2, .a3, .a4 {
-        display: flex;
-        font-size: small;
-        justify-content: space-between;
-        padding: 5px;
-    }
-
-    .prods {
-        padding-right: 70px;
-    }
-    div.a1 p, div.a2 p, div.a3 p, div.a4 p {
-        font-size: x-small;
-    }
-
-    .a3 {
-        border-bottom: grey solid 1px;
-        padding-left: 5px;
-        padding-right: 5px;
-    }
-
-    ul {
-        list-style: none;
-        
-        
-    }
-
-    footer nav div ul li {
-        font-size: 10px;
-    }
-    footer nav div {
-        font-size: 12px;
-        font-weight: bolder;
-        /*display: flex;
-        flex-direction: column;
-        align-items: center;*/
-    }
-
-    .datos {
-        font-size: 8px;
-    }
-
-    .product-details{
-        display: flex;
-        justify-content: space-around;
-    }
-
-    .reference-images{
-        width: 100px;
-        display:flex;
-        flex-direction: column;
-        justify-content: space-around ;
-        border: 1px solid gray;
-        margin: 10px;
-        border-radius: 5px;
-        padding-left: 10px;
-        padding-right: 10px;
-        background-color: rgb(217, 233, 233)
-    }
-
+section.resumen{
+    width: 50%;
     
-    .main-image img{
-        width: 600px;
-        height: 600px;
-        box-sizing: border-box;
-    }
-    .product-title{
-        background-color: rgb(217, 233, 233);
-        border: 1px solid gray;
-        margin: 10px;
-        border-radius: 5px;
-        padding-left: 10px;
-        padding-right: 10px;
-        text-align: center;
-    }
+   /* border: 1px solid gray;*/
     
-    .price-cuotas-shipping-garanty{
-        display: flex;
-    }
+    justify-content: center;
+    align-items: center;
+    padding-right: 20px;
+    
+}
 
-    .price{
-        display: flex;
-        align-items: center;
-        background-color: rgb(217, 233, 233);
-        border: 1px solid gray;
-        margin: 10px;
-        border-radius: 5px;
-        padding-left: 10px;
-        padding-right: 10px
-    }
+.main-carrito {
+    display: flex;
+    
+}
 
-    .cuotas-shipping-garanty{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: rgb(217, 233, 233);
-        border: 1px solid gray;
-        margin: 10px;
-        border-radius: 5px;
-        padding-left: 10px;
-        padding-right: 10px;
-        font-weight: bold;
-    }
+.caja { 
+    /*margin-top: 10px;*/
+    margin-bottom: 10px;
+    background-color: lightgrey;
+    border: 1px solid gray;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    
+}
 
-    .benefits{
-        align-self: center;
-    }
+.boton {
+    background-color: lightblue;
+    border: 1px solid gray;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bolder;
+            margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 15px;
+}
 
-    .description{
-        box-sizing: content-box;
-        width: 90%;
-        border: 1px solid gray;
-        border-radius: 5px;
-        padding: 20px;
-        margin: 20px;
-        box-sizing: border-box;
-    }
+.a1, .a2, .a3, .a4 {
+    display: flex;
+    font-size: small;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.prods {
+    padding-right: 70px;
+}
+
+div.a1 p, div.a2 p, div.a3 p, div.a4 p {
+    font-size: x-small;
+}
+
+.a3 {
+    border-bottom: grey solid 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+ul {
+    list-style: none;
+    
+    
+}
+
+footer nav div ul li {
+    font-size: 10px;
+}
+
+footer nav div {
+    font-size: 12px;
+    font-weight: bolder;
+    /*display: flex;
+    flex-direction: column;
+    align-items: center;*/
+}
+
+.datos {
+    font-size: 8px;
+}
+
+.product-details{
+    display: flex;
+    justify-content: space-around;
+}
+
+.reference-images{
+    width: 100px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around ;
+    border: 1px solid gray;
+    margin: 10px;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgb(217, 233, 233)
+}
+
+.main-image img{
+    width: 600px;
+    height: 600px;
+    box-sizing: border-box;
+    border: 1px solid gray;
+    border-radius: 5px
+}
+
+.product-title{
+    background-color: rgb(217, 233, 233);
+    border: 1px solid gray;
+    margin: 10px;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+}
+
+.price-cuotas-shipping-garanty{
+    display: flex;
+}
+
+.price{
+    display: flex;
+    align-items: center;
+    background-color: rgb(217, 233, 233);
+    border: 1px solid gray;
+    margin: 10px;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px
+}
+
+.cuotas-shipping-garanty{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(217, 233, 233);
+    border: 1px solid gray;
+    margin: 10px;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: bold;
+}
+
+.benefits{
+    align-self: center;
+}
+
+.description{
+    box-sizing: content-box;
+    width: 90%;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px;
+    box-sizing: border-box;
+}
