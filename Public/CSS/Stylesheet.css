@@ -90,7 +90,7 @@ div .detalle {
     justify-content: right;
 }
 
-section {
+.prods {
     align-items: center;
     /*border: 1px solid gray;*/
     padding-top: 50px;
@@ -174,127 +174,194 @@ div.a1 p, div.a2 p, div.a3 p, div.a4 p {
 ul {
     list-style: none;
 }
-    
-    .price-cuotas-shipping-garanty{
+
+.main-image-productDetails{
+    text-align: center;
+    border: 1px solid gray;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.main-image-productDetails img{
+    width: 100%;   
+}
+
+.reference-images-productDetails{
+    display: flex;
+    width: 25vw;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.reference-images-productDetails img{
+    width: 100%;
+    padding: 10px;
+    background-color: lightblue;
+    padding: 10px;
+}
+
+.reference-images-productDetails-img1{
+    border: 1px solid gray;
+    border-right: none;
+}
+
+.reference-images-productDetails-img2{
+    border: 1px solid gray;
+    border-left: none;
+}
+
+.benefits{
+    background-color: #7e828727;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.price-cuotas-shipping-garanty{
+    display: flex;
+    flex-direction: column;
+}
+
+.price{
+    background-color: lightblue;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin: 15px;
+    padding: 15px;
+    width: min-content;
+}
+
+.cuotas-shipping-garanty{
+    background-color: lightblue;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin: 15px;
+    padding: 15px;
+    width: max-content;
+    font-weight: bold;
+}
+
+.caracteristics{
+    background-color: lightblue;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin: 15px;
+    padding: 15px;
+    height: 300px;
+}
+
+@media (min-width: 769px){
+    .product-details{
         display: flex;
     }
 
-    .price{
-        display: flex;
-        align-items: center;
-        background-color: rgb(217, 233, 233);
-        border: 1px solid gray;
-        margin: 10px;
-        border-radius: 5px;
-        padding-left: 10px;
-        padding-right: 10px
-    }
-
-    .cuotas-shipping-garanty{
-        display: flex;
+    .reference-images-productDetails{
+        order: -1;
         flex-direction: column;
-        align-items: center;
-        background-color: rgb(217, 233, 233);
-        border: 1px solid gray;
-        margin: 10px;
-        border-radius: 5px;
-        padding-left: 10px;
-        padding-right: 10px;
-        font-weight: bold;
+        margin-top: 1%;
+        margin-bottom: 1%;
+        margin-left: 1%;
+        margin-right: 0%;
+        align-self: center;
+        width: 20%;
+    }
+
+    .reference-images-productDetails-img1{
+        border-right: 1px solid gray;
+        border-bottom: none;
+    }
+
+    .reference-images-productDetails-img2{
+        border-left: 1px solid gray;
+        border-top: none
     }
 
     .benefits{
-        align-self: center;
+        height: min-content;
     }
+}
 
-    .description{
-        box-sizing: content-box;
-        width: 90%;
-        border: 1px solid gray;
-        border-radius: 5px;
-        padding: 20px;
-        margin: 20px;
-        box-sizing: border-box;
-    }
-    .body_home{
-        background-color: #7e828727;
-    }
-    .body_home main{
-        width: 100vw
-    }   
-    .banner{
-        width: 100%;
-    }
+.body_home{
+    background-color: #7e828727;
+}
+.body_home main{
+    width: 100vw
+}   
+.banner{
+    width: 100%;
+}
 
-    .abajo_banner{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .botones_populares_ofertras{
-        background-color: #802a00;
-        border-radius: 5px;
-        padding: 1px;
-        width: 20%;
-        margin: 4px;
-        font-size: 15px;
-        text-align: center;
-    }
+.abajo_banner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.botones_populares_ofertras{
+    background-color: #802a00;
+    border-radius: 5px;
+    padding: 1px;
+    width: 20%;
+    margin: 4px;
+    font-size: 15px;
+    text-align: center;
+}
 
-    .productos_home{
-        display: flex;
-        justify-content: center;
-        padding: 0%;
-        align-items: stretch;
-        flex-wrap: wrap;
-    }
+.productos_home{
+    display: flex;
+    justify-content: center;
+    padding: 0%;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.productos_home article{
+    background-color: #fff;
+    width: 140px;
+    border: #7e8287 2px solid;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.productos_home article img{
     
-    .productos_home article{
-        background-color: #fff;
-        width: 140px;
-        border: #7e8287 2px solid;
-        border-radius: 5px;
-        padding: 15px;
-        margin: 10px;
-        display: flex;
-        flex-direction: column;
+    border-bottom: #7e8287 solid 1px;
+}
 
-    }
+.titulo_productos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.titulo_productos p{
+    background-color: #802a00;
+    border-radius: 5px;
+}
 
-    .productos_home article img{
-        
-        border-bottom: #7e8287 solid 1px;
-    }
+.nuestros_productos{
+    display: flex;
+    padding: 0%;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 25px;
+}
 
-    .titulo_productos{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 10px;
-    }
-    .titulo_productos p{
-        background-color: #802a00;
-        border-radius: 5px;
-    }
-
-    .nuestros_productos{
-        display: flex;
-        padding: 0%;
-        width: 100%;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: center;
-        margin-bottom: 25px;
-    }
-    
-    .nuestros_productos article{
-        background-color: #fff;
-        width: 100px;
-        border: #7e8287 2px solid;
-        border-radius: 5px;
-        padding: 15px;
-        margin: 2px;
-        display: flex;
-        flex-direction: column;
-    }
+.nuestros_productos article{
+    background-color: #fff;
+    width: 100px;
+    border: #7e8287 2px solid;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 2px;
+    display: flex;
+    flex-direction: column;
+}
     
