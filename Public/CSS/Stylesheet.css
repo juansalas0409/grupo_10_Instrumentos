@@ -6,24 +6,25 @@
    font-family: 'Roboto', sans-serif;
 }
 
-header img, footer img{
-    width: 20%;
+header img {
+    width: 30vw;
     padding-left: 10px;
     padding-right: 15px;
    /*    border: 1px solid gray;*/
    height: 100%;
     
-    
-     
 }
 
+footer img {
+    width: 30vw;
+}
 header p {
     font-size: 14px ;
     font-weight: bold;
     margin-left: 5px;
 }
 
-header, footer{
+header {
     background-color: lightblue;
     display:flex;
     padding-left: 10px;
@@ -32,13 +33,21 @@ header, footer{
 }
 
 header {
-    height: 10vh;
+    height: 12vh;
 }
 
 footer {
-    align-items: flex-start;
-    height: 15vh;
+    background-color: lightblue;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    
 }
+.iconos {
+    font-size: 8vw;
+}
+
+
 
 .header {
     padding-left: 20px;
@@ -50,38 +59,42 @@ footer {
 .header i, fas {
     margin-left: 10px;
     margin-right: 10px;
+    font-size: 7vw;
 }
 
 .footer
 {
     padding-left: 20px;
    display:flex;
-   align-items: flex-start;
-   justify-content: space-around;
-   width: 90%;
-   padding-top: 10px;
-   padding-bottom: 10px;
-   font-size: 100%;
-   height: 100%;
+   flex-direction: column-reverse;
    
-   
-}
-.footer div {
-    font-size: 80%;
-    
-    margin-right: 10px;
 }
 
-.nuestros_productos {
-    height: 100%;
+
+.nuestros-productos {
+    font-size: 6vw;
+    font-weight: bolder;
+    text-align: center;
+
+}
+.nuestros-productos ul li a{
+    font-size: 4vw;
+    text-decoration: none;
+    color: black;
+        
+}
+
+.footer div {
+    text-align: center;
+    padding: 5px 0px;
 }
 
 .barraBusqueda {
     background-color: white;
     border-radius: 5px;
-    font-size: small;
-    padding-left: 5px;
-    padding-right: 5px;
+    font-size: 4vw;
+    padding: 5px;
+    
     border: 1px solid gray;
     font-style: italic;
 
@@ -93,7 +106,7 @@ footer {
 
 .productos-carro {
     display:flex;
-    /*justify-content: space-between ;*/
+    justify-content: space-between ;
     width: 100%;
     border: 1px solid gray;
    
@@ -101,33 +114,42 @@ footer {
     padding-left: 5px;
     padding-right: 10px;
     background-color: rgb(217, 233, 233);
-    margin-top: 2px;
-    margin-bottom: 2px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
 }
 
 .productos-carro img{
-    width: 40%;
+    width: 20%;
     padding: 5px;
        
 }
 .productos-carro h3 {
-    font-size: 100%;
+    font-size: 4vw;
+}
+.productos-carro h6 {
+    font-size: 2vw;
+}
+.productos-carro h4 {
+    font-size: 3vw;
 }
 .menu-desktop {
     display: none;
 }
 
-div .detalle {
+div.detalle {
     display: flex;
     flex-direction: column;
-    justify-content: right;
+    justify-content: center;
+    
+    
 }
 
 .prods {
     
-    border: 1px solid gray;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    /*border: 1px solid gray;*/
+    padding-top: 30px;
+    padding-bottom: 30px;
     padding-right: 5px;
     padding-left: 5px;
     /* width: 50%;*/
@@ -153,7 +175,7 @@ section.resumen{
     display: flex;
     flex-direction: column;
     
-    border: 1px solid gray;
+    /*border: 1px solid gray;*/
     
     justify-content: center;
     align-items: center;
@@ -164,18 +186,24 @@ section.resumen{
 
 .main-carrito {
     display: flex;
+    flex-direction: column;
     
 }
 
 .caja { 
+    width: 80%;
     /*margin-top: 10px;*/
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     background-color: lightgrey;
     border: 1px solid gray;
     padding-top: 10px;
     padding-bottom: 20px;
     border-radius: 10px;
     
+    
+}
+.caja p {
+    font-size: 40vw;
 }
 
 .boton {
@@ -187,11 +215,12 @@ section.resumen{
             margin-left: 5px;
     margin-right: 5px;
     margin-top: 15px;
+    font-size: 5vw;
 }
 
 .a1, .a2, .a3, .a4 {
     display: flex;
-    font-size: small;
+   
     justify-content: space-between;
     padding: 5px;
 }
@@ -199,7 +228,7 @@ section.resumen{
 
 
 div.a1 p, div.a2 p, div.a3 p, div.a4 p {
-    font-size: x-small;
+    font-size: 4vw;
 }
 
 .a3 {
