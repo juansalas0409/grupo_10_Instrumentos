@@ -7,9 +7,12 @@
 }
 
 header img, footer img{
-    width: 13%;
+    width: 20%;
     padding-left: 10px;
     padding-right: 15px;
+   /*    border: 1px solid gray;*/
+   height: 100%;
+    
     
      
 }
@@ -28,16 +31,25 @@ header, footer{
     
 }
 
+header {
+    height: 10vh;
+}
+
 footer {
     align-items: flex-start;
+    height: 15vh;
 }
 
 .header {
     padding-left: 20px;
    display:flex;
    align-items: center;
-   justify-content: space-around;
+   justify-content: space-arround;
    width: 90%;
+}
+.header i, fas {
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .footer
@@ -49,7 +61,19 @@ footer {
    width: 90%;
    padding-top: 10px;
    padding-bottom: 10px;
+   font-size: 100%;
+   height: 100%;
    
+   
+}
+.footer div {
+    font-size: 80%;
+    
+    margin-right: 10px;
+}
+
+.nuestros_productos {
+    height: 100%;
 }
 
 .barraBusqueda {
@@ -60,7 +84,7 @@ footer {
     padding-right: 5px;
     border: 1px solid gray;
     font-style: italic;
-    margin-left: 10px;
+
 }
 
 .fa-shopping-cart {
@@ -69,19 +93,28 @@ footer {
 
 .productos-carro {
     display:flex;
-    justify-content: space-between ;
-    /*width: 60%;*/
+    /*justify-content: space-between ;*/
+    width: 100%;
     border: 1px solid gray;
-    margin: 10px;
+   
     border-radius: 5px;
-    padding-left: 10px;
+    padding-left: 5px;
     padding-right: 10px;
     background-color: rgb(217, 233, 233);
+    margin-top: 2px;
+    margin-bottom: 2px;
 }
 
 .productos-carro img{
-    width: 15%;
+    width: 40%;
+    padding: 5px;
        
+}
+.productos-carro h3 {
+    font-size: 100%;
+}
+.menu-desktop {
+    display: none;
 }
 
 div .detalle {
@@ -91,13 +124,16 @@ div .detalle {
 }
 
 .prods {
-    align-items: center;
-    /*border: 1px solid gray;*/
+    
+    border: 1px solid gray;
     padding-top: 50px;
     padding-bottom: 50px;
+    padding-right: 5px;
+    padding-left: 5px;
     /* width: 50%;*/
-        
+   
 }
+
 
 .boton-carro {
     display: flex;
@@ -113,13 +149,16 @@ div .detalle {
 }
 
 section.resumen{
-    width: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     
-   /* border: 1px solid gray;*/
+    border: 1px solid gray;
     
     justify-content: center;
     align-items: center;
-    padding-right: 20px;
+    padding-right: 1px;
+    padding-left: 1px;
     
 }
 
@@ -157,9 +196,7 @@ section.resumen{
     padding: 5px;
 }
 
-.prods {
-    padding-right: 70px;
-}
+
 
 div.a1 p, div.a2 p, div.a3 p, div.a4 p {
     font-size: x-small;
@@ -281,6 +318,13 @@ ul {
     .benefits{
         height: min-content;
     }
+    .fa-bars{
+        visibility:hidden;
+    }
+    .menu-desktop {
+        display: contents;
+    }
+    
 }
 
 .body_home{
@@ -364,4 +408,5 @@ ul {
     display: flex;
     flex-direction: column;
 }
+
     
