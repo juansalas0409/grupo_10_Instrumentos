@@ -41,6 +41,7 @@ footer {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
+    width: 100vw;
     
 }
 .iconos {
