@@ -439,3 +439,70 @@ ul {
 }
 
     
+/*Registro LogIn*/
+/*---- MAIN ----*/
+
+.mainDeRegistro{
+    height: 100%;
+}
+.mainLogIn{
+    height: 100%;
+}
+.cajaSignIn{
+    background-color: grey;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 20%;
+    border-radius: 15px;
+    padding: 10%;
+}
+.titulo{
+    text-align: center;
+    margin-top: 2vh;
+}
+.datosParaIngresar{
+    text-align: left;
+    margin-top: 3vh;
+    margin-left: 5vw;
+    background-color: white;
+    margin-left: 3%;
+    margin-left: 3%;
+    border-radius: 5px;
+    color: black;
+    font-weight: lighter;
+}
+.preguntaClave{
+    text-decoration: underline;
+    text-align: center;
+    margin-top: 10px;
+}
+.inicio{
+    background-color: white;
+    border: solid black 1px;
+    padding: 3px;
+    text-align: center;
+    margin-top: 10%;
+    border-radius: 10px;
+}
+.formu{
+    text-align: center;
+    margin-top: 40%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 43%;
+    background-color: grey;
+    padding: 20px;
+    border-radius: 7px;
+}
+.formuRegistro{
+    background-color: grey;
+    text-align: center;
+    margin-top: 20%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 25%;
+    border-radius: 7px;
+}
+.enviar{
+    margin-top: 20px;
+}
