@@ -27,13 +27,14 @@ header p {
 header {
     background-color: lightblue;
     display:flex;
-    padding-left: 10px;
+    /* padding-left: 10px; */
     
     
 }
 
 header {
     height: 12vh;
+    width: 100vw;
 }
 
 footer {
@@ -61,6 +62,7 @@ footer {
     margin-left: 10px;
     margin-right: 10px;
     font-size: 7vw;
+    color: #000;
 }
 
 .footer
@@ -136,6 +138,7 @@ footer {
 }
 .menu-desktop {
     display: none;
+
 }
 
 div.detalle {
@@ -390,6 +393,12 @@ ul {
     flex-wrap: wrap;
 }
 
+section.productos_home a {
+    text-decoration: solid;
+    color: #000;
+}
+
+
 .productos_home article{
     background-color: #fff;
     width: 140px;
@@ -399,6 +408,7 @@ ul {
     margin: 10px;
     display: flex;
     flex-direction: column;
+    height: 220px;
 
 }
 

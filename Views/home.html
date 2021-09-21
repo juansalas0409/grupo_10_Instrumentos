@@ -14,7 +14,9 @@
     </head>
 <body class="body_home">
     <header>
-        <img src="/images/Logo-astronauta.png" alt="Logo-tienda">
+        <a href="/">
+            <img src="/images/Logo-astronauta.png" alt="Logo-tienda">
+        </a>
         <nav class="header">
             <div class="menu-desktop">
             <p>Nuestros Productos</p>
@@ -25,8 +27,8 @@
             <i class="fas fa-search"></i>
             <i class="fas fa-bars"></i>
             <div class="menu-desktop">
-            <i class="fas fa-user-circle"></i>
-            <i class="fas fa-shopping-cart"></i>
+            <a href="/login"><i class="fas fa-user-circle"></i></a>
+            <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
             </div>
         </nav>
     </header>
@@ -41,16 +43,20 @@
             </article>
         </div>
         <section class="productos_home">
-            <article>
-                <img src="/Images/guitar.jpg" alt="Articulo 1">
-                <h3>Guitarra Fender</h3>
-                <h4>$40.000</h5>
-            </article>
-            <article>
-                <img src="/Images/cableGuitarra.jpg" alt="cable guitarra">
-                <h3>Cable</h3>
-                <h4>$950</h5>
-            </article>
+            <a href="/detalleDeProducto">
+                <article>
+                    <img src="/Images/guitar.jpg" alt="Articulo 1">
+                    <h3>Guitarra Fender</h3>
+                    <h4>$40.000</h5>
+                </article>
+            </a>
+            <a href="/detalleDeProducto">
+                <article>
+                    <img src="/Images/cableGuitarra.jpg" alt="cable guitarra">
+                    <h3>Cable</h3>
+                    <h4>$950</h5>
+                </article>
+            </a>
         </section>
         <div class="titulo_productos" >
             <p><strong>Nuestros Productos</strong></p>
