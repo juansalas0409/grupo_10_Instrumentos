@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>home</title>
+        <link rel="stylesheet" href="/Css/stylesheet.Css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <body class="body_home">
+    <!-- header -->
+
+    <%- include('../partials/header'); -%>
+    
+    <!-- main -->
+    <main>
+        <img class="banner" src="/images/banner.png" alt="banner">
+        <div class="abajo_banner">
+            <article class= "botones_populares_ofertras">
+                <p><strong>Populares</strong></p>
+            </article>
+            <article class="botones_populares_ofertras">
+                <p><strong>Ofertas</strong></p>
+            </article>
+        </div>
+        <section class="productos_home">
+            <a href="/detalleDeProducto">
+                <article>
+                    <img src="/Images/guitar.jpg" alt="Articulo 1">
+                    <h3>Guitarra Fender</h3>
+                    <h4>$40.000</h5>
+                    </article>
+                </a>
+                <a href="/detalleDeProducto">
+                    <article>
+                        <img src="/Images/cableGuitarra.jpg" alt="cable guitarra">
+                        <h3>Cable</h3>
+                    <h4>$950</h5>
+                </article>
+            </a>
+        </section>
+        <div class="titulo_productos" >
+            <p><strong>Nuestros Productos</strong></p>
+        </div>
+        <section class="nuestros_productos">
+            <article>
+                <img src="/Images/logo piano.png" alt="logo piano">
+                <h5>Pianos y Teclados</h5>
+            </article>
+            <article>
+                <img src="/Images/logo guitarra.png" alt="logo guitarra">
+                <h5>Bajos y Guitarras</h5>
+            </article>
+            <article>
+                <img src="/Images/logo viento.png" alt="logo viento">
+                <h5>Instrumentos de Viento</h5>
+            </article>
+            <article>
+                <img src="/Images/logo accesorios.png" alt="logo accesorios">
+                <h5>Accesorios</h5>
+            </article>
+            <article>
+                <img src="/Images/logo mic.png" alt="logo mic">
+                <h5>Producción Musical</h5>
+            </article>
+        </section>
+    </main>
+    <!-- footer -->
+    <%- include('../partials/footer.ejs') %> 
+</body>
+</html>

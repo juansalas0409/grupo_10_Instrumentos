@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Carrito</title>
+        <link rel="stylesheet" href="/Css/stylesheet.Css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- header -->
+        <%- include('../partials/header.ejs'); %> 
+        <!-- main -->
+        <main class="main-carrito">
+            <section class="prods" >
+                <article class="productos-carro">
+                    <img src="/Images/guitar.jpg" alt="Articulo 1">
+                    <div class="detalle">
+                        <h3>Guitarra Fender</h3>
+                        <h6>Guitarra criolla clásica Gracia M1 natural</h4>
+                            <h4>$40.000</h5>
+                            </div>
+                            <div class="boton-carro">
+                        <div>+</div>
+                        <div class="num">1</div>
+                        <div>-</div>
+                    </div>
+                </article>
+                <article class="productos-carro">
+                    <img src="/Images/cableGuitarra.jpg" alt="cable guitarra">
+                    <div class="detalle">
+                        <h3>Cable</h3>
+                        <h6>Cable para instrumentos plug plug</h4>
+                            <h4>$950</h5>
+                            </div>
+                            <div class="boton-carro">
+                                <div>+</div>
+                                <div class="num">2</div>
+                                <div>-</div>
+                            </div>
+                        </article>
+                    </section>
+                    <section class="resumen">
+                        <div class="caja">
+                            <div class="a1">
+                                <p>Guitarra Fender 1u</p><p><strong>$40.000</strong></p>
+                </div>
+                <div class="a2">
+                    <p>Cable 2u</p><p><strong>$1900</strong></p>
+                </div>
+                <div class="a3">
+                    <p>Envio</p><p><strong>$500</strong></p>
+                </div>
+                <div class="a4">
+                    <p><strong>Total</strong></p><p><strong>$42.400</strong></p>
+                </div>
+                <div class="boton">
+                    Finalizar Compra
+                </div>
+            </div> 
+        </section>
+    </main>
+    <!-- footer -->
+    <%- include('../partials/footer') %> 
+</body>
+</html>

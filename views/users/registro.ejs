@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Producto</title>
+        <link rel="stylesheet" href="/Css/stylesheet.Css" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"/>
+    </head>
+    <body>
+    <!-- header -->
+    <%- include('../partials/header') %> 
+    <!-- main -->
+<main class="mainDeRegistro">
+    <div class="formuRegistro">
+        <form action="/registro" method="POST">
+            <label for="nombre">Nombre y Apellido:</label>
+            <input type="text" name="nombre" id="nombre" />
+            <br />
+            <label for="nombre de usuario">Nombre de usuario:</label>
+          <input type="text" name="nombre de usuario" id="nombre de usuario" minlength="4" />
+          <br />
+          <label for="fechaDeNacimiento">Fecha de Nacimiento:</label>
+          <input type="date" name="fecha" />
+          <br />
+          <label for="text" name="domicilio">Domicilio:</label>
+          <input type="text" name="domicilio" id="domicilio" /><br />
+          <label>Foto de perfil</label><br />
+          <input type="file" name="avatar" accept=".jpg" multiple /><br /><br />
+          <label for="contrasena">Contraseña:</label>
+          <input type="password" name="contrasena" id="contrasena" alt="strongPass" required minlength="4"/>
+          <input type="submit" value="ENVIAR" class="enviar" />
+        </form>
+    </div>
+    </main>
+    <!-- footer -->
+    <%- include('../partials/footer') %> 
+</body>
+</html>

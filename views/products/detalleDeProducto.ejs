@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Producto</title>
+        <link rel="stylesheet" href="/Css/stylesheet.Css" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- header -->
+        <%- include('../partials/header') %> 
+        <!-- main -->
+    <main>
+        <section class="product-details">
+        <div class="main-image-productDetails">
+            <img src="./Images/guitar.jpg" alt="frontal" />
+        </div>
+        <div class="reference-images-productDetails">
+            <img class="reference-images-productDetails-img1" src="./Images/guitar.jpg" alt="frontal" />
+            <img class="reference-images-productDetails-img2" src="./Images/guitar-fender.jpg" alt="lateral" />
+        </div>
+        <div class="benefits">
+            <div class="product-title">
+                <h2>Guitarra Fender</h2>
+            </div>
+            <div class="price-cuotas-shipping-garanty">
+                <div class="price">$40.000</div>
+                <div class="cuotas-shipping-garanty">
+                    <ul>
+                        <li>3, 6, 9, 12 o 18 Cuotas sin Interés.</li>
+                <li>Envío a todo el país.</li>
+                <li>Garantía de fábrica: 30 días.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="boton">Comprar</div>
+</div>
+</section>
+<section>
+    <div class="caracteristics">
+        <h2>Caracteristicas del Producto</h2>
+    </div>
+</section>
+</main>
+<!-- footer -->
+<%- include('../partials/footer') %> 
+</body>
+</html>
