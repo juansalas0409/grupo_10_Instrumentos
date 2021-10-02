@@ -1,184 +1,368 @@
 * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-   /* border: 1px solid gray;*/
-   font-family: 'Roboto', sans-serif;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  /* border: 1px solid gray;*/
+  font-family: "Roboto", sans-serif;
+}
+/* mobile */
+
+body {
+  background-color: #000000;
+}
+/* header */
+
+header {
+  background-color: #603718;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
 }
 
-@media (max-width : 425px){
-    /* mobile */
+header img {
+  width: 30vw;
+}
 
-    body{
-        background-color: #000000;
-    }
+.menu-desktop,
+.barraBusqueda {
+  display: none;
+}
+
+.fa-bars {
+  font-size: 50px;
+}
+
+/* main */
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.title {
+  font-size: 22px;
+  color: #727171;
+  padding: 10px 0;
+}
+
+.product-image img {
+  width: 75vw;
+  border-radius: 10px;
+}
+
+.price {
+  padding: 20px 0;
+}
+
+.price h3 {
+  font-size: 20px;
+}
+
+.price p,
+.description p {
+  font-size: 20px;
+}
+
+.price h3,
+p {
+  color: #727171;
+}
+
+.description {
+  width: 75vw;
+  height: 30vh;
+  border: 2px solid #727171;
+  border-radius: 10px;
+}
+
+.buy {
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.buy button {
+  background-color: #000000;
+  border: 2px solid #727171;
+  border-radius: 10px;
+  font-size: 20px;
+  color: #727171;
+  width: max-content;
+  height: 65px;
+  transition: all, 40ms;
+}
+
+.buy button:active {
+  background-color: #727171;
+  color: #000000;
+  border: 2px solid #000000;
+}
+
+.fa-whatsapp {
+  color: #00a758;
+  font-size: 40px;
+}
+
+.whatsapp {
+  position: fixed;
+  right: 20px;
+  bottom: 65px;
+  display: flex;
+  border: 3px solid #00a758;
+  border-radius: 60px;
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* footer */
+
+.footer {
+  display: none;
+}
+
+.footer-mobile {
+  background-color: #727171;
+  display: flex;
+  height: 60px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer-mobile h3 {
+  font-size: 22px;
+  color: #ffffff;
+}
+
+.footer-mobile i {
+  font-size: 22px;
+}
+
+.icons-mobile {
+  display: flex;
+  width: 70px;
+  justify-content: space-around;
+}
+
+.navbar-icons {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  /* header */
+
+  header {
+    background-color: #603718;
+    padding: 0 30px;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  header img {
+    width: 15%;
+  }
+
+  .header {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .menu-desktop {
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+  }
+
+  .menu-desktop p {
+    color: #000000;
+    font-weight: bold;
+    font-size: 1.8vw;
+  }
+
+  .barraBusqueda {
+    display: none;
+  }
+
+  .bars {
+    display: none;
+  }
+
+  .navbar-icons {
+    display: inline-block;
+    width: 20%;
+    font-size: 22px;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+@media (min-width: 1024px){
+    /* Laptop */
     /* header */
-    
-    header {
-        background-color: #603718;
-        display:flex;
-        align-items: center;
+
+    .header{
+        display: flex;
         justify-content: space-between;
-        padding: 0 30px
+        width: 100%;
+        align-items: center;
     }
 
-    header img{
-        width: 30vw;
+    .menu-desktop{
+        width: 50%;
+        justify-content: space-around;
     }
 
-    .menu-desktop, .barraBusqueda{
-        display: none;
+    .menu-desktop p{
+        font-weight: 1000;
     }
 
-    .fa-bars{
-        font-size: 50px;
+    .barraBusqueda{
+        display: flex;
+        width: 30%;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .navbar-icons{
+        display: flex;
+        justify-content: space-around;
+        font-size: 2vw;
+        width: 15%;
+    }
+
+    .fa-search{
+        font-size: 2vw;
+    }
+
+    #search{
+        height: 5vh;
+        width: 40vw;
+        border-radius: 10px;
+        font-size: 2.5vh;
+    }
+
+    .barraBusqueda button {
+        background-color:rgba(0, 0, 0, 0);
+        border: none;
+        border-radius: 10px;
+        font-size: 20px;
+        color: #000000;
+        width: max-content;
+        padding: 10px
     }
 
     /* main */
 
     main{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         flex-wrap: wrap;
-        align-content: center;
+    }
+
+    .title{
+        position: absolute;
+        top: 15vw;
+        right: 16vw;
+    }
+
+    .product-image{
+        width: max-content;
+        padding: 50px;
+    }
+
+    .product-image img{
+        width: 50vw;
+    }
+
+    .price{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 24vw;
+        position: absolute;
+        top: 20vw;
+        right: 12vw;
     }
 
     .title {
-        font-size: 24px;
-        color: #727171;
-        padding: 10px 0
-    }
-
-    .product-image img {
-        width: 75vw;
-        border-radius: 10px;
-    }
-    
-    .price{
-        padding: 20px 0;
-    }
-
-    .price h3{
-        font-size: 22px;
-    }
-
-    .price p, .description p{
-        font-size: 20px;
-    }
-
-    .price h3, p{
-        color: #727171
-    }
-
-    .description {
-        width: 75vw;
-        height: 30vh;
-        border: 2px solid #727171;
-        border-radius: 10px;
+        font-size: 2.6vw;
+        
     }
 
     .buy{
-        padding: 30px;
-        display: flex;
-        justify-content: center;
+        position: absolute;
+        bottom: 10vw;
+        right: 3.5vw;
+    }
+    .buy button{
+        width: 35vw;
+        height: min-content;
     }
     
-    .buy button{
-        background-color: #000000;
-        border: 2px solid #727171;
-        border-radius: 10px;
-        font-size: 20px;
-        color: #727171;
-        width: max-content;
-        height: 15vw;
-        transition: all, 40ms;
+
+    .price h3 {
+        font-size: 2.5vw;
+      }
+      
+    .price p,
+    .description p {
+        font-size: 2vw;
     }
 
-    .buy button:active{
-        background-color: #727171;
-        color: #000000;
-        border: 2px solid #000000;
+    .buy h2{
+        font-size: 2.6vw;
+    }
+
+    .description{
+        position: relative;
+        left: 12vw;
+        margin: 20px;
+    }
+
+    .whatsapp{
+        width: 5vw;
+        height: 5vw;
+        bottom: 8vw;
     }
 
     .fa-whatsapp{
-        color: #00a758;
-        font-size: 40px;
-    }
-    
-    .whatsapp{
-        position: fixed;
-        right: 20px;
-        bottom: 65px;
-        display: flex;
-        border: 3px solid #00a758;
-        border-radius: 60px;
-        width: 50px;
-        height: 50px;
-        align-items: center;
-        justify-content: center;
+        font-size: 4vw;
     }
 
     /* footer */
 
-    .footer{
+    .footer-mobile{
         display: none;
     }
 
-    .footer-mobile{
-        background-color: #727171;
+    .footer{
         display: flex;
-        height: 60px;
+        background-color: #727171;
         justify-content: space-around;
         align-items: center;
+        font-size: 1.6vw ;
     }
 
-    .footer-mobile h3{
-        font-size: 22px;
-        color: #ffffff;
+    .footer img{
+        width: 10%;
     }
 
-    .footer-mobile i{
-        font-size: 22px;
+    .footer ul li a{
+        text-decoration: none;
+        color: #000000;
     }
-
-    .icons-mobile{
-        display: flex;
-        width: 70px;
-        justify-content: space-around;
-    }
-}
-
-@media (min-width : 768px){
-    /* tablet */
-    body {
-        background-color: #000000;
-    }
-
-    /* header */
     
-    header {
-        background-color: #603718;
-        padding: 0 30px
+    .footer ul li{
+        list-style-type: none;
+        text-align: center;
     }
 
-    header img{
-        width: 30vw;
-    }
-
-    .header{
-        display: flex;
-    }
-
-    .menu-desktop{
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .barraBusqueda{
-        display: none;
-    }
-
-    .bars{
-        display: none;
+    .datos{
+        color: #000000;
     }
 }
