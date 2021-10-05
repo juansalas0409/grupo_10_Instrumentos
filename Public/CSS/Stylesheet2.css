@@ -1,0 +1,664 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+   /* border: 1px solid gray;*/
+   font-family: 'Roboto', sans-serif;
+}
+
+/* HEADER */
+header {
+    background-color: #603718;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+  }
+  
+  header img {
+    width: 30vw;
+  }
+  
+  .menu-desktop,
+  .barraBusqueda {
+    display: none;
+  }
+  
+  .fa-bars {
+    font-size: 50px;
+  }
+  
+/* FOOTER */
+.footer {
+    display: none;
+  }
+  
+  .footer-mobile {
+    background-color: #727171;
+    display: flex;
+    height: 60px;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .footer-mobile h3 {
+    font-size: 22px;
+    color: #ffffff;
+  }
+  
+  .footer-mobile i {
+    font-size: 22px;
+  }
+  
+  .icons-mobile {
+    display: flex;
+    width: 70px;
+    justify-content: space-around;
+  }
+  
+  .navbar-icons {
+    display: none;
+  }
+/* HOME */
+main {
+    padding: 10px 5px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .home_main_Categorias {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .home_main_Categorias_Divs {
+    width: 19%;
+    display: flex;
+    background-color: #fff;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 5px;
+    border: #727171 2px solid;
+  }
+  .home_main_Categorias > div > a > img {
+    width: 15vw;
+  }
+
+  .Home_cuadrado {
+    color: #fff;
+    position: relative;
+    right: 45%;
+    bottom: 25px;
+  }
+
+  .Home_cuadrado i {
+    border-left: #727171 solid 2px;
+    border-top: #727171 solid 2px;
+    transform: rotate(45deg);
+  }
+
+  .Home_Detalle_categoria {
+    height: 140vw;
+  }
+
+  .Home_Detalle_categoria_Pianos {
+    display: flex;
+    background-color: #fff;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 5px;
+    height: 130vw;
+    width: 97%;
+    align-items: center;
+    border: #727171 solid 2px;
+    position: absolute;
+    top: 60vw;
+    left: 1vw;
+  }
+  .Home_Detalle_categoria_Guitarras {
+    display: none;
+    background-color: #fff;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 5px;
+    height: 130vw;
+    width: 97%;
+    align-items: center;
+    border: #727171 solid 2px;
+    position: absolute;
+    top: 60vw;
+    left: 1vw;
+  }
+  .Home_Detalle_categoria_Viento {
+    display: none;
+    background-color: #fff;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 5px;
+    height: 130vw;
+    width: 97%;
+    align-items: center;
+    border: #727171 solid 2px;
+    position: absolute;
+    top: 60vw;
+    left: 1vw;
+  }
+  .Home_Detalle_categoria_Accesorios {
+    display: none;
+    background-color: #fff;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 5px;
+    height: 130vw;
+    width: 97%;
+    align-items: center;
+    border: #727171 solid 2px;
+    position: absolute;
+    top: 60vw;
+    left: 1vw;
+  }
+  .Home_Detalle_categoria_Produccion {
+    display: none;
+    background-color: #fff;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 5px;
+    height: 130vw;
+    width: 97%;
+    align-items: center;
+    border: #727171 solid 2px;
+    position: absolute;
+    top: 60vw;
+    left: 1vw;
+  }
+  .Home_Tarjeta_producto_destacado > a > img {
+    width: 80%;
+    border-bottom: #333 solid 1px;
+    margin-bottom: 5px;
+    padding-bottom: 10px;
+  }
+  .Home_Tarjeta_producto_destacado a {
+    display: flex;
+    justify-content: center;
+  }
+  .Home_Tarjeta_producto_destacado {
+    padding: 10px;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    border: #727171 4px solid;
+    margin: 10px 0;
+  }
+  .Home_Boton_categoria {
+    z-index: 150;
+    width: 50%;
+    background-color: #603718;
+    border-radius: 5px;
+  }
+
+  .Home_Boton_categoria a {
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+  }
+
+  .Home_Categ_Guitarras:focus + .Home_Detalle_categoria_Guitarras {
+    display: flex;
+  }
+  .Home_Categ_Viento:focus + .Home_Detalle_categoria_Viento {
+    display: flex;
+  }
+  .Home_Categ_Accesorios:focus + .Home_Detalle_categoria_Accesorios {
+    display: flex;
+  }
+  .Home_Categ_Produccion:focus + .Home_Detalle_categoria_Produccion {
+    display: flex;
+  }
+  .Home_Desktop{
+    display: none;
+  }
+
+/* CARRITO */
+
+/* DETALLE DE PRODUCTO */
+
+/* LOGIN */
+
+/* REGISTRO */
+
+/* LISTADO PRODUCTOS */
+
+/* PERFIL USUARIO */
+
+@media (min-width: 425px){
+    /* HEADER */
+
+    /* FOOTER */
+
+    /* HOME */
+    main {
+        padding: 10px 5px;
+        display: flex;
+        flex-direction: column;
+        align-content: space-around;
+        align-items: center;
+      }
+    
+      .home_main_Categorias {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 425px;
+        justify-content: space-between;
+      }
+      .home_main_Categorias_Divs {
+        width: 19%;
+        display: flex;
+        background-color: #fff;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 15px;
+        border-radius: 5px;
+        border: #727171 2px solid;
+        max-height: 140px;
+      }
+      .home_main_Categorias > div > a > img {
+        width: 15vw;
+        max-width: 69px;
+      }
+    
+      .Home_cuadrado {
+        color: #fff;
+        position: relative;
+        right: 45%;
+        bottom: 40px;
+        font-size: 3em;
+        display: none;
+      }
+    
+      .Home_cuadrado i {
+        border-left: #727171 solid 2px;
+        border-top: #727171 solid 2px;
+        transform: rotate(45deg);
+      }
+    
+      .Home_Detalle_categoria {
+        height: 140vw;
+      }
+    
+      .Home_Detalle_categoria_Pianos {
+        display: flex;
+        background-color: #fff;
+        flex-direction: column;
+        padding: 15px;
+        border-radius: 5px;
+        height: 130vw;
+        width: 97%;
+        align-items: center;
+        border: #727171 solid 2px;
+        position: absolute;
+        top: 60vw;
+        left: 1vw;
+        max-height: 700px;
+      }
+      .Home_Detalle_categoria_Guitarras {
+        display: none;
+        background-color: #fff;
+        flex-direction: column;
+        padding: 15px;
+        border-radius: 5px;
+        height: 130vw;
+        width: 97%;
+        align-items: center;
+        border: #727171 solid 2px;
+        position: absolute;
+        top: 60vw;
+        left: 1vw;
+        max-height: 700px;
+      }
+      .Home_Detalle_categoria_Viento {
+        display: none;
+        background-color: #fff;
+        flex-direction: column;
+        padding: 15px;
+        border-radius: 5px;
+        height: 130vw;
+        width: 97%;
+        align-items: center;
+        border: #727171 solid 2px;
+        position: absolute;
+        top: 60vw;
+        left: 1vw;
+        max-height: 700px;
+      }
+      .Home_Detalle_categoria_Accesorios {
+        display: none;
+        background-color: #fff;
+        flex-direction: column;
+        padding: 15px;
+        border-radius: 5px;
+        height: 130vw;
+        width: 97%;
+        align-items: center;
+        border: #727171 solid 2px;
+        position: absolute;
+        top: 60vw;
+        left: 1vw;
+        max-height: 700px;
+      }
+      .Home_Detalle_categoria_Produccion {
+        display: none;
+        background-color: #fff;
+        flex-direction: column;
+        padding: 15px;
+        border-radius: 5px;
+        height: 130vw;
+        width: 97%;
+        align-items: center;
+        border: #727171 solid 2px;
+        position: absolute;
+        top: 60vw;
+        left: 1vw;
+        max-height: 700px;
+      }
+      .Home_Tarjeta_producto_destacado > a > img {
+        width: 80%;
+        border-bottom: #333 solid 1px;
+        margin-bottom: 5px;
+        padding-bottom: 10px;
+      }
+      .Home_Tarjeta_producto_destacado a {
+        display: flex;
+        justify-content: center;
+      }
+      .Home_Tarjeta_producto_destacado {
+        padding: 10px;
+        height: 60vh;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        border: #727171 4px solid;
+        margin: 10px 0;
+      }
+      .Home_Boton_categoria {
+        z-index: 150;
+        width: 50%;
+        background-color: #603718;
+        border-radius: 5px;
+      }
+    
+      .Home_Boton_categoria a {
+        text-decoration: none;
+        color: #fff;
+        text-align: center;
+      }
+    
+      .Home_Categ_Guitarras:focus + .Home_Detalle_categoria_Guitarras {
+        display: flex;
+      }
+      .Home_Categ_Viento:focus + .Home_Detalle_categoria_Viento {
+        display: flex;
+      }
+      .Home_Categ_Accesorios:focus + .Home_Detalle_categoria_Accesorios {
+        display: flex;
+      }
+      .Home_Categ_Produccion:focus + .Home_Detalle_categoria_Produccion {
+        display: flex;
+      }
+      .Home_Desktop{
+        display: none;
+      }
+    
+    /* CARRITO */
+
+    /* DETALLE DE PRODUCTO */
+
+    /* LOGIN */
+
+    /* REGISTRO */
+
+    /* LISTADO PRODUCTOS */
+
+    /* PERFIL USUARIO */
+
+}
+
+@media (min-width: 769px){
+    /* HEADER */
+    header {
+        background-color: #603718;
+        padding: 0 30px;
+        display: flex;
+        justify-content: flex-start;
+      }
+    
+      header img {
+        width: 15%;
+      }
+    
+      .header {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+      }
+    
+      .menu-desktop {
+        display: flex;
+        justify-content: space-around;
+        width: 70%;
+      }
+    
+      .menu-desktop p {
+        color: #000000;
+        font-weight: bold;
+        font-size: 1.8vw;
+      }
+    
+      .barraBusqueda {
+        display: none;
+      }
+    
+      .bars {
+        display: none;
+      }
+    
+      .navbar-icons {
+        display: inline-block;
+        width: 20%;
+        font-size: 22px;
+        display: flex;
+        justify-content: space-around;
+      }
+    /* FOOTER */
+
+    /* HOME */
+    main {
+        padding: 10px 5px;
+        display: flex;
+        flex-direction: column;
+        align-content: space-around;
+        align-items: center;
+      }
+      .Home_Detalle_categoria{
+        display: none;
+      }
+      .home_main_Categorias_Divs {
+        display: none;
+      }
+      .Home_Desktop{
+        display: flex;
+        flex-direction: column;
+      }
+      .Home_Desktop>h2{
+        color: #727171;
+        font-size: 3em;
+      }
+    
+      .Home_Categorias_Desktop{
+        display: flex;
+        flex-direction: column;
+      }
+    
+      .Home_Categoria_Art_Desktop{
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        border-radius: 5px;
+        border: #333 solid 2px;
+        padding: 15px;
+        margin: 5px 0;
+      }
+      .Home_Categoria_Art_Desktop_1{
+        background-color: #fff;
+        display: flex;
+        flex-direction:row-reverse;
+        align-items: center;
+        border-radius: 5px;
+        border: #333 solid 2px;
+        padding: 15px;
+        margin: 5px 0;
+      }
+      .Home_Categoria_Art_Desktop>img{
+        width: 450px;
+        padding: 40px;
+      }
+      .Home_Categoria_Art_Desktop_1>img{
+        width: 450px;
+        padding: 40px;
+      }
+      .Home_Descripcion_Categoria_Desktop{
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+      }
+      .Home_Boton_Ir_Categoria_Desktop{
+        background-color: #603718;
+        border: #000000 solid 2px;
+        border-radius: 6px;
+        width: 170px;
+        padding: 10px;
+      }
+      .Home_Boton_Ir_Categoria_Desktop>a{
+        color: #fff;
+        text-decoration: none;
+      }
+    
+
+    /* CARRITO */
+
+    /* DETALLE DE PRODUCTO */
+
+    /* LOGIN */
+
+    /* REGISTRO */
+
+    /* LISTADO PRODUCTOS */
+
+    /* PERFIL USUARIO */
+
+}
+
+@media (min-width: 1024px){
+    /* header */
+
+    .header{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+    }
+
+    .menu-desktop{
+        width: 50%;
+        justify-content: space-around;
+    }
+
+    .menu-desktop p{
+        font-weight: 1000;
+    }
+
+    .barraBusqueda{
+        display: flex;
+        width: 30%;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .navbar-icons{
+        display: flex;
+        justify-content: space-around;
+        font-size: 2vw;
+        width: 15%;
+    }
+
+    .fa-search{
+        font-size: 2vw;
+    }
+
+    #search{
+        height: 5vh;
+        width: 40vw;
+        border-radius: 10px;
+        font-size: 2.5vh;
+    }
+
+    .barraBusqueda button {
+        background-color:rgba(0, 0, 0, 0);
+        border: none;
+        border-radius: 10px;
+        font-size: 20px;
+        color: #000000;
+        width: max-content;
+        padding: 10px
+    }
+    /* FOOTER */
+    .footer-mobile{
+        display: none;
+    }
+
+    .footer{
+        display: flex;
+        background-color: #727171;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 1.6vw ;
+    }
+
+    .footer img{
+        width: 10%;
+    }
+
+    .footer ul li a{
+        text-decoration: none;
+        color: #000000;
+    }
+    
+    .footer ul li{
+        list-style-type: none;
+        text-align: center;
+    }
+
+    .datos{
+        color: #000000;
+    }
+    /* HOME */
+
+    /* CARRITO */
+
+    /* DETALLE DE PRODUCTO */
+
+    /* LOGIN */
+
+    /* REGISTRO */
+
+    /* LISTADO PRODUCTOS */
+
+    /* PERFIL USUARIO */
+}
