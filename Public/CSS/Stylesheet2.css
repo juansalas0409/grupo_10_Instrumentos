@@ -227,9 +227,143 @@ main {
 
 /* DETALLE DE PRODUCTO */
 
-/* LOGIN */
+/* REGISTRO y LOGIN */
+.mainDeRegistro{
+  height: 100%;
+}
+.mainLogIn{
+  height: 100%;
+}
+.cajaSignIn{
+  background-color: grey;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 20%;
+  border-radius: 15px;
+  padding: 10%;
+}
+.titulo{
+  text-align: center;
+  margin-top: 2vh;
+}
+.datosParaIngresar{
+  text-align: left;
+  margin-top: 3vh;
+  margin-left: 5vw;
+  background-color: white;
+  margin-left: 3%;
+  margin-left: 3%;
+  border-radius: 5px;
+  color: black;
+  font-weight: lighter;
+}
+.preguntaClave{
+  text-decoration: underline;
+  text-align: center;
+  margin-top: 10px;
+}
+.inicio{
+  background-color: white;
+  border: solid black 1px;
+  padding: 3px;
+  text-align: center;
+  margin-top: 10%;
+  border-radius: 10px;
+}
+.formu{
+  text-align: left;
+  margin-top: 20%;
+  margin-right: 20%;
+  margin-bottom: 43%;
+  padding-left: 20px;
+  border-radius: 7px;
+  color: #727171
+}
+.formuRegistro{
+  text-align: left;
+  margin-top: 10%;
+  margin-right: 20%;
+  margin-bottom: 43%;
+  padding-left: 20px;
+  border-radius: 7px;
+  color: #727171
+}
+.enviar{
+  margin-top: 20px;
+}
+.cuadroBlancoDatos{
+  border-bottom: solid 1px #727171;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  background-color: black;
+  color: #727171;
+  width: 120%;
+  margin-top: 50px;
+}
+.tituloLogin{
+  color: #727171;
+  text-align: center;
+  padding-top: 50px;
+}
+.botonInicioPa{
+  color: #727171;
+  border: 1px solid #727171;
+  text-align: center;
+  padding: 10px;
+  background-color: transparent;
+  margin-left: 35%;
+  margin-right: 40%;
+  margin-top: 100px;
+}
+.botonInicioPa:hover{
+  background-color: #727171;
+  color: black;
+}
+.botonRegistroPa{
+  color: #727171;
+  border: 1px solid #727171;
+  text-align: center;
+  padding: 10px;
+  background-color: transparent;
+  margin-left: 40%;
+  margin-right: 40%;
+  margin-top: 70px;
+}
+.botonRegistroPa:hover{
+  background-color: #727171;
+  color: black;
+}
+.tituloRegistro{
+  color: #727171;
+  text-align: center;
+  margin-top: 50px;
+}
+.olvidasteLaClave{
+  color: #727171;
+  text-decoration: none;
+  font-weight: 100;
+  margin-left: 16%;
+  margin-top: 10px;
+}
 
-/* REGISTRO */
+
+
+/*---MEDIA QUERI---*/
+@media(min-width: 769px){
+  .formu{
+      margin-left: 37%;
+      margin-right: 42%;
+      margin-top: 7%;
+      margin-bottom: 0px;
+  }
+  .formuRegistro{
+      margin-left: 37%;
+      margin-right: 42%;
+      margin-top: 5%;
+      margin-bottom: 0px;
+  }
+}
 
 /* LISTADO PRODUCTOS */
 
