@@ -14,3 +14,27 @@
 
 5. Dejar de hacer.
     Por el momento no tenemos nada para dejar de hacer.
+
+    <!-- Sprint 3 -->
+
+#Obstaculos-Problemas:
+
+
+Juan y Nico-> tiempo.
+Marco y Juan S-> la coordinación.
+
+1. Comenza a hacer.
+Las weekly los jueves a las 8:30
+Aplicar un Srum Master por semana.
+
+2. Hacer más.
+Organizarnos antes las clases.
+
+3. Continuar haciendo.
+Ser organizados.
+
+4. Hacer menos.
+nada puntualmente.
+
+5. Dejar de hacer
+nada puntualmente
