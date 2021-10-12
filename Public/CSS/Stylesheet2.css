@@ -1009,8 +1009,144 @@ p {
   /* HOME */
 
   /* CARRITO */
+  
+.carrito-productos-carro {
+  display:flex;
+  justify-content: space-between ;
+  width: 100%;
+  border: 2px solid gray;
+ 
+  border-radius: 5px;
+  padding-left: 5px;
+  padding-right: 10px;
+  background-color: black;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: white;
+  
+}
 
-  /* DETALLE DE PRODUCTO */
+.carrito-productos-carro img{
+  width: 20%;
+  padding: 5px;
+     
+}
+.carrito-productos-carro h3 {
+  font-size: 5vw;
+}
+.carrito-productos-carro h6 {
+  font-size: 3vw;
+}
+.carrito-productos-carro h4 {
+  font-size: 4vw;
+}
+
+div.carrito-detalle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 70%;
+  
+  
+}
+
+.carrito-prods {
+  
+  /*border: 1px solid gray;*/
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-right: 5px;
+  padding-left: 5px;
+  /* width: 50%;*/
+ 
+}
+
+
+.carrito-boton-carro {
+  display: flex;
+  align-items: center;
+}
+
+.carrito-num {
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  color: #000000;
+}
+
+section.carrito-resumen{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  
+  
+  /*border: 1px solid gray;*/
+  
+  justify-content: center;
+  align-items: center;
+  padding-right: 1px;
+  padding-left: 1px;
+  
+}
+
+.carrito-main {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  
+}
+
+.carrito-caja { 
+  width: 80%;
+  /*margin-top: 10px;*/
+  margin-bottom: 20px;
+  background-color: black;
+  border: 2px solid gray;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  border-radius: 10px;
+  color: white;
+  
+  
+}
+.carrito-caja p {
+  font-size: 40vw;
+}
+
+.carrito-boton {
+  background-color: black;
+  border: 2px solid gray;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bolder;
+          margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 15px;
+  font-size: 5vw;
+}
+
+.carrito-a1, .carrito-a2, .carrito-a3, .carrito-a4 {
+  display: flex;
+ 
+  justify-content: space-between;
+  padding: 5px;
+}
+
+
+
+div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
+  font-size: 4vw;
+}
+
+.carrito-a3 {
+  border-bottom: grey solid 1px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+/*------------------Fin Carrito-----------------------------------*/
+/* DETALLE DE PRODUCTO */
 
   .detail-main {
     display: flex;
@@ -1056,11 +1192,9 @@ p {
     width: 35vw;
     height: min-content;
   }
-
   .detail-price h3 {
     font-size: 2.5vw;
   }
-
   .detail-price p,
   .detail-description p {
     font-size: 2vw;
