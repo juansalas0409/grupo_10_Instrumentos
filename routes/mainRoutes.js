@@ -6,7 +6,7 @@ const mainController = require('../controllers/mainControllers');
 
 routes.get('/', mainController.home);
 
-routes.get('/detalleDeProducto', mainController.detalleDeProducto);
+routes.get('/detail', mainController.detalleDeProducto);
 
 routes.get('/carrito', mainController.carrito);
 
