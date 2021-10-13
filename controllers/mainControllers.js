@@ -1,6 +1,6 @@
 const mainController = {
   home: (req, res) => {
-    return res.render("products/home");
+    return res.render("./products/home");
   },
   detalleDeProducto: (req, res) => {
     return res.render("./products/detalleDeProducto");
