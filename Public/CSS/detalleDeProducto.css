@@ -42,18 +42,18 @@ main {
   align-content: center;
 }
 
-.title {
+.detail-title {
   font-size: 22px;
   color: #727171;
   padding: 10px 0;
 }
 
-.product-image img {
+.detail-product-image img {
   width: 75vw;
   border-radius: 10px;
 }
 
-.price {
+.detail-price {
   padding: 20px 0;
 }
 
