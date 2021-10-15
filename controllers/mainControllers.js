@@ -1,19 +1,22 @@
 const mainController = {
   home: (req, res) => {
-    return res.render("products/home");
+    res.render("products/home");
   },
   detalleDeProducto: (req, res) => {
-    return res.render("./products/detalleDeProducto");
+    res.render("./products/detalleDeProducto");
   },
   carrito: (req, res) => {
-    return res.render("./products/carrito");
+    res.render("./products/carrito");
   },
   login: (req, res) => {
-    return res.render("./users/login");
+    res.render("./users/login");
   },
   register: (req, res) => {
-    return res.render("./users/registro");
+    res.render("./users/registro");
   },
+  search: (req, res) => {
+    res.render("./products/search")
+  }
 };
 
 module.exports = mainController;

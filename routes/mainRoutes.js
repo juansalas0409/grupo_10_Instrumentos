@@ -14,4 +14,6 @@ routes.get('/login', mainController.login);
 
 routes.get('/register', mainController.register);
 
+routes.get('/search', mainController.search)
+
 module.exports = routes
