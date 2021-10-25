@@ -4,7 +4,7 @@ const path = require("path");
 const productsFilPath = path.join(__dirname, "../data/productosDB.json");
 const products = JSON.parse(fs.readFileSync(productsFilPath, "utf-8"));
 
-const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+const toThousand =  n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const productsController = {
   products: (req, res) => {
@@ -13,13 +13,11 @@ const productsController = {
 
   detalleDeProducto: (req, res) => {
     let id = req.params.id;
+    console.log(id)
 
-    let product = products.find((product) => product.id == id);
-
-    res.render("./products/detalleDeProducto", {
-      product: product,
-      toThousand,
-    });
+    let product = products.find(element => element.id == id);
+    console.log(product)
+    res.render("./products/detalleDeProducto", {product, toThousand });
   },
 
   // create form
