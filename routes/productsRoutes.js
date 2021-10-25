@@ -4,7 +4,7 @@ const express =  require('express');
 const routes = express.Router();
 const multer = require('multer');
 const path = require('path');
-const { detalleDeProducto } = require('../controllers/productControllers.js');
+const productControllers= require('../controllers/productControllers.js');
 
 // Storage
 const storage = multer.diskStorage({
@@ -30,7 +30,7 @@ routes.get('/', productsController.products)
 routes.get('/detail/:id', productsController.detalleDeProducto);
 
 // edit
-routes.get('/edit/:id', productsController.edit);
+routes.get('/edit', productsController.edit);
 routes.patch('/edit/:id',productsController.update);
 
 // delete

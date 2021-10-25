@@ -44,7 +44,7 @@ const productsController = {
   edit: (req, res) => {
     let id = req.params.id;
     let productToEdit = products.find((product) => products.id == id);
-    res.render("", { productToEdit });
+    res.render("./products/edit", { productToEdit });
   },
 
   // update product

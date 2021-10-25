@@ -2,7 +2,6 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  /* border: 1px solid gray;*/
   font-family: "Roboto", sans-serif;
 }
 
@@ -569,6 +568,59 @@ p {
   font-weight: 100;
   margin-left: 16%;
   margin-top: 10px;
+}
+
+/* Edición de Productos */
+
+.edit-body {
+  background-color: #000000;
+}
+
+.edit-title {
+  font-size: 22px;
+  color: #727171;
+  padding: 10px;
+}
+
+.edit-form{
+  display: flex;
+  justify-content: center;
+  color: #727171;
+  height: 60vh;
+}
+
+.edit-items{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.edit-description{
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+  align-items: center;
+}
+
+.edit-submit{
+  display: flex;
+  justify-content: center;
+}
+
+.edit-submit button {
+  background-color: #000000;
+  border: 2px solid #727171;
+  border-radius: 10px;
+  font-size: 20px;
+  color: #727171;
+  width: max-content;
+  transition: all, 40ms;
+}
+
+.edit-submit button:active {
+  background-color: #727171;
+  color: #000000;
+  border: 2px solid #000000;
 }
 
 /*---MEDIA QUERI---*/

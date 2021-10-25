@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- head -->
+<%- include('../partials/head', {title: 'Edición'}); %>
+<!-- head -->
+
+<body class="edit-body">
+
+    <!-- Header -->
+    <%- include('../partials/header'); %>
+    <!-- Header -->
+
+    <div class="edit-main">
+        <div>
+            <div class="edit-title">
+                <h2>Estás editando </h2>
+                <!--  <productToEdit.name %> -->
+            </div>
+        </div>
+        <div class="edit-form">
+            <form class="edit-items" action="/products/edit?_method=PATCH" method="POST">
+                <!-- < productsToEdit.id %> -->
+                <div class="edit-name">
+                    <label for="name">Nombre del producto:</label>
+                    <input type="text" name="name" id="name" placeholder="Ej: Guitarra Fender">
+                </div>
+                <div class="edit-price">
+                    <label for="price">Precio del producto:</label>
+                    <input type="number" id="price" name="price" placeholder="1234">
+                </div>
+                <div class="edit-description">
+                    <label for="description">Descripción:</label>
+                    <textarea name="description" id="description"></textarea>
+                    <!-- < productToEdit.description %> -->
+                </div>
+                <div class="edit-submit">
+                    <button type="submit">Guardar</button>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <%- include('../partials/footer') %>
+    <!-- footer -->
+
+</body>
+</html>
