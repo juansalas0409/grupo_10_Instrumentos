@@ -7,17 +7,17 @@
         <%- include('../partials/header') %> 
         <!-- main -->
         <main class="detail-main">
-            <h3 class="detail-title">Guitarra Fender</h3>
+            <h3 class="detail-title"><%= product.name %> </h3>
             <div class="detail-product-image">
-                <img src= "images/guitar-fender.jpg" alt="guitar-fender.jpg">
+                <img src= "<%= product.image %> " alt="">
             </div>
             <div class="detail-price">
-                <h3>Precio</h3>
+                <h3><%= toThousand(product.price) %> </h3>
                 <br>
                 <p>Cuotas sin Interés</p>
             </div>
             <div class="detail-description">
-                <p>Descripción</p>
+                <p><%= product.description %> </p>
             </div>
             <div class="detail-buy">
                 <button name="buy" type="submit">
@@ -26,6 +26,10 @@
                     </h2>
                 </button>
             </div>
+            <a href="/products/edit/<%= product.id %> ">Editar Producto</a>
+            <form action="/products/delete/<%= product.id %>?_method=DELETE" method="post">
+                <button type="submit">Eliminar</button>
+            </form>
             <div class="whatsapp">
                 <i class="fab fa-whatsapp"></i>
             </div>
