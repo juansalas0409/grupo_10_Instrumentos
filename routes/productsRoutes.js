@@ -29,6 +29,10 @@ routes.get('/', productsController.products)
 // detail
 routes.get('/detail/:id', productsController.detalleDeProducto);
 
+// Create
+routes.get("/create", productsController.create );
+routes.post("/", productsController.store );
+
 // edit
 routes.get('/edit', productsController.edit);
 routes.patch('/edit/:id',productsController.update);

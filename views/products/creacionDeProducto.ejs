@@ -1,0 +1,45 @@
+<!------head----------->
+
+<%- include("../partials/head",{title: 'Creacion'}) %>
+
+<!-------------------->
+
+<body>
+
+<!------header----------->
+<%- include("../partials/header") %>
+<!-------------------->
+<main class= "main-crear">
+
+    <form action="/products" method="POST" >
+    <div class="crear-form-titulo">
+        Ingresar nuevo producto
+    </div>
+    <div class="crear-form-body">
+    <div class="create-form1">
+        <label for="nombre" class="crear-form-label">Nombre</label>
+        <input type="text" name="nombre" placeholder= "Ex. producto 1" class="crear-form-input">
+     </div> 
+     <div class="create-form1">
+        <label for="id" class="crear-form-label">Id</label>
+        <input type="text" name="id" placeholder= "Ex. 888888888-8" class="crear-form-input">
+     </div> 
+     <div class="create-form1">
+        <label for="precio" class="crear-form-label">Precio</label>
+        <input type="text" name="precio" placeholder="Ex. 100" class="crear-form-input">
+     </div>  
+     <div class="create-form1">
+        <label for="description" class="crear-form-label">Descripción</label>
+        <textarea name="description" id="" cols="30" rows="10" class="crear-form-input"></textarea>
+     </div>   
+     <div>
+     <button type="submit" class="crear-form-button">Guardar Producto</button>
+     </div>
+    </div> 
+</form>
+</main>
+<!------footer----------->
+<%- include("../partials/footer") %>
+<!-------------------->
+    
+</body>

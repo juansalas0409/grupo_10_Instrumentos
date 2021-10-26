@@ -359,7 +359,59 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
   padding-right: 5px;
 }
 /*------------------Fin Carrito-----------------------------------*/
+/* CREACION de PROD  */
 
+.main-crear {
+
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+.crear-form-titulo {
+  margin: 20px;
+  font-weight: bolder ;
+  font-size: 8vw;
+  border: 2px solid white;
+  padding: 5vw;
+  border-radius: 10px;
+
+}
+.crear-form-body {
+  margin-top: 10px;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+}
+
+.create-form1 {
+  display: flex;
+  flex-direction: column;
+  padding: 1vw 5vw;
+  width: 80%;
+  margin: auto;
+}
+
+.crear-form-label{
+  font-size: 4vw;
+}
+.crear-form-button {
+  margin: 4px;
+  padding: 6px;
+  font-size: 4vw;
+  border-radius: 10px;
+  font-weight: bolder;
+}
+.crear-form-input {
+  border-radius: 5px;
+  text-align: center;
+  padding: 5px;
+  margin: 2px;
+}
+
+/* ---Fin CREACION de PROD */
 /* DETALLE DE PRODUCTO */
 
 .detail-body {

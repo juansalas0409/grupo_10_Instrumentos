@@ -8,7 +8,7 @@ const toThousand =  n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const productsController = {
   products: (req, res) => {
-    res.render('', {products, toThousand})
+    res.render('./products/productList', {products, toThousand})
   },
 
   detalleDeProducto: (req, res) => {
@@ -22,15 +22,15 @@ const productsController = {
 
   // create form
   create: (req, res) => {
-    res.render("");
+    res.render("./products/creacionDeProducto");
   },
 
-  // store creation
+    // store creation
   store: (req, res) => {
     let newProduct = {
       id: products[products.length - 1].id + 1,
       ...req.body,
-      image: req.file.filename,
+      //image: req.file.filename,
     };
 
     products.push(newProduct);
