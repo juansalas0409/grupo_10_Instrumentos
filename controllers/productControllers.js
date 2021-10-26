@@ -8,7 +8,7 @@ const toThousand =  n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const productsController = {
   products: (req, res) => {
-    res.render('', {products, toThousand})
+    res.render('./products/productList', {products, toThousand})
   },
 
   detalleDeProducto: (req, res) => {
@@ -22,15 +22,15 @@ const productsController = {
 
   // create form
   create: (req, res) => {
-    res.render("");
+    res.render("./products/creacionDeProducto");
   },
 
-  // store creation
+    // store creation
   store: (req, res) => {
     let newProduct = {
       id: products[products.length - 1].id + 1,
       ...req.body,
-      image: req.file.filename,
+      //image: req.file.filename,
     };
 
     products.push(newProduct);
@@ -44,7 +44,7 @@ const productsController = {
   edit: (req, res) => {
     let id = req.params.id;
     let productToEdit = products.find((product) => products.id == id);
-    res.render("", { productToEdit });
+    res.render("./products/edit", { productToEdit });
   },
 
   // update product

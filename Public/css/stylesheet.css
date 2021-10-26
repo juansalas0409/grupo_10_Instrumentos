@@ -2,7 +2,6 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  /* border: 1px solid gray;*/
   font-family: "Roboto", sans-serif;
 }
 
@@ -360,7 +359,59 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
   padding-right: 5px;
 }
 /*------------------Fin Carrito-----------------------------------*/
+/* CREACION de PROD  */
 
+.main-crear {
+
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+.crear-form-titulo {
+  margin: 20px;
+  font-weight: bolder ;
+  font-size: 8vw;
+  border: 2px solid white;
+  padding: 5vw;
+  border-radius: 10px;
+
+}
+.crear-form-body {
+  margin-top: 10px;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+}
+
+.create-form1 {
+  display: flex;
+  flex-direction: column;
+  padding: 1vw 5vw;
+  width: 80%;
+  margin: auto;
+}
+
+.crear-form-label{
+  font-size: 4vw;
+}
+.crear-form-button {
+  margin: 4px;
+  padding: 6px;
+  font-size: 4vw;
+  border-radius: 10px;
+  font-weight: bolder;
+}
+.crear-form-input {
+  border-radius: 5px;
+  text-align: center;
+  padding: 5px;
+  margin: 2px;
+}
+
+/* ---Fin CREACION de PROD */
 /* DETALLE DE PRODUCTO */
 
 .detail-body {
@@ -569,6 +620,59 @@ p {
   font-weight: 100;
   margin-left: 16%;
   margin-top: 10px;
+}
+
+/* Edición de Productos */
+
+.edit-body {
+  background-color: #000000;
+}
+
+.edit-title {
+  font-size: 22px;
+  color: #727171;
+  padding: 10px;
+}
+
+.edit-form{
+  display: flex;
+  justify-content: center;
+  color: #727171;
+  height: 60vh;
+}
+
+.edit-items{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.edit-description{
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+  align-items: center;
+}
+
+.edit-submit{
+  display: flex;
+  justify-content: center;
+}
+
+.edit-submit button {
+  background-color: #000000;
+  border: 2px solid #727171;
+  border-radius: 10px;
+  font-size: 20px;
+  color: #727171;
+  width: max-content;
+  transition: all, 40ms;
+}
+
+.edit-submit button:active {
+  background-color: #727171;
+  color: #000000;
+  border: 2px solid #000000;
 }
 
 /*---MEDIA QUERI---*/
