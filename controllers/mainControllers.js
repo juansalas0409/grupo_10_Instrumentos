@@ -1,6 +1,6 @@
 const userController = {
   home: (req, res) => {
-    res.render("products/home", {productos: productos});
+    res.render("products/home");
   },
   login: (req, res) => {
     res.render("./users/login");
