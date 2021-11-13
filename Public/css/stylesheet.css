@@ -575,7 +575,7 @@ p {
   border-left: none;
   border-right: none;
   border-top: none;
-  background-color: black;
+  /* background-color: black; */
   color: #727171;
   width: 120%;
   margin-top: 50px;

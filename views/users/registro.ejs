@@ -1,33 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- head -->
-<%- include('../partials/head.ejs', {title: 'Registro'}); %>  
-<body>
-    <!-- header -->
-    <%- include('../partials/header') %>
+
+    <!-- head -->
+    <%- include('../partials/head.ejs', {title: 'Registro'}); %>
+
+    <body>
+
+        <!-- header -->
+        <%- include('../partials/header') %>
+
         <!-- main -->
         <main class="mainDeRegistro">
             <h2 class="tituloRegistro">Registrate</h2>
             <div class="formuRegistro">
-                <form action="/registro" method="POST">
 
-                    <input class=cuadroBlancoDatos type="text" name="nombre" id="nombre"
-                        placeholder="Nombre y Apellido">
-                    <input class=cuadroBlancoDatos type="text" name="nombre de usuario" id="nombre de usuario"
-                        minlength="4" placeholder="Nombre de usuario">
-                    <input class=cuadroBlancoDatos type="date" name="fecha" placeholder="Fecha De Nacimiento">
-                    <input class=cuadroBlancoDatos type="text" name="domicilio" id="domicilio" placeholder="Domicilio">
-                    <input class=cuadroBlancoDatos type="password" name="contrasena" id="contrasena" alt="strongPass"
-                        required minlength="4" placeholder="Contraseña"><br><br>
+            <form action="/register" method="POST" enctype="multipart/form-data" >
+                <label for="nombre">Nombre y Apellido</label>
+                <input class="cuadroBlancoDatos" type="text" name="nombre" id="nombre" placeholder="Nombre y Apellido" 
+                <% if(locals.oldData) { %>
+                    value = <%= oldData.nombre %> 
+                <% } %> />
 
+                    <% if (locals.errors && errors.nombre) { %>
+                        <div><%= errors.nombre.msg %></div>
+                    <% } %>
 
-                    <input type="submit" value="REGISTRAR" class="botonRegistroPa">
+                <label for="email">Correo Electrónico</label>
+                <input class="cuadroBlancoDatos" type="email" name="email" id="email" placeholder="Correo Electrónico" 
+                <% if(locals.oldData) { %>
+                    value = <%= oldData.email %>
+                <% } %> />
 
-                </form>
+                    <% if (locals.errors && errors.email) { %>
+                        <div><%= errors.email.msg %></div>
+                    <% } %>
+
+                <label for="nombreDeUsuario">Nombre de Usuario</label>
+                <input class="cuadroBlancoDatos" type="text" name="nombreDeUsuario" id="nombreDesuario" minlength="4" placeholder="Nombre de usuario" 
+                <% if(locals.oldData) { %>
+                    value = <%= oldData.nombreDeUsuario %>
+                <% } %> />
+
+                    <% if (locals.errors && errors.nombreDeUsuario) { %>
+                        <div><%= errors.nombreDeUsuario.msg %></div>
+                    <% } %>
+
+                <label for="fecha">Fecha de Nacimiento</label>
+                <input class="cuadroBlancoDatos" type="date" name="fecha" placeholder="Fecha De Nacimiento" 
+                <% if(locals.oldData) { %>
+                    value = <%= oldData.fecha %>
+                <% } %> />
+
+                    <% if (locals.errors && errors.fecha) { %>
+                        <div><%= errors.fecha.msg %></div>
+                    <% } %>
+
+                <label for="domicilio">Domicilio</label>
+                <input class="cuadroBlancoDatos" type="text" name="domicilio" id="domicilio" placeholder="Domicilio" 
+                <% if(locals.oldData) { %>
+                    value = <%= oldData.domicilio %>
+                <% } %> />
+
+                    <% if (locals.errors && errors.domicilio) { %>
+                        <div><%= errors.domicilio.msg %></div>
+                    <% } %>
+
+                <label for="contrasena">Contraseña</label>
+                <input class="cuadroBlancoDatos" type="password" name="contrasena" id="contrasena" alt="strongPass" minlength="4" placeholder="Contraseña" />
+
+                    <% if (locals.errors && errors.contrasena) { %>
+                        <div><%= errors.contrasena.msg %></div>
+                    <% } %>
+
+                <label for="avatar">Inserte una imagen</label>
+                <input type="file" class="cuadroBlancoDatos" name="avatar" />
+                    <% if (locals.errors && errors.avatar) { %>
+                        <div><%= errors.avatar.msg %></div>
+                    <% } %>
+                <br /><br />
+
+                <input type="submit" value="REGISTRAR" class="botonRegistroPa">
+
+            </form>
             </div>
         </main>
+
         <!-- footer -->
         <%- include('../partials/footer') %>
-</body>
 
+    </body>
 </html>

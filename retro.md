@@ -42,16 +42,16 @@ nada puntualmente
 <!-- Sprint 4 -->
 
 1. Comenzar a hacer.
-    Buscar horarios de reunion comodo para todos.
+    Buscar horarios de reunion comodo para trabajar todos.
 
 2. Hacer más.
     Repartirnos más organizadamente las tareas.
 
 3. Continuar haciendo.
-    Cumplir con las consignas en tiempo y forma; y comunicacion constante.
+    Comunicacion constante.
 
 4. Hacer menos.
-    Por el momento no tenemos nada para hacer menos.
+    Ser menos independientes.
 
 5. Dejar de hacer.
     Por el momento no tenemos nada para dejar de hacer.
