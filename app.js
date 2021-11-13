@@ -4,6 +4,7 @@ const path = require('path')
 const methodOverride = require('method-override')
 const mainRoutes = require('./routes/mainRoutes');
 const productRoutes = require('./routes/productsRoutes');
+const userRoutes = require('./routes/usersRoutes');
 
 const app = express();
 
@@ -20,6 +21,7 @@ app.set('view engine', 'ejs');
 // Routes
 app.use('/', mainRoutes);
 app.use('/products', productRoutes);
+app.use('/users', userRoutes);
 
 // Server
 app.listen(process.env.PORT || 3000, function(){console.log("Se esta corriendo el servidor en http://localhost:3000")});

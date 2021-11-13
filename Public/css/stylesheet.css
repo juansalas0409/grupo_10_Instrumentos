@@ -580,6 +580,9 @@ p {
   width: 120%;
   margin-top: 50px;
 }
+
+
+
 .tituloLogin {
   color: #727171;
   text-align: center;
@@ -625,7 +628,9 @@ p {
   margin-left: 16%;
   margin-top: 10px;
 }
-
+.err-rojo {
+  color: red
+}
 /* Edición de Productos */
 
 .edit-body {

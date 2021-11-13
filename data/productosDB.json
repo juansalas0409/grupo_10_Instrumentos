@@ -141,8 +141,20 @@
  },
  {
   "id": "353535",
-  "nombre": "Producto creacion test",
-  "precio": "50000",
+  "name": "Producto creacion test",
+  "price": "50000",
   "description": "producto testproducto testproducto testproducto testproducto testproducto testproducto testproducto testproducto testproducto testproducto testproducto testproducto testproducto testproducto testproducto testproducto testproducto testproducto testvproducto test"
+ },
+ {
+  "id": "123",
+  "name": "test9",
+  "price": "100",
+  "description": "testestest"
+ },
+ {
+  "id": "1231",
+  "name": "nuevo test",
+  "price": "4566",
+  "description": "adakdfalkdbva,mnfdsvbad"
  }
 ]

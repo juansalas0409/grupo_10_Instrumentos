@@ -1,182 +1,212 @@
 [
-  {
-    "id": 1,
-    "first_name": "Adelaide",
-    "last_name": "Wilderspoon",
-    "email": "awilderspoon0@cnet.com",
-    "password": "sNF6GUVzx",
-    "category": "user",
-    "image": "https://randomuser.me/api/portraits/women/1.jpg"
-  },
-  {
-    "id": 2,
-    "first_name": "Kacie",
-    "last_name": "Bertome",
-    "email": "kbertome1@economist.com",
-    "password": "EiPtS4gifwXD",
-    "category": "user",
-    "image": "https://randomuser.me/api/portraits/women/2.jpg"
-  },
-  {
-    "id": 3,
-    "first_name": "Boycie",
-    "last_name": "Tutill",
-    "email": "btutill2@dmoz.org",
-    "password": "GkbdSoF",
-    "category": "user",
-    "image": "https://randomuser.me/api/portraits/women/3.jpg"
-  },
-  {
-    "id": 4,
-    "first_name": "Dimitry",
-    "last_name": "Blamey",
-    "email": "dblamey3@ifeng.com",
-    "password": "huOpUgmVBTNJ",
-    "category": "user",
-    "image": "https://randomuser.me/api/portraits/men/1.jpg"
-  },
-  {
-    "id": 5,
-    "first_name": "Kariotta",
-    "last_name": "Neumann",
-    "email": "kneumann4@ning.com",
-    "password": "a21UboyMU",
-    "category": "user",
-    "image": "https://randomuser.me/api/portraits/women/4.jpg"
-  },
-  {
-    "id": 6,
-    "first_name": "Alvan",
-    "last_name": "Kivlehan",
-    "email": "akivlehan5@chron.com",
-    "password": "dLPZKcnh",
-    "category": "user",
-    "image": "https://randomuser.me/api/portraits/men/2.jpg"
-  },
-  {
-    "id": 7,
-    "first_name": "Aretha",
-    "last_name": "Rayner",
-    "email": "arayner6@shop-pro.jp",
-    "password": "xvk1mBtd32",
-    "category": "user",
-    "image": "https://randomuser.me/api/portraits/women/5.jpg"
-  },
-  {
-    "id": 8,
-    "first_name": "Lorain",
-    "last_name": "Seyfart",
-    "email": "lseyfart7@blogs.com",
-    "password": "GludPqLlqq",
-    "category": "user",
-    "image": "https://randomuser.me/api/portraits/women/6.jpg"
-  },
-  {
-    "id": 9,
-    "first_name": "Britt",
-    "last_name": "Plaster",
-    "email": "bplaster8@netvibes.com",
-    "password": "afTlMYZv9l",
-    "category": "user",
-    "image": "https://randomuser.me/api/portraits/women/7.jpg"
-  },
-  {
-    "id": 10,
-    "first_name": "Judi",
-    "last_name": "De Haven",
-    "email": "jdehaven9@newyorker.com",
-    "password": "30V8DXO3H",
-    "category": "user",
-    "image": "https://randomuser.me/api/portraits/women/8.jpg"
-  },
-  {
-    "id": 11,
-    "first_name": "Conchita",
-    "last_name": "Hyndley",
-    "email": "chyndleya@phoca.cz",
-    "password": "M74hCRPxBt3",
-    "category": "user",
-    "image": "https://randomuser.me/api/portraits/women/9.jpg"
-  },
-  {
-    "id": 12,
-    "first_name": "Gilemette",
-    "last_name": "Kingsnorth",
-    "email": "gkingsnorthb@deliciousdays.com",
-    "password": "VuY7FGlCMjp",
-    "category": "user",
-    "image": "https://randomuser.me/api/portraits/women/10.jpg"
-  },
-  {
-    "id": 13,
-    "first_name": "Raphael",
-    "last_name": "Getley",
-    "email": "rgetleyc@godaddy.com",
-    "password": "AU6tnf0kH",
-    "category": "user",
-    "image": "https://randomuser.me/api/portraits/men/3.jpg"
-  },
-  {
-    "id": 14,
-    "first_name": "Alene",
-    "last_name": "Buckston",
-    "email": "abuckstond@weibo.com",
-    "password": "XXeYSGUu",
-    "category": "user",
-    "image": "https://randomuser.me/api/portraits/women/11.jpg"
-  },
-  {
-    "id": 15,
-    "first_name": "Kristoffer",
-    "last_name": "Betun",
-    "email": "kbetune@biglobe.ne.jp",
-    "password": "yTZgStsiMJ",
-    "category": "user",
-    "image": "https://randomuser.me/api/portraits/men/4.jpg"
-  },
-  {
-    "id": 16,
-    "first_name": "Sidney",
-    "last_name": "de Banke",
-    "email": "sdebankef@nyu.edu",
-    "password": "uEaFvwWva5",
-    "category": "user",
-    "image": "https://randomuser.me/api/portraits/women/12.jpg"
-  },
-  {
-    "id": 17,
-    "first_name": "Raphael",
-    "last_name": "Le Surf",
-    "email": "rlesurfg@usnews.com",
-    "password": "V3Lis5SX",
-    "category": "user",
-    "image": "https://randomuser.me/api/portraits/men/5.jpg"
-  },
-  {
-    "id": 18,
-    "first_name": "Wallis",
-    "last_name": "Wason",
-    "email": "wwasonh@51.la",
-    "password": "1KTalbPO",
-    "category": "user",
-    "image": "https://randomuser.me/api/portraits/men/6.jpg"
-  },
-  {
-    "id": 19,
-    "first_name": "Vinita",
-    "last_name": "Gillbe",
-    "email": "vgillbei@smugmug.com",
-    "password": "UZNjc7Go28KH",
-    "category": "user",
-    "image": "https://randomuser.me/api/portraits/women/13.jpg"
-  },
-  {
-    "id": 20,
-    "first_name": "Ivonne",
-    "last_name": "D'Arrigo",
-    "email": "idarrigoj@myspace.com",
-    "password": "I4hX2RKsJoci",
-    "category": "user",
-    "image": "https://randomuser.me/api/portraits/women/14.jpg"
-  }
+ {
+  "id": 1,
+  "first_name": "Adelaide",
+  "last_name": "Wilderspoon",
+  "email": "awilderspoon0@cnet.com",
+  "password": "sNF6GUVzx",
+  "category": "user",
+  "image": "https://randomuser.me/api/portraits/women/1.jpg"
+ },
+ {
+  "id": 2,
+  "first_name": "Kacie",
+  "last_name": "Bertome",
+  "email": "kbertome1@economist.com",
+  "password": "EiPtS4gifwXD",
+  "category": "user",
+  "image": "https://randomuser.me/api/portraits/women/2.jpg"
+ },
+ {
+  "id": 3,
+  "first_name": "Boycie",
+  "last_name": "Tutill",
+  "email": "btutill2@dmoz.org",
+  "password": "GkbdSoF",
+  "category": "user",
+  "image": "https://randomuser.me/api/portraits/women/3.jpg"
+ },
+ {
+  "id": 4,
+  "first_name": "Dimitry",
+  "last_name": "Blamey",
+  "email": "dblamey3@ifeng.com",
+  "password": "huOpUgmVBTNJ",
+  "category": "user",
+  "image": "https://randomuser.me/api/portraits/men/1.jpg"
+ },
+ {
+  "id": 5,
+  "first_name": "Kariotta",
+  "last_name": "Neumann",
+  "email": "kneumann4@ning.com",
+  "password": "a21UboyMU",
+  "category": "user",
+  "image": "https://randomuser.me/api/portraits/women/4.jpg"
+ },
+ {
+  "id": 6,
+  "first_name": "Alvan",
+  "last_name": "Kivlehan",
+  "email": "akivlehan5@chron.com",
+  "password": "dLPZKcnh",
+  "category": "user",
+  "image": "https://randomuser.me/api/portraits/men/2.jpg"
+ },
+ {
+  "id": 7,
+  "first_name": "Aretha",
+  "last_name": "Rayner",
+  "email": "arayner6@shop-pro.jp",
+  "password": "xvk1mBtd32",
+  "category": "user",
+  "image": "https://randomuser.me/api/portraits/women/5.jpg"
+ },
+ {
+  "id": 8,
+  "first_name": "Lorain",
+  "last_name": "Seyfart",
+  "email": "lseyfart7@blogs.com",
+  "password": "GludPqLlqq",
+  "category": "user",
+  "image": "https://randomuser.me/api/portraits/women/6.jpg"
+ },
+ {
+  "id": 9,
+  "first_name": "Britt",
+  "last_name": "Plaster",
+  "email": "bplaster8@netvibes.com",
+  "password": "afTlMYZv9l",
+  "category": "user",
+  "image": "https://randomuser.me/api/portraits/women/7.jpg"
+ },
+ {
+  "id": 10,
+  "first_name": "Judi",
+  "last_name": "De Haven",
+  "email": "jdehaven9@newyorker.com",
+  "password": "30V8DXO3H",
+  "category": "user",
+  "image": "https://randomuser.me/api/portraits/women/8.jpg"
+ },
+ {
+  "id": 11,
+  "first_name": "Conchita",
+  "last_name": "Hyndley",
+  "email": "chyndleya@phoca.cz",
+  "password": "M74hCRPxBt3",
+  "category": "user",
+  "image": "https://randomuser.me/api/portraits/women/9.jpg"
+ },
+ {
+  "id": 12,
+  "first_name": "Gilemette",
+  "last_name": "Kingsnorth",
+  "email": "gkingsnorthb@deliciousdays.com",
+  "password": "VuY7FGlCMjp",
+  "category": "user",
+  "image": "https://randomuser.me/api/portraits/women/10.jpg"
+ },
+ {
+  "id": 13,
+  "first_name": "Raphael",
+  "last_name": "Getley",
+  "email": "rgetleyc@godaddy.com",
+  "password": "AU6tnf0kH",
+  "category": "user",
+  "image": "https://randomuser.me/api/portraits/men/3.jpg"
+ },
+ {
+  "id": 14,
+  "first_name": "Alene",
+  "last_name": "Buckston",
+  "email": "abuckstond@weibo.com",
+  "password": "XXeYSGUu",
+  "category": "user",
+  "image": "https://randomuser.me/api/portraits/women/11.jpg"
+ },
+ {
+  "id": 15,
+  "first_name": "Kristoffer",
+  "last_name": "Betun",
+  "email": "kbetune@biglobe.ne.jp",
+  "password": "yTZgStsiMJ",
+  "category": "user",
+  "image": "https://randomuser.me/api/portraits/men/4.jpg"
+ },
+ {
+  "id": 16,
+  "first_name": "Sidney",
+  "last_name": "de Banke",
+  "email": "sdebankef@nyu.edu",
+  "password": "uEaFvwWva5",
+  "category": "user",
+  "image": "https://randomuser.me/api/portraits/women/12.jpg"
+ },
+ {
+  "id": 17,
+  "first_name": "Raphael",
+  "last_name": "Le Surf",
+  "email": "rlesurfg@usnews.com",
+  "password": "V3Lis5SX",
+  "category": "user",
+  "image": "https://randomuser.me/api/portraits/men/5.jpg"
+ },
+ {
+  "id": 18,
+  "first_name": "Wallis",
+  "last_name": "Wason",
+  "email": "wwasonh@51.la",
+  "password": "1KTalbPO",
+  "category": "user",
+  "image": "https://randomuser.me/api/portraits/men/6.jpg"
+ },
+ {
+  "id": 19,
+  "first_name": "Vinita",
+  "last_name": "Gillbe",
+  "email": "vgillbei@smugmug.com",
+  "password": "UZNjc7Go28KH",
+  "category": "user",
+  "image": "https://randomuser.me/api/portraits/women/13.jpg"
+ },
+ {
+  "id": 20,
+  "first_name": "Ivonne",
+  "last_name": "D'Arrigo",
+  "email": "idarrigoj@myspace.com",
+  "password": "I4hX2RKsJoci",
+  "category": "user",
+  "image": "https://randomuser.me/api/portraits/women/14.jpg"
+ },
+ {
+  "id": 21,
+  "nombre": "Juan",
+  "apellido": "Migone test",
+  "email": "jjmigone@gmail.com",
+  "nombreDeUsuario": "qweq",
+  "fecha": "2021-11-15",
+  "categoria": "test",
+  "contrasena": "asdas",
+  "image": "1636781096728_img.png"
+ },
+ {
+  "id": 22,
+  "first_name": "test5",
+  "last_name": "migonetest",
+  "email": "jjmigone@hotmail.com",
+  "nombreDeUsuario": "asjghdkajs",
+  "image": "1636781890300_img.png"
+ },
+ {
+  "id": 23,
+  "first_name": "test10",
+  "last_name": "migtest",
+  "email": "jjmigone@hotmail.com",
+  "nombreDeUsuario": "testest",
+  "password": "123sdasd",
+  "category": "asdasd",
+  "fechaDeNac": "2021-11-23",
+  "image": "1636782057643_img.png"
+ }
 ]

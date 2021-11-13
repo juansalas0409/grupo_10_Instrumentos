@@ -14,15 +14,25 @@
             <h2 class="tituloRegistro">Registrate</h2>
             <div class="formuRegistro">
 
-            <form action="/register" method="POST" enctype="multipart/form-data" >
-                <label for="nombre">Nombre y Apellido</label>
-                <input class="cuadroBlancoDatos" type="text" name="nombre" id="nombre" placeholder="Nombre y Apellido" 
+            <form action="/users/register" method="POST" enctype="multipart/form-data" >
+                <label for="nombre">Nombre</label>
+                <input class="cuadroBlancoDatos" type="text" name="nombre" id="nombre" placeholder="Nombre" 
                 <% if(locals.oldData) { %>
                     value = <%= oldData.nombre %> 
                 <% } %> />
 
                     <% if (locals.errors && errors.nombre) { %>
-                        <div><%= errors.nombre.msg %></div>
+                        <div class= "err-rojo"><%= errors.nombre.msg %></div>
+                    <% } %>
+                
+                <label for="apellido">Apellido</label>
+                <input class="cuadroBlancoDatos" type="text" name="apellido" id="apellido" placeholder="apellido" 
+                <% if(locals.oldData) { %>
+                    value = <%= oldData.apellido %> 
+                <% } %> />
+
+                    <% if (locals.errors && errors.apellido) { %>
+                        <div class= "err-rojo"><%= errors.apellido.msg %></div>
                     <% } %>
 
                 <label for="email">Correo Electrónico</label>
@@ -32,7 +42,7 @@
                 <% } %> />
 
                     <% if (locals.errors && errors.email) { %>
-                        <div><%= errors.email.msg %></div>
+                        <div class= "err-rojo"><%= errors.email.msg %></div>
                     <% } %>
 
                 <label for="nombreDeUsuario">Nombre de Usuario</label>
@@ -42,40 +52,40 @@
                 <% } %> />
 
                     <% if (locals.errors && errors.nombreDeUsuario) { %>
-                        <div><%= errors.nombreDeUsuario.msg %></div>
+                        <div class= "err-rojo"><%= errors.nombreDeUsuario.msg %></div>
                     <% } %>
 
-                <label for="fecha">Fecha de Nacimiento</label>
+                <label for="fecha" class="label-register">Fecha de Nacimiento</label>
                 <input class="cuadroBlancoDatos" type="date" name="fecha" placeholder="Fecha De Nacimiento" 
                 <% if(locals.oldData) { %>
                     value = <%= oldData.fecha %>
                 <% } %> />
 
                     <% if (locals.errors && errors.fecha) { %>
-                        <div><%= errors.fecha.msg %></div>
+                        <div class= "err-rojo"><%= errors.fecha.msg %></div>
                     <% } %>
 
-                <label for="domicilio">Domicilio</label>
-                <input class="cuadroBlancoDatos" type="text" name="domicilio" id="domicilio" placeholder="Domicilio" 
+                <label for="categoria">Categoria</label>
+                <input class="cuadroBlancoDatos" type="text" name="categoria" id="categoria" placeholder="Categoria" 
                 <% if(locals.oldData) { %>
-                    value = <%= oldData.domicilio %>
+                    value = <%= oldData.categoria %>
                 <% } %> />
 
-                    <% if (locals.errors && errors.domicilio) { %>
-                        <div><%= errors.domicilio.msg %></div>
+                    <% if (locals.errors && errors.categoria) { %>
+                        <div class= "err-rojo"><%= errors.categoria.msg %></div>
                     <% } %>
 
                 <label for="contrasena">Contraseña</label>
                 <input class="cuadroBlancoDatos" type="password" name="contrasena" id="contrasena" alt="strongPass" minlength="4" placeholder="Contraseña" />
 
                     <% if (locals.errors && errors.contrasena) { %>
-                        <div><%= errors.contrasena.msg %></div>
+                        <div class= "err-rojo"><%= errors.contrasena.msg %></div>
                     <% } %>
 
                 <label for="avatar">Inserte una imagen</label>
                 <input type="file" class="cuadroBlancoDatos" name="avatar" />
                     <% if (locals.errors && errors.avatar) { %>
-                        <div><%= errors.avatar.msg %></div>
+                        <div class= "err-rojo"><%= errors.avatar.msg %></div>
                     <% } %>
                 <br /><br />
 
