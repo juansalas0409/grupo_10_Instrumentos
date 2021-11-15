@@ -51,6 +51,7 @@ const validations = [
 const userController = require('../controllers/userControllers');
 
 routes.get('/login', userController.login);
+routes.post('/login', userController.loginProcess);
 
 routes.get('/register', userController.register);
 routes.post('/register', uploadFile.single('avatar'), validations, userController.processRegister);

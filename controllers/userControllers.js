@@ -1,6 +1,9 @@
 const { validationResult } = require('express-validator')
 const fs = require("fs");
 const path = require("path");
+const bcryptjs = require('bcryptjs');
+
+const User = require('../models/User')
 
 const usersFilPath = path.join(__dirname, "../data/usersDB.json");
 const users = JSON.parse(fs.readFileSync(usersFilPath, "utf-8"));
@@ -10,9 +13,27 @@ const userController = {
   login: (req, res) => {
     res.render("./users/login");
   },
+
+  loginProcess: (req, res) => {
+    let userToLogin = User.findByField('email', req.body.email)
+
+    if(userToLogin){
+      
+    }
+
+    return res.render("./users/login", {
+      errors: {
+        email: {
+          msg: 'No se encuentra este email en nuestra base de datos'
+        }
+      }
+    })
+  },
+
   register: (req, res) => {
     res.render("./users/registro");
   },
+
   processRegister: (req, res) => {
     let resultValidation = validationResult(req)
 
@@ -23,30 +44,28 @@ const userController = {
       })
     }
 
-    else {
-        
-            let newUser = {
-              id: users[users.length - 1].id + 1,
-              first_name: req.body.nombre,
-              last_name: req.body.apellido,
-              email:req.body.email,
-              nombreDeUsuario: req.body.nombreDeUsuario,
-              password: req.body.contrasena,
-              category:  req.body.categoria,
-              fechaDeNac: req.body.fecha,
-              image: req.file.filename,
-            };
-        
-            users.push(newUser);
-        
-            fs.writeFileSync(usersFilPath, JSON.stringify(users, null, " "));
-        
-            res.redirect("/")
-    
-    
-  }
-  
+    let userInDB = User.findByField('email', req.body.email)
 
+    if(userInDB){
+      return res.render("./users/registro", {
+        errors: {
+          email:{
+            msg: 'Este email ya está registrado'
+          }
+        },
+        oldData: req.body
+      })
+    }
+
+    let userToCreate = {
+      ...req.body,
+      contrasena: bcryptjs.hashSync(req.body.contrasena, 10),
+      avatar: req.file.filename
+    }
+
+  let userCreated = User.create(userToCreate);
+  
+  res.redirect("/users/login");
 }};
 
 module.exports = userController;
