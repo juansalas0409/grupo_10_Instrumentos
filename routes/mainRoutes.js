@@ -5,6 +5,8 @@ const path = require('path')
 
 const mainController = require('../controllers/mainControllers');
 
+
+
 routes.get('/', mainController.home);
 
 module.exports = routes

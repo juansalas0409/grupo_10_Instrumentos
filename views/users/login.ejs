@@ -8,10 +8,14 @@
       <!-- main -->
       <main class="mainLogIn">
         <h2 class="tituloLogin">Iniciar Sesión</h2>
-        <form action="/home" method="POST">
+        <form action="/users/login" method="POST">
             <div class="formu">
-                <input class=cuadroBlancoDatos type="text" name="nombre" id="nombreDeUsuario" minlength="4" required
+                <input class=cuadroBlancoDatos type="email" name="email" id="email" minlength="4" required
                     placeholder="Email"><br>
+                    
+                    <% if(locals.errors && errors.email) {%>
+                        <div><%= errors.email.msg %></div> 
+                    <% } %> 
 
                 <input class=cuadroBlancoDatos type="password" name="contrasena" id="contrasena" alt="strongPass"
                     minlength="4" required placeholder="Contraseña"><br>

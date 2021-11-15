@@ -48,12 +48,29 @@ const validations = [
     })
 ]
 
-const userController = require('../controllers/userControllers');
+const guestMiddleware = function (req, res, next){
+    if(req.session.userLogged){
+        return res.redirect('/')
+    }
+    next();
+};
 
-routes.get('/login', userController.login);
+const authMiddleware = function (req, res, next){
+    if(!req.session.userLogged){
+        return res.redirect('/users/login')
+    }
+}
+
+const userController = require('../controllers/userControllers');
+const { Router } = require('express');
+
+routes.get('/login', guestMiddleware, userController.login);
 routes.post('/login', userController.loginProcess);
 
-routes.get('/register', userController.register);
+routes.get('/register', guestMiddleware, userController.register);
 routes.post('/register', uploadFile.single('avatar'), validations, userController.processRegister);
+
+routes.get('/profile', authMiddleware, userController.profile);
+Router.get('/logout/', userController.logout)
 
 module.exports = routes

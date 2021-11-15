@@ -18,7 +18,27 @@ const userController = {
     let userToLogin = User.findByField('email', req.body.email)
 
     if(userToLogin){
-      
+      let isOkThePassword = bcryptjs.compareSync(req.body.contrasena, userToLogin.contrasena)
+
+      if (isOkThePassword){
+        delete userToLogin.contrasena;
+
+        req.session.userLogged = userToLogin;
+
+        if(req.body.remember_user) {
+          res.cookie('email', req.body.email, {maxAge: (1000 * 60) * 60})
+        }
+        return res.redirect('/home');
+      }
+
+      return res.render("./users/login", {
+        errors: {
+          email: {
+            msg: 'Las credenciales son inválidas'
+          }
+        }
+      })
+
     }
 
     return res.render("./users/login", {
@@ -66,6 +86,20 @@ const userController = {
   let userCreated = User.create(userToCreate);
   
   res.redirect("/users/login");
-}};
+
+},
+
+  profile: (req, res) => {
+    return res.render('/main/home', {
+      user: req.session.userLogged
+    })
+  },
+
+  logout: (req, res) => {
+    req.session.destroy();
+    res.clearCooki('email')
+    return res.redirect('/')
+  }
+};
 
 module.exports = userController;
