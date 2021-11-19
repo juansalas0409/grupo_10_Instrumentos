@@ -59,6 +59,7 @@ const authMiddleware = function (req, res, next){
     if(!req.session.userLogged){
         return res.redirect('/users/login')
     }
+    next()
 }
 
 const userController = require('../controllers/userControllers');
