@@ -28,7 +28,7 @@ const userController = {
         if(req.body.remember_user) {
           res.cookie('email', req.body.email, {maxAge: (1000 * 60) * 60})
         }
-        return res.redirect('/home');
+        return res.redirect('/users/profile');
       }
 
       return res.render("./users/login", {
@@ -90,7 +90,7 @@ const userController = {
 },
 
   profile: (req, res) => {
-    return res.render('/main/home', {
+    return res.render('/users/profile.ejs', {
       user: req.session.userLogged
     })
   },

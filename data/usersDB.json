@@ -208,5 +208,15 @@
   "category": "asdasd",
   "fechaDeNac": "2021-11-23",
   "image": "1636782057643_img.png"
+ },
+ {
+  "nombre": "juan",
+  "apellido": "migone",
+  "email": "jjmigone@mailinator.com",
+  "nombreDeUsuario": "juantest123",
+  "fecha": "2021-11-15",
+  "categoria": "asasd",
+  "contrasena": "$2a$10$gwKPfM17L6m96KYO4O33YOMHLa5UM/6397WoDJ6JmJibmn8Fgvbea",
+  "avatar": "1637285236493_img.png"
  }
 ]
