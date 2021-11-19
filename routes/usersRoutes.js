@@ -71,6 +71,6 @@ routes.get('/register', guestMiddleware, userController.register);
 routes.post('/register', uploadFile.single('avatar'), validations, userController.processRegister);
 
 routes.get('/profile', authMiddleware, userController.profile);
-Router.get('/logout/', userController.logout)
+routes.get('/logout/', userController.logout)
 
 module.exports = routes
