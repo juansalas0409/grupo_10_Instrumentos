@@ -55,3 +55,20 @@ nada puntualmente
 
 5. Dejar de hacer.
     Por el momento no tenemos nada para dejar de hacer.
+
+<!-- Sprint 5 -->
+
+1. Comenzar a hacer.
+    Realizar las reuniones semanales para coordinar nuestro trabajo.
+
+2. Hacer más.
+    Coordinar el trabajo.
+
+3. Continuar haciendo.
+    Cumpliendo con las tareas a realizar.
+
+4. Hacer menos.
+    Trabajo individual.
+
+5. Dejar de hacer.
+    Por el momento no tenemos nada para dejar de hacer.

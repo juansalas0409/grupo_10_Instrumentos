@@ -16,7 +16,7 @@ const storage = multer.diskStorage({
     }
 });
 
-const upload = multer({storage: storage});
+const upload = multer({storage});
 
 // Controller
 const productsController = require('../controllers/productControllers.js');
@@ -31,7 +31,7 @@ routes.get('/detail/:id', productsController.detalleDeProducto);
 
 // Create
 routes.get("/create", productsController.create );
-routes.post("/", productsController.store );
+routes.post("/",upload.single('image'), productsController.store );
 
 // edit
 routes.get('/edit', productsController.edit);

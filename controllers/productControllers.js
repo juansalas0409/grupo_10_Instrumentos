@@ -31,9 +31,8 @@ const productsController = {
       id: products[products.length - 1].id + 1,
       name: req.body.nombre,
       price: req.body.precio,
-      description: req.body.description
-      
-      //image: req.file.filename,
+      description: req.body.description,
+      image: req.file.filename,
     };
 
     products.push(newProduct);
