@@ -24,7 +24,7 @@ const productsController = require('../controllers/productControllers.js');
 routes.get('/search', productsController.search)
 
 // all products
-routes.get('/:category', productsController.products)
+routes.get('/category/:category', productsController.products)
 
 // detail
 routes.get('/detail/:id', productsController.detalleDeProducto);

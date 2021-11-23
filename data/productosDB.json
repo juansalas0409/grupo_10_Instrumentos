@@ -1,10 +1,10 @@
 [
  {
-     "id":"01",
-     "name":" ",
-     "price":" ",
-     "description":" ",
-     "image": "1637611471686-img.jpg"
+  "id": "01",
+  "name": " ",
+  "price": " ",
+  "description": " ",
+  "image": "1637611471686-img.jpg"
  },
  {
   "id": "824644064-0",
@@ -165,13 +165,6 @@
   "category": "produccion",
   "description": "maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue eget semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id consequat in consequat ut nulla",
   "image": ""
- },
- {
-  "id": "353535",
-  "name": "Producto creacion test",
-  "price": "50000",
-  "category": "produccion",
-  "description": "producto testproducto testproducto testproducto testproducto testproducto testproducto testproducto testproducto testproducto testproducto testproducto testproducto testproducto testproducto testproducto testproducto testproducto testproducto testvproducto test"
  },
  {
   "id": "123",
