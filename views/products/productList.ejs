@@ -12,8 +12,23 @@
 <%- include("../partials/header") %>
 <!-------------------->
 <main>
-Esta es la pagina de producto "completar"
+<!-- Esta es la pagina de producto "completar" -->
 
+<h3 class="mainTitle_productList"><%= categoria %> </h3>
+<% for(let i = 0; i < prods.length; i++ ) { %>
+<a href="/products/detail/<%= prods[i].id %> " class="main_container_prodList">
+    <div class="containerProds_ProdList">
+        <div class="img_prodList">
+            <img src="/images/products/<%= prods[i].image %> " width="100px">
+        </div>
+        <div class="infoContainer_prodList">
+            <h4 class="title_ProdList"><%= prods[i].name %></h4>
+            <p class="price_prodList">$ <%= prods[i].price %> </p>
+            <p class="description_prodList"><%= prods[i].description %></p>
+        </div>
+    </div>
+<% } %>
+</a> 
 </main>
 <!------footer----------->
 <%- include("../partials/footer") %>

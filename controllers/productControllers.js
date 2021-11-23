@@ -8,7 +8,10 @@ const toThousand =  n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const productsController = {
   products: (req, res) => {
-    res.render('./products/productList', {products, toThousand})
+    let categoria = req.params.category
+    let prods = products.filter(elements => elements.category == categoria);
+    console.log(prods)
+    res.render('./products/productList', {products, categoria, prods, toThousand});  
   },
 
   detalleDeProducto: (req, res) => {
@@ -31,6 +34,7 @@ const productsController = {
       id: products[products.length - 1].id + 1,
       name: req.body.nombre,
       price: req.body.precio,
+      category: req.body.categorias,
       description: req.body.description,
       image: req.file.filename,
     };

@@ -11,114 +11,47 @@
     <main>
         <section class="home_main_Categorias">
           <div class="home_main_Categorias_Divs">
-            <a href="#" class="Home_Categ_Pianos"
+            <a href="/pianos" class="Home_Categ_Pianos"
               ><img src="/images/logo piano.png"
             /></a>
+            <% %> 
             <div class="Home_Detalle_categoria_Pianos">
               <div class="Home_cuadrado">
                 <i class="fas fa-square-full"></i>
               </div>
-              <h2>Pianos</h2>
+              <h2><%= categoria %> </h2>
               <!-- aca va la tarjeta del producto destacado -->
               <article class="Home_Tarjeta_producto_destacado">
-                <a href="#"><img src="/images/logo piano.png" /></a>
-                <a href="/products/detail/"><h4>Piano ABCD</h4></a>
-                <p>99.999$</p>
+                <a href="/products/detail/<%= selectedProd.id %> "><img src="/images/products/<%= selectedProd.image %>" /></a>
+                <a href="/products/detail/<%= selectedProd.id %>"><h4><%= selectedProd.name %> </h4></a>
+                <p>$ <%= selectedProd.price %> </p>
                 <p>20%OFF</p>
               </article>
               <!-- pongo una imagen, despues lo hago bien con el ejs -->
               <div class="Home_Boton_categoria">
-                <a href="#"><p>Ir a Categoría</p></a>
+                <a href="/products/<%= categoria %> "><p>Ir a Categoría</p></a>
               </div>
             </div>
           </div>
           <div class="home_main_Categorias_Divs">
-            <a href="#" class="Home_Categ_Guitarras"
+            <a href="/guitarras" class="Home_Categ_Guitarras"
               ><img src="/images/logo guitarra.png"
             /></a>
-            <div class="Home_Detalle_categoria_Guitarras">
-              <div class="Home_cuadrado">
-                <i class="fas fa-square-full"></i>
-              </div>
-              <h2>Guitarras</h2>
-              <!-- aca va la tarjeta del producto destacado -->
-              <article class="Home_Tarjeta_producto_destacado">
-                <a href="#"><img src="/images/logo guitarra.png" /></a>
-                <h4>guitarra ABCD</h4>
-                <p>99.999$</p>
-                <p>20%OFF</p>
-              </article>
-              <!-- pongo una imagen, despues lo hago bien con el ejs -->
-              <div class="Home_Boton_categoria">
-                <a href="#"><p>Ir a Categoría</p></a>
-              </div>
-            </div>
           </div>
           <div class="home_main_Categorias_Divs">
-            <a href="#" class="Home_Categ_Viento"
+            <a href="/viento" class="Home_Categ_Viento"
               ><img src="/images/logo viento.png"
             /></a>
-            <div class="Home_Detalle_categoria_Viento">
-              <div class="Home_cuadrado">
-                <i class="fas fa-square-full"></i>
-              </div>
-              <h2>Viento</h2>
-              <!-- aca va la tarjeta del producto destacado -->
-              <article class="Home_Tarjeta_producto_destacado">
-                <a href="#"><img src="/images/logo viento.png" /></a>
-                <h4>Saxofón ABCD</h4>
-                <p>99.999$</p>
-                <p>20%OFF</p>
-              </article>
-              <!-- pongo una imagen, despues lo hago bien con el ejs -->
-              <div class="Home_Boton_categoria">
-                <a href="#"><p>Ir a Categoría</p></a>
-              </div>
-            </div>
           </div>
           <div class="home_main_Categorias_Divs">
-            <a href="#" class="Home_Categ_Accesorios"
+            <a href="/accesorios" class="Home_Categ_Accesorios"
               ><img src="/images/logo accesorios.png"
             /></a>
-            <div class="Home_Detalle_categoria_Accesorios">
-              <div class="Home_cuadrado">
-                <i class="fas fa-square-full"></i>
-              </div>
-              <h2>Accesorios</h2>
-              <!-- aca va la tarjeta del producto destacado -->
-              <article class="Home_Tarjeta_producto_destacado">
-                <a href="#"><img src="/images/logo accesorios.png" /></a>
-                <h4>Amplificador ABCD</h4>
-                <p>99.999$</p>
-                <p>20%OFF</p>
-              </article>
-              <!-- pongo una imagen, despues lo hago bien con el ejs -->
-              <div class="Home_Boton_categoria">
-                <a href="#"><p>Ir a Categoría</p></a>
-              </div>
-            </div>
           </div>
           <div class="home_main_Categorias_Divs">
-            <a href="#" class="Home_Categ_Produccion"
+            <a href="/produccion" class="Home_Categ_Produccion"
               ><img src="/images/logo mic.png"
             /></a>
-            <div class="Home_Detalle_categoria_Produccion">
-              <div class="Home_cuadrado">
-                <i class="fas fa-square-full"></i>
-              </div>
-              <h2>Produccion</h2>
-              <!-- aca va la tarjeta del producto destacado -->
-              <article class="Home_Tarjeta_producto_destacado">
-                <a href="#"><img src="/images/logo mic.png" /></a>
-                <h4>Microfono ABCD</h4>
-                <p>99.999$</p>
-                <p>20%OFF</p>
-              </article>
-              <!-- pongo una imagen, despues lo hago bien con el ejs -->
-              <div class="Home_Boton_categoria">
-                <a href="#"><p>Ir a Categoría</p></a>
-              </div>
-            </div>
           </div>
         </section>
         <section class="Home_Detalle_categoria"></section>
@@ -164,7 +97,7 @@
                 </p>
               </div>
               <div class="Home_Boton_Ir_Categoria_Desktop">
-                <a href="#"><p>Ir a Categoría</p></a>
+                <a href="/products/viento"><p>Ir a Categoría</p></a>
               </div>
             </article>
             <!-- ACC. -->
