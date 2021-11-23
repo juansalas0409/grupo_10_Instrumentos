@@ -11,7 +11,8 @@ const mainController = {
     let categoria = req.params.category
     let prods = products.filter(elements => elements.category == categoria);
     var random_number = Math.floor(Math.random() * prods.length);
-    const selectedProd = prods[random_number]
+    const selectedProd = prods[random_number] 
+    
     res.render("main/home", {selectedProd, products, categoria, toThousand});
   }
 };

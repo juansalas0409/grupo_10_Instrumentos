@@ -2,19 +2,38 @@
     <a href="/"><img src="/images/Logo-astronauta.png" alt="Logo-tienda"></a>
     <nav class="header">
         <div class="menu-desktop">
-            <p>Nuestros Productos</p>
+            <a href="../products/create"><p>Publicá</p></a>
             <p>Nosotros</p>
             <p>Contáctanos</p>
         </div>
-        <form class="barraBusqueda" action="/search" method="GET">
+        <form class="barraBusqueda" action="/search/search" method="GET">
             <input type="search" name="search" id="search" placeholder="Realizá tu búsqueda">
             <button type="submit">
                 <i class="fas fa-search"></i>
             </button>
         </form>
-        <div class="bars">
-            <i class="fas fa-bars"></i>
-        </div>
+        <nav role="navigation">
+            <div id="menuToggle">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul id="menu">
+                    <a href="/">
+                        <li>Home <i class="fas fa-home"></i></li>
+                    </a>
+                    <a href="../users/login">
+                        <li>Ingresá <i class="fas fa-user-circle"></i></li>
+                    </a>
+                    <a href="../products/create">
+                        <li>Vendé <i class="fas fa-dollar-sign"></i></li>
+                    </a>
+                    <a href="/products/carrito">
+                        <li>Carrito <i class="fas fa-shopping-cart"></i></li>
+                    </a>
+                </ul>
+            </div>
+        </nav>
         <div class="navbar-icons">
             <a href="/users/login"><i class="fas fa-user-circle"></i></a>
             <a href="/products/carrito"><i class="fas fa-shopping-cart"></i></a>
