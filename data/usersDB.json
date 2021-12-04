@@ -218,5 +218,15 @@
   "categoria": "asasd",
   "contrasena": "$2a$10$gwKPfM17L6m96KYO4O33YOMHLa5UM/6397WoDJ6JmJibmn8Fgvbea",
   "avatar": "1637285236493_img.png"
+ },
+ {
+  "nombre": "Marco",
+  "apellido": "Checa",
+  "email": "AA@AA.COM",
+  "nombreDeUsuario": "marco",
+  "fecha": "1111-11-11",
+  "categoria": "2",
+  "contrasena": "$2a$10$8AsmKFN8MaAlE/oEe1S9fedfHK6QGKI.PpgC.krLmucUdyghMOwQW",
+  "avatar": "1638647808822_img.jpg"
  }
 ]
