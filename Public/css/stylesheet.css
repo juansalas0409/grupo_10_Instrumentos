@@ -770,6 +770,7 @@ p {
   padding-left: 20px;
   border-radius: 7px;
   color: #727171;
+  
 }
 .enviar {
   margin-top: 20px;
@@ -782,7 +783,8 @@ p {
   /* background-color: black; */
   color: #727171;
   width: 120%;
-  margin-top: 50px;
+  margin: 20px 0;
+  
 }
 
 
@@ -888,6 +890,37 @@ p {
   border: 2px solid #000000;
 }
 
+/* perfil de usuario */
+.info-user-profile{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.container-user-profile{
+  display: flex;
+  /* margin-top: 20vh;
+  margin-bottom: 30vh;*/
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2vh;
+
+}
+
+.profile-img img{
+  /* margin-right: 10px;
+  padding: 10px;*/
+  max-width: 70vw;
+  border-radius: 15px;
+}
+.user-edit-delete-profile{
+  background-color: rgb(221, 216, 216);
+  border: 2px solid #000000;
+  border-radius: 5px;
+  text-align: center;
+
+}
+
+
 /*---MEDIA QUERI---*/
 @media (min-width: 769px) {
   /* header */
@@ -936,6 +969,7 @@ p {
     justify-content: space-around;
   }
 
+
   .formu {
     /* margin-left: 37%;
     margin-right: 42%; */
@@ -952,10 +986,22 @@ p {
     display: none;
   }
   
-}
-/* LISTADO PRODUCTOS */
+  /* LISTADO PRODUCTOS */
+  
+  /* PERFIL USUARIO */
+  .container-user-profile{
+    flex-direction:row;
+    margin-bottom: 20vh;
+    margin-top: 10vw;
 
-/* PERFIL USUARIO */
+  }
+  .profile-img img{
+    margin-right: 10px;
+    padding: 10px;
+    max-width: 40vw;
+    border-radius: 30px;
+  }
+}
 
 @media (min-width: 425px) {
   /* HEADER */
@@ -1057,6 +1103,26 @@ p {
   #menuToggle{
     display: none;
   }
+  .profile-controls{
+    display: none;
+    background-color:rgb(221, 215, 215);
+    border: 1px solid #000;
+    padding:10px;
+    border-radius: 5px;
+    position: absolute;
+    right:10vw;
+    top:8vh
+  }
+  .profile-controls a {
+    color: #000000;
+    text-decoration: none;
+    list-style-type: none;
+  }
+  .nav-as:hover .profile-controls{
+    display: block;
+
+  }
+
   
   /* FOOTER */
 

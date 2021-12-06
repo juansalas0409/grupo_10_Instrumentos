@@ -97,7 +97,7 @@ const userController = {
 
   logout: (req, res) => {
     req.session.destroy();
-    res.clearCooki('email')
+    // res.clearCooki('email')
     return res.redirect('/')
   }
 };
