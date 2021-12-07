@@ -51,6 +51,7 @@ const userController = {
   },
 
   register: (req, res) => {
+    
     res.render("./users/registro");
   },
 
@@ -97,7 +98,7 @@ const userController = {
 
   logout: (req, res) => {
     req.session.destroy();
-    // res.clearCooki('email')
+    res.clearCookie('email')
     return res.redirect('/')
   }
 };
