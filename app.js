@@ -7,7 +7,8 @@ const productRoutes = require('./routes/productsRoutes');
 const userRoutes = require('./routes/usersRoutes');
 const session = require('express-session');
 const cookies = require('cookie-parser');
-const User = require('./models/User')
+const User = require('./models/User');
+const userLoggedMiddleware = require( "./middlewares/userLoggedMiddleware");
 
 const app = express();
 
@@ -22,25 +23,25 @@ app.use(session({
     saveUninitialized: false,
 }));
 app.use(cookies());
-
+app.use(userLoggedMiddleware);
 //crear una carpeta middleware
-app.use(function userLoggedMiddleware(req, res, next) {
-    res.locals.isLogged = false;
+// app.use(function userLoggedMiddleware(req, res, next) {
+//     res.locals.isLogged = false;
 
-	let emailInCookie = req.cookies.userEmail;
-	let userFromCookie = User.findByField('email', emailInCookie);
+// 	let emailInCookie = req.cookies.userEmail;
+// 	let userFromCookie = User.findByField('email', emailInCookie);
 
-	if (userFromCookie) {
-		req.session.userLogged = userFromCookie;
-	}
+// 	if (userFromCookie) {
+// 		req.session.userLogged = userFromCookie;
+// 	}
 
-	if (req.session.userLogged) {
-		res.locals.isLogged = true;
-		res.locals.userLogged = req.session.userLogged;
-	}
+// 	if (req.session.userLogged) {
+// 		res.locals.isLogged = true;
+// 		res.locals.userLogged = req.session.userLogged;
+// 	}
 
-	next();
-})
+// 	next();
+// })
 
 // Template Engine EJS
 app.set('views', path.join(__dirname, '/views'));
