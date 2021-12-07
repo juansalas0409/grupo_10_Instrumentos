@@ -26,6 +26,9 @@
                     <a href="../users/logout">
                         <li> Cerrar Sesión <i class="fas fa-user-circle"></i></li>
                     </a>
+                    <a href="../users/profile">
+                        <li> Mi Perfil <i class="fas fa-user-circle"></i></li>
+                    </a>
                     <a href="../products/create">
                         <li>Vendé <i class="fas fa-dollar-sign"></i></li>
                     </a>
@@ -56,8 +59,10 @@
             <a href="/users/profile"><i class="fas fa-user-circle profile-pic"></i></a>
             <% if (locals.isLogged){%>
             <ul class="profile-controls">
-                
-                
+                <a href="../users/profile">
+                    <li>Mi Perfil</li>
+                </a>
+                <br>
                 <a href="../users/logout">
                     <li>Cerrar Sesión</li>
                 </a>
