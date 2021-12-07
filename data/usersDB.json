@@ -228,5 +228,15 @@
   "categoria": "2",
   "contrasena": "$2a$10$8AsmKFN8MaAlE/oEe1S9fedfHK6QGKI.PpgC.krLmucUdyghMOwQW",
   "avatar": "1638647808822_img.jpg"
+ },
+ {
+  "nombre": "juan",
+  "apellido": "test",
+  "email": "jjtest@test.com",
+  "nombreDeUsuario": "juantest",
+  "fecha": "2021-12-15",
+  "categoria": "asdasd",
+  "contrasena": "$2a$10$7BopUCANf9xRH3XD4wBlL.ZQ7VrDjR9/fnwcdqDAFMTLkG6w1sAAq",
+  "avatar": "1638886942815_img.png"
  }
 ]

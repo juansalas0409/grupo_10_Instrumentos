@@ -2,6 +2,8 @@ const express =  require('express');
 const routes = express.Router();
 const multer = require('multer');
 const path = require('path')
+const guestMiddleware = require("../middlewares/guestMiddleware");
+const authMiddleware = require("../middlewares/authMiddleware");
 
 const { body } = require('express-validator')
 
@@ -47,20 +49,6 @@ const validations = [
         return true;
     })
 ]
-
-const guestMiddleware = function (req, res, next){
-    if(req.session.userLogged){
-        return res.redirect('/')
-    }
-    next();
-};
-
-const authMiddleware = function (req, res, next){
-    if(!req.session.userLogged){
-        return res.redirect('/users/login')
-    }
-    next()
-}
 
 const userController = require('../controllers/userControllers');
 const { Router } = require('express');
