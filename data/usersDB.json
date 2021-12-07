@@ -238,5 +238,25 @@
   "categoria": "asdasd",
   "contrasena": "$2a$10$7BopUCANf9xRH3XD4wBlL.ZQ7VrDjR9/fnwcdqDAFMTLkG6w1sAAq",
   "avatar": "1638886942815_img.png"
+ },
+ {
+  "nombre": "Juan",
+  "apellido": "migtest",
+  "email": "luna@test.com",
+  "nombreDeUsuario": "asdasd",
+  "fecha": "2021-12-09",
+  "categoria": "qwert",
+  "contrasena": "$2a$10$ZjruxLFti0gM0suYf5gGJOdiMGtyoHiIzpH5g3IJZIyRpi.oI5k0K",
+  "avatar": "1638892194601_img.jpg"
+ },
+ {
+  "nombre": "Juan",
+  "apellido": "migone",
+  "email": "luna@test2.com",
+  "nombreDeUsuario": "luna",
+  "fecha": "2021-12-23",
+  "categoria": "tera",
+  "contrasena": "$2a$10$olbtdLCFL1ekS3iGvjkYNOuOQefAhMw/8fgezQbNPCcy3TtpkblsC",
+  "avatar": "1638892241339_img.jpg"
  }
 ]
