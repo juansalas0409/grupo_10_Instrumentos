@@ -4,7 +4,7 @@ const express =  require('express');
 const routes = express.Router();
 const multer = require('multer');
 const path = require('path');
-const productControllers= require('../controllers/productControllers.js');
+const adminMiddleware = require('../middlewares/adminMiddleware');
 
 // Storage
 const storage = multer.diskStorage({
@@ -21,7 +21,7 @@ const upload = multer({storage});
 // Controller
 const productsController = require('../controllers/productControllers.js');
 
-routes.get('/search', productsController.search)
+routes.get('/search', adminMiddleware,  productsController.search)
 
 // all products
 routes.get('/category/:category', productsController.products)
@@ -30,15 +30,15 @@ routes.get('/category/:category', productsController.products)
 routes.get('/detail/:id', productsController.detalleDeProducto);
 
 // Create
-routes.get("/create", productsController.create );
+routes.get("/create",adminMiddleware, productsController.create );
 routes.post("/",upload.single('image'), productsController.store );
 
 // edit
-routes.get('/edit', productsController.edit);
+routes.get('/edit',adminMiddleware, productsController.edit);
 routes.patch('/edit/:id',productsController.update);
 
 // delete
-routes.delete('/delete/:id', productsController.delete);
+routes.delete('/delete/:id', adminMiddleware, productsController.delete);
 
 routes.get('/carrito', productsController.carrito);
 
