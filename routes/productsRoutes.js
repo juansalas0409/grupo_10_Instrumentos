@@ -34,7 +34,7 @@ routes.get("/create",adminMiddleware, productsController.create );
 routes.post("/",upload.single('image'), productsController.store );
 
 // edit
-routes.get('/edit',adminMiddleware, productsController.edit);
+routes.get('/edit/:id',adminMiddleware, productsController.edit);
 routes.patch('/edit/:id',productsController.update);
 
 // delete
