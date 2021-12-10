@@ -4,7 +4,7 @@
         <div class="menu-desktop">
             <a href="../products/create"><p>Publicá</p></a>
             <p>Nosotros</p>
-            <p>Contáctanos</p>
+            <a href="../contacto">Contáctanos</a>
         </div>
         <form class="barraBusqueda" action="/products/search" method="GET">
             <input type="search" name="search" id="search" placeholder="Realizá tu búsqueda">
@@ -53,7 +53,7 @@
         </nav>
         <div class="navbar-icons">
             <div class="nav-as">
-            <a href="/users/profile"><i class="fas fa-user-circle profile-pic"></i></a>
+            <a href="../users/profile"><i class="fas fa-user-circle profile-pic"></i></a>
             <% if (locals.isLogged){%>
             <ul class="profile-controls">
                 
@@ -72,7 +72,7 @@
                 </ul>
             <%} %>
             </div>
-            <a href="/products/carrito"><i class="fas fa-shopping-cart"></i></a>
+            <a href="../products/carrito"><i class="fas fa-shopping-cart"></i></a>
         </div>
     </nav>
 </header>

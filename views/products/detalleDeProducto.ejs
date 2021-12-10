@@ -20,11 +20,11 @@
                 <p><%= product.description %> </p>
             </div>
             <div class="detail-buy">
-                <button name="buy" type="submit">
+                <a href="/products/add/<%= product.id %> "  >
                     <h2>
                         Comprar
                     </h2>
-                </button>
+                </a>
             </div>
             <a href="/products/edit/<%= product.id %> ">Editar Producto</a>
             <form action="/products/delete/<%= product.id %>?_method=DELETE" method="post">

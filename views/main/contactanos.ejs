@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- head -->
+<%- include('../partials/head', {title: 'Inicio'}); %>  
+    <body class="body_home">
+    <!-- header -->
+
+    <%- include('../partials/header'); -%>
+    
+    <!-- main -->
+    <main class="main_contacto">
+        <% if(usuario){%>
+        <form class="contact">
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre"value="<%= usuario.nombre %> ">
+            <label for="mail">Mail</label>
+            <input type='mail' name="mail" value="<%= usuario.email%>">
+            <label for="Mensaje">Mensaje</label>
+            <textarea name="mensaje"type='textarea'rows='5' cols='50'>Escribe Aquí</textarea>
+            <button type="submit">ENVIAR</button>
+        </form>
+        <%}else{%>
+            <form class="contact">
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre">
+                <label for="mail">Mail</label>
+                <input type='mail' name="mail">
+                <label for="Mensaje">Mensaje</label>
+                <textarea name="mensaje"type='textarea'rows='5' cols='50'>Escribe Aquí</textarea>
+                <button type="submit">ENVIAR</button>
+            </form>
+        <% } %> 
+    </main>
+    <!-- footer -->
+    <%- include('../partials/footer.ejs') %> 
+</body>
+</html>

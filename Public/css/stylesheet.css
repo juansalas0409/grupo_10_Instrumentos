@@ -341,7 +341,20 @@ main {
 .Home_Desktop {
   display: none;
 }
-
+/* CONTACTO */
+.main_contacto{
+  padding: 5px;
+}
+.contact{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  margin: 10px 0;
+}
+.contact label {
+  margin-top: 10px;
+}
 
 /* PRODUCT LIST */
 .mainTitle_productList{
@@ -947,10 +960,11 @@ p {
     width: 70%;
   }
 
-  .menu-desktop p {
+  .menu-desktop a {
     color: #000000;
     font-weight: bold;
     font-size: 1.8vw;
+    text-decoration: none
   }
 
   .barraBusqueda {
