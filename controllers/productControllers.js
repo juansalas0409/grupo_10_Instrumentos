@@ -90,7 +90,14 @@ const productsController = {
   },
 
   search: (req, res) => {
-    res.render("./products/search");
+
+    let search = req.query.search;
+
+    console.log(search)
+
+    let productsToSearch = products.filter(product => product.name.toLowerCase().includes(search));
+    
+    res.render("./products/search", {products: productsToSearch, search, toThousand});
   },
 };
 

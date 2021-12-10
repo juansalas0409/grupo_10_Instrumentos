@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- head -->
+  <%- include('../partials/head.ejs', {title: 'Resultados de la búsqueda'}); %>
+  <body>
+    <!-- header -->
+    <%- include('../partials/header') %>
+
+    <!-- main -->
+    <main>
+      <div>
+        <div>
+          <h2>Resultados de la búsqueda: <%= search %></h2>
+        </div>
+        <% if(products.length > 0) { %>
+          <% products.forEach(function(product) { %>
+          <% let finalPrice = product.price %>
+          <div>
+            <section>
+              <a href="'products/detail/<%= product.id %>"></a>
+              <figure>
+                <img src="/images/products/<%= product.image %>" alt="<%= product.image %>">
+              </figure>
+              <article>
+                <h2>$<%= toThousand(finalPrice) %> </h2>
+                <p><%= product.name %></p>
+              </article>
+            </section>
+          </div>
+          <% }) %> 
+        <% }else{ %>
+          <div>
+            <h2>No hay productos que coincidan con esta búsqueda</h2>
+          </div>
+        <% } %> 
+      </div>
+    </main>
+
+    <!-- footer -->
+    <%- include('../partials/footer') %>
+  </body>
+</html>

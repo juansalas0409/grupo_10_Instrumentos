@@ -258,5 +258,15 @@
   "categoria": "tera",
   "contrasena": "$2a$10$olbtdLCFL1ekS3iGvjkYNOuOQefAhMw/8fgezQbNPCcy3TtpkblsC",
   "avatar": "1638892241339_img.jpg"
+ },
+ {
+  "nombre": "Juan",
+  "apellido": "Salas",
+  "email": "juan.salas0409@gmail.com",
+  "nombreDeUsuario": "juanprueba01",
+  "fecha": "1999-09-04",
+  "categoria": "user",
+  "contrasena": "$2a$10$BxCXYEP638q75rR3D9qdXesw4/ar.G7enSl6WLYOYjnO3ijCKnTry",
+  "avatar": "1638975775812_img.png"
  }
 ]
