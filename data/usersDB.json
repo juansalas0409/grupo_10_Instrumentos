@@ -225,7 +225,7 @@
   "email": "AA@AA.COM",
   "nombreDeUsuario": "marco",
   "fecha": "1111-11-11",
-  "categoria": "2",
+  "categoria": "admin",
   "contrasena": "$2a$10$8AsmKFN8MaAlE/oEe1S9fedfHK6QGKI.PpgC.krLmucUdyghMOwQW",
   "avatar": "1638647808822_img.jpg"
  },
@@ -268,5 +268,15 @@
   "categoria": "user",
   "contrasena": "$2a$10$BxCXYEP638q75rR3D9qdXesw4/ar.G7enSl6WLYOYjnO3ijCKnTry",
   "avatar": "1638975775812_img.png"
+ },
+ {
+  "nombre": "marcocc",
+  "apellido": "ccccc",
+  "email": "cc@cc.com",
+  "nombreDeUsuario": "cccc",
+  "fecha": "1111-11-11",
+  "categoria": "2",
+  "contrasena": "$2a$10$sgUoLvj4O0C2aJ.hCqQS2ecT0ialdKRjHRTqW.4KIcdmEa3TTDWmG",
+  "avatar": "1639098351773_img.jpg"
  }
 ]
