@@ -9,6 +9,7 @@ const session = require('express-session');
 const cookies = require('cookie-parser');
 const User = require('./models/User');
 const userLoggedMiddleware = require( "./middlewares/userLoggedMiddleware");
+const bd = require("./database/models")
 
 const app = express();
 
@@ -37,3 +38,5 @@ app.use('/users', userRoutes);
 
 // Server
 app.listen(process.env.PORT || 3000, function(){console.log("Se esta corriendo el servidor en http://localhost:3000")});
+
+console.log(bd.User);
