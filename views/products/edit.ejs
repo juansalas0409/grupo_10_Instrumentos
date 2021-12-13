@@ -14,24 +14,23 @@
     <div class="edit-main">
         <div>
             <div class="edit-title">
-                <h2>Estás editando </h2>
-                <!--  <productToEdit.name %> -->
+                <h2>Estás editando <%= productToEdit.product_name %></h2>
             </div>
         </div>
         <div class="edit-form">
-            <form class="edit-items" action="/products/edit?_method=PATCH" method="POST">
+            <form class="edit-items" action="/products/edit?_method=PATCH" method="POST" >
                 <!-- < productsToEdit.id %> -->
                 <div class="edit-name">
                     <label for="name">Nombre del producto:</label>
-                    <input type="text" name="name" id="name" placeholder="Ej: Guitarra Fender">
+                    <input type="text" name="name" id="name" placeholder="Ej: Guitarra Fender" value='<%= productToEdit.product_name %> '>
                 </div>
                 <div class="edit-price">
                     <label for="price">Precio del producto:</label>
-                    <input type="number" id="price" name="price" placeholder="1234">
+                    <input type="number" id="price" name="price" placeholder="1234" value='<%= productToEdit.price %> '>
                 </div>
                 <div class="edit-description">
                     <label for="description">Descripción:</label>
-                    <textarea name="description" id="description"></textarea>
+                    <textarea name="description" id="description"value='<%= productToEdit.description %> '></textarea>
                     <!-- < productToEdit.description %> -->
                 </div>
                 <div class="edit-submit">

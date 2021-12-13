@@ -11,7 +11,7 @@
     <main>
         <section class="home_main_Categorias">
           <div class="home_main_Categorias_Divs">
-            <a href="/pianos" class="Home_Categ_Pianos"
+            <a href="/1" class="Home_Categ_Pianos"
               ><img src="/images/logo piano.png"
             /></a>
             <% %> 
@@ -19,37 +19,37 @@
               <div class="Home_cuadrado">
                 <i class="fas fa-square-full"></i>
               </div>
-              <h2><%= categoria %> </h2>
+              <h2><%= categoria.category_name %></h2>
               <!-- aca va la tarjeta del producto destacado -->
               <article class="Home_Tarjeta_producto_destacado">
                 <a href="/products/detail/<%= selectedProd.id %> "><img src="/images/products/<%= selectedProd.image %>" /></a>
-                <a href="/products/detail/<%= selectedProd.id %>"><h4><%= selectedProd.name %> </h4></a>
+                <a href="/products/detail/<%= selectedProd.id %>"><h4><%= selectedProd.product_name %> </h4></a>
                 <p>$ <%= selectedProd.price %> </p>
                 <p>20%OFF</p>
               </article>
               <!-- pongo una imagen, despues lo hago bien con el ejs -->
               <div class="Home_Boton_categoria">
-                <a href="/products/category/<%= categoria %> "><p>Ir a Categoría</p></a>
+                <a href="/products/category/<%= categoria.id %> "><p>Ir a Categoría</p></a>
               </div>
             </div>
           </div>
           <div class="home_main_Categorias_Divs">
-            <a href="/guitarras" class="Home_Categ_Guitarras"
+            <a href="/2" class="Home_Categ_Guitarras"
               ><img src="/images/logo guitarra.png"
             /></a>
           </div>
           <div class="home_main_Categorias_Divs">
-            <a href="/viento" class="Home_Categ_Viento"
+            <a href="/3" class="Home_Categ_Viento"
               ><img src="/images/logo viento.png"
             /></a>
           </div>
           <div class="home_main_Categorias_Divs">
-            <a href="/accesorios" class="Home_Categ_Accesorios"
+            <a href="/4" class="Home_Categ_Accesorios"
               ><img src="/images/logo accesorios.png"
             /></a>
           </div>
           <div class="home_main_Categorias_Divs">
-            <a href="/produccion" class="Home_Categ_Produccion"
+            <a href="/5" class="Home_Categ_Produccion"
               ><img src="/images/logo mic.png"
             /></a>
           </div>
@@ -70,7 +70,7 @@
                 </p>
               </div>
               <div class="Home_Boton_Ir_Categoria_Desktop">
-                <a href="/products/category/pianos"><p>Ir a Categoría</p></a>
+                <a href="/products/category/1"><p>Ir a Categoría</p></a>
               </div>
             </article>
             <!-- GUITARRA -->
@@ -84,7 +84,7 @@
                 </p>
               </div>
               <div class="Home_Boton_Ir_Categoria_Desktop">
-                <a href="/products/category/guitarras"><p>Ir a Categoría</p></a>
+                <a href="/products/category/2"><p>Ir a Categoría</p></a>
               </div>
             </article>
             <!-- INST. VIENTO -->
@@ -98,7 +98,7 @@
                 </p>
               </div>
               <div class="Home_Boton_Ir_Categoria_Desktop">
-                <a href="/products/category/viento"><p>Ir a Categoría</p></a>
+                <a href="/products/category/3"><p>Ir a Categoría</p></a>
               </div>
             </article>
             <!-- ACC. -->
@@ -112,7 +112,7 @@
                 </p>
               </div>
               <div class="Home_Boton_Ir_Categoria_Desktop">
-                <a href="/products/category/accesorios"><p>Ir a Categoría</p></a>
+                <a href="/products/category/4"><p>Ir a Categoría</p></a>
               </div>
             </article>
             <!-- PROD. -->
@@ -126,7 +126,7 @@
                 </p>
               </div>
               <div class="Home_Boton_Ir_Categoria_Desktop">
-                <a href="/products/category/produccion"><p>Ir a Categoría</p></a>
+                <a href="/products/category/5"><p>Ir a Categoría</p></a>
               </div>
             </article>
           </div>

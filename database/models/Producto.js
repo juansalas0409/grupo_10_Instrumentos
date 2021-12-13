@@ -22,7 +22,7 @@ let cols={
 
 }
 let config = {
-    tablename: 'products',
+    tableName: 'products',
     timestamps: false
 }
     
@@ -36,7 +36,7 @@ Producto.associate= function(models){
         timestamps: false
     })
     Producto.belongsTo(models.ProductCategory,{
-        as:'productsCategories',
+        as:'categoria',
         foreignKey: 'product_category'
     })
 }

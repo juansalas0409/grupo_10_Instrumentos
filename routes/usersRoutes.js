@@ -28,13 +28,13 @@ const uploadFile = multer({storage});
 const userController = require('../controllers/userControllers');
 const { Router } = require('express');
 
-routes.get('/login', guestMiddleware, userController.login);
-routes.post('/login', userController.loginProcess);
+// routes.get('/login', guestMiddleware, userController.login);
+// routes.post('/login', userController.loginProcess);
 
-routes.get('/register', guestMiddleware, userController.register);
-routes.post('/register', uploadFile.single('avatar'), validations, userController.processRegister);
+// routes.get('/register', guestMiddleware, userController.register);
+// routes.post('/register', uploadFile.single('avatar'), validations, userController.processRegister);
 
-routes.get('/profile', authMiddleware, userController.profile);
-routes.get('/logout/', userController.logout)
+// routes.get('/profile', authMiddleware, userController.profile);
+// routes.get('/logout/', userController.logout)
 
 module.exports = routes
