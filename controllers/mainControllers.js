@@ -2,18 +2,12 @@ const fs = require("fs");
 const path = require("path");
 const db = require("../database/models");
 
-// const productsFilPath = path.join(__dirname, "../data/productosDB.json");
-// const products = JSON.parse(fs.readFileSync(productsFilPath, "utf-8"));
-
-// const usersFilPath = path.join(__dirname, "../data/usersDB.json");
-// const users = JSON.parse(fs.readFileSync(usersFilPath, "utf-8"));
-
 const toThousand =  n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const mainController = {
   home: (req, res) => {
     
-    if(req.params.id === null){
+    if(!req.params.category){
       db.ProductCategory.findByPk(1, {include:[{association: 'productos'}]})
     .then(function (categoria) {
         var random_number = Math.floor(Math.random() * categoria.productos.length);

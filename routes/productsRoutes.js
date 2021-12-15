@@ -21,7 +21,7 @@ const upload = multer({storage});
 // Controller
 const productsController = require('../controllers/productControllers.js');
 
-// routes.get('/search', adminMiddleware,  productsController.search)
+routes.get('/search',  productsController.search)//adminMiddleware, 
 
 // all products
 routes.get('/category/:category', productsController.products)
@@ -38,8 +38,8 @@ routes.get('/edit/:id', productsController.edit);//añadir el adminMiddleware,
 routes.patch('/edit/:id',productsController.update);
 
 // delete
-// routes.delete('/delete/:id', adminMiddleware, productsController.delete);
+routes.delete('/delete/:id', productsController.delete); //adminMiddleware,
 
-// routes.get('/carrito', productsController.carrito);
+routes.get('/carrito', productsController.carrito);
 
 module.exports = routes

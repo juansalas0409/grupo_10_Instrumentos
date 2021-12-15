@@ -1,11 +1,9 @@
 const fs = require("fs");
 const path = require("path");
-
-// const productsFilPath = path.join(__dirname, "../data/productosDB.json");
-// const products = JSON.parse(fs.readFileSync(productsFilPath, "utf-8"));
-
+const { brotliDecompressSync } = require("zlib");
 const toThousand =  n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const db = require('../database/models')
+const Op = db.Sequelize.Op
 
 const productsController = {
   products: (req, res) => {
@@ -50,25 +48,22 @@ const productsController = {
   // update product
   update: (req, res) => {
     db.Producto.update({
-      product_name: req.body.nombre,
-      price: req.body.precio,
+      product_name: req.body.name,
+      price: req.body.price,
       product_category: req.body.categorias,
       description: req.body.description,
     },
     {
       where:{id: req.params.id}
     })
-    res.redirect('/1');
+    res.redirect('/');
   },
 
   // delete
   delete: (req, res) => {
-    let id = req.params.id;
-
-    let finalProducts = products.filter((product) => product.id != id);
-
-    fs.writeFileSync(productsFilPath, JSON.stringify(finalProducts, null, " "));
-
+    db.Producto.destroy({
+      where:{id:req.params.id}
+      })
     res.redirect("/");
   },
 
@@ -81,10 +76,15 @@ const productsController = {
     let search = req.query.search;
 
     console.log(search)
+    db.Producto.findAll(
+      {
+        where:{product_name: {[Op.like]:'%'+search+'%'}}
+      }
+    ).then(function(products){
+      res.render("./products/search", {products, search, toThousand});
 
-    let productsToSearch = products.filter(product => product.name.toLowerCase().includes(search));
+    })
     
-    res.render("./products/search", {products: productsToSearch, search, toThousand});
   },
 };
 

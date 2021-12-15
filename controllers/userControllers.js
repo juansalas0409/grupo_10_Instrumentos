@@ -1,106 +1,112 @@
-const { validationResult } = require('express-validator')
+const { validationResult } = require("express-validator");
 const fs = require("fs");
 const path = require("path");
-const bcryptjs = require('bcryptjs');
-
-// const User = require('../models/User')
-
-// const usersFilPath = path.join(__dirname, "../data/usersDB.json");
-// const users = JSON.parse(fs.readFileSync(usersFilPath, "utf-8"));
+const bcryptjs = require("bcryptjs");
+const db = require("../database/models");
+const Op = db.Sequelize.Op;
 
 const userController = {
-  
   login: (req, res) => {
     res.render("./users/login");
   },
 
   loginProcess: (req, res) => {
-    let userToLogin = User.findByField('email', req.body.email)
-
-    if(userToLogin){
-      let isOkThePassword = bcryptjs.compareSync(req.body.contrasena, userToLogin.contrasena)
-
-      if (isOkThePassword){
-        delete userToLogin.contrasena;
-
-        req.session.userLogged = userToLogin;
-
-        if(req.body.remember_user) {
-          res.cookie('email', req.body.email, {maxAge: (1000 * 60) * 60})
+    db.User.findOne({
+      where: {
+        email: req.body.email,
+      },
+    }).then((userToLogin) => {
+      if (userToLogin) {
+        let isOkThePassword = bcryptjs.compareSync(
+          req.body.contrasena,
+          userToLogin.password
+        );
+        if (isOkThePassword) {
+          delete userToLogin.password;
+          req.session.userLogged = userToLogin;
+          if (req.body.remember_user) {
+            res.cookie("email", req.body.email, { maxAge: 1000 * 60 * 60 });
+            return res.redirect("/users/profile");
+          }
         }
-        return res.redirect('/users/profile');
+        return res.render("./users/login", {
+          errors: {
+            email: {
+              msg: "Las credenciales son inválidas",
+            },
+          },
+        });
       }
-
       return res.render("./users/login", {
         errors: {
           email: {
-            msg: 'Las credenciales son inválidas'
-          }
-        }
-      })
-
-    }
-
-    return res.render("./users/login", {
-      errors: {
-        email: {
-          msg: 'No se encuentra este email en nuestra base de datos'
-        }
-      }
-    })
+            msg: "No se encuentra este email en nuestra base de datos",
+          },
+        },
+      });
+    });
   },
 
   register: (req, res) => {
-    
     res.render("./users/registro");
   },
 
   processRegister: (req, res) => {
-    let resultValidation = validationResult(req)
+    let resultValidation = validationResult(req);
 
     if (resultValidation.errors.length > 0) {
       return res.render("./users/registro", {
         errors: resultValidation.mapped(),
-        oldData: req.body
-      })
+        oldData: req.body,
+      });
     }
-
-    let userInDB = User.findByField('email', req.body.email)
-
-    if(userInDB){
-      return res.render("./users/registro", {
-        errors: {
-          email:{
-            msg: 'Este email ya está registrado'
-          }
-        },
-        oldData: req.body
-      })
-    }
-
-    let userToCreate = {
-      ...req.body,
-      contrasena: bcryptjs.hashSync(req.body.contrasena, 10),
-      avatar: req.file.filename
-    }
-
-  let userCreated = User.create(userToCreate);
+    let emailreg = req.body.email
+    db.User.findOne({
+      where: {
+        email: emailreg,
+      },
+    }).then(userInDB=>{
+      if (userInDB) {
+        return res.render("./users/registro", {
+          errors: {
+            email: {
+              msg: "Este email ya está registrado",
+            },
+          },
+          oldData: req.body,
+        });
+      }
   
-  res.redirect("/users/login");
+      db.User.create({
+        first_name: req.body.nombre,
+        last_name: req.body.apellido,
+        email: req.body.email,
+        username: req.body.nombreDeUsuario,
+        birth_date: req.body.fecha,
+        category_id: req.body.categoria,
+        password: bcryptjs.hashSync(req.body.contrasena, 10),
+        avatar: req.file.filename,
+      })
+    res.redirect("/users/login");
+    }  
+    ).catch(function(errors){
+      res.json(errors);
+    })},
 
-},
+
+
 
   profile: (req, res) => {
-    return res.render('./users/profile', {
-      user: req.session.userLogged
-    })
+    return res.render("./users/profile", {
+      user: req.session.userLogged,
+    });
   },
 
   logout: (req, res) => {
     req.session.destroy();
-    res.clearCookie('email')
-    return res.redirect('/')
-  }
+    res.clearCookie("email");
+    return res.redirect("/");
+  },
 };
 
 module.exports = userController;
