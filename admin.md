@@ -1,3 +1,3 @@
 ADMINISTRADOR
-email: AA@AA.com
+email: AA@AA.COM
 password: hola
