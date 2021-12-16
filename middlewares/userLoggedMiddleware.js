@@ -1,4 +1,6 @@
-const User = require ("../models/User")
+// const User = require ("../models/User")
+
+const db = require('../database/models')
 
 function userLoggedMiddleware (req, res, next) {
     // ---para la barra de navegacion segun tipo de usuario --
@@ -11,7 +13,8 @@ function userLoggedMiddleware (req, res, next) {
         }
         // -- para el logueo automatico con cookies--
         let emailInCookie = req.cookies.email
-        let userFromCookie = User.findByField("email", emailInCookie)
+        // let userFromCookie = User.findByField("email", emailInCookie)
+        let userFromCookie = db.User.findOne({where: { email: emailInCookie} });
        
 
         if(userFromCookie) {
