@@ -26,8 +26,8 @@ const userController = {
           req.session.userLogged = userToLogin;
           if (req.body.remember_user) {
             res.cookie("email", req.body.email, { maxAge: 1000 * 60 * 60 });
-            return res.redirect("/users/profile");
-          }
+                      }
+          return res.redirect("/users/profile");
         }
         return res.render("./users/login", {
           errors: {
@@ -51,16 +51,21 @@ const userController = {
     res.render("./users/registro");
   },
 
-  processRegister: (req, res) => {
-    let resultValidation = validationResult(req);
+  // processRegister2: function(req, res){ res.send(req.body) },
 
-    if (resultValidation.errors.length > 0) {
-      return res.render("./users/registro", {
-        errors: resultValidation.mapped(),
-        oldData: req.body,
-      });
-    }
+  processRegister: (req, res) => {
+       let resultValidation = validationResult(req);
+       console.log(resultValidation)
+       console.log(req.body.nombre)
+
+       if (resultValidation.errors.length > 0) {
+         return res.render("./users/registro", {
+          errors: resultValidation.mapped(),
+          oldData: req.body
+         });
+      }
     let emailreg = req.body.email
+        
     db.User.findOne({
       where: {
         email: emailreg,
@@ -82,15 +87,17 @@ const userController = {
         last_name: req.body.apellido,
         email: req.body.email,
         username: req.body.nombreDeUsuario,
-        birth_date: req.body.fecha,
-        category_id: req.body.categoria,
+        brith_date: req.body.fecha,
+        category_id: 1,
         password: bcryptjs.hashSync(req.body.contrasena, 10),
-        avatar: req.file.filename,
+        avatar: req.file.filename
       })
     res.redirect("/users/login");
     }  
     ).catch(function(errors){
-      res.json(errors);
+      
+     res.json(errors);
+      
     })},
 
 

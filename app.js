@@ -8,7 +8,7 @@ const userRoutes = require('./routes/usersRoutes');
 const session = require('express-session');
 const cookies = require('cookie-parser');
 const User = require('./models/User');
-// const userLoggedMiddleware = require( "./middlewares/userLoggedMiddleware");
+const userLoggedMiddleware = require( "./middlewares/userLoggedMiddleware");
 const bd = require("./database/models")
 
 const app = express();
@@ -24,7 +24,7 @@ app.use(session({
     saveUninitialized: false,
 }));
 app.use(cookies());
-// app.use(userLoggedMiddleware);
+app.use(userLoggedMiddleware);
 
 
 // Template Engine EJS

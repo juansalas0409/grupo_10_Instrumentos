@@ -13,8 +13,8 @@ function userLoggedMiddleware (req, res, next) {
         }
         // -- para el logueo automatico con cookies--
         let emailInCookie = req.cookies.email
-        // let userFromCookie = User.findByField("email", emailInCookie)
-        let userFromCookie = db.User.findOne({where: { email: emailInCookie} });
+        //let userFromCookie = User.findByField("email", emailInCookie)
+        db.User.findOne({where: { email: emailInCookie} }).then( userFromCookie=>{
        
 
         if(userFromCookie) {
@@ -26,7 +26,7 @@ function userLoggedMiddleware (req, res, next) {
             res.locals.isLogged = true;
             res.locals.userLogged = req.session.userLogged;
 
-        }
+        }})
 
     
 

@@ -20,7 +20,7 @@ const upload = multer({storage});
 
 // Controller
 const productsController = require('../controllers/productControllers.js');
-const adminMiddleware = require('../middlewares/adminMiddleware.js');
+
 
 routes.get('/search', adminMiddleware, productsController.search)//adminMiddleware, 
 

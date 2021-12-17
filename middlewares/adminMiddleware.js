@@ -5,7 +5,7 @@ const path = require("path");
 // const usersFilPath = path.join(__dirname, "../data/usersDB.json");
 // const users = JSON.parse(fs.readFileSync(usersFilPath, "utf-8"));
 
-const db = require("../database/modles");
+const db = require("../database/models");
 
 function adminMiddleware(req, res, next) {
     

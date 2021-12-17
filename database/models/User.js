@@ -19,8 +19,8 @@ module.exports =(sequelize, DataTypes)=>{
         username: {
             type: DataTypes.STRING,
         },
-        birth_date: {
-            type: DataTypes.DATE
+        brith_date: {
+            type: DataTypes.DATEONLY
         },
         category_id: {
             type: DataTypes.INTEGER
