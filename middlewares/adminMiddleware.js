@@ -13,7 +13,7 @@ if (req.session.userLogged){
    let user = req.session.userLogged.categoria;
     
 
-  if (user == "admin") {
+  if (user == 1) {
       next();
     }else{
         res.status(401).json('Debes ser admin')

@@ -24,7 +24,7 @@ CREATE TABLE products (
    product_name VARCHAR(255) NOT NULL,
    price DECIMAL NOT NULL,
    product_category INT NOT NULL,
-   description VARCHAR(255) NOT NULL,
+   description VARCHAR(500) NOT NULL,
    image VARCHAR(255) NOT NULL,
    PRIMARY KEY (id)
 );
@@ -63,25 +63,32 @@ ALTER TABLE cart_detail ADD CONSTRAINT FK_8ea17788-306e-48c3-b073-9a175f86470c F
 
 -- Tabla de Usuarios
 
-INSERT INTO users (id, first_name, last_name, email, password, username, brith_date, category_id, avatar) VALUES (1, 'Andrew', 'Jantel', 'ajantel0@webnode.com', '9flesdwAgL', 'ajantel0', '4/20/1999', 'Construction Foreman', 'https://robohash.org/anemodicta.png?size=50x50&set=set1');
+INSERT INTO users (id, first_name, last_name, email, password, username, brith_date, category_id, avatar) VALUES (1, 'Andrew', 'Jantel', 'ajantel0@webnode.com', '9flesdwAgL', 'ajantel0', DATE '1999/4/20', 1, 'https://robohash.org/anemodicta.png?size=50x50&set=set1');
 
-INSERT INTO users (id, first_name, last_name, email, password, username, brith_date, category_id, avatar) VALUES (2, 'Charity', 'Marrett', 'cmarrett1@oakley.com', 'rzn8hi1qxL', 'cmarrett1', '6/3/1997', 'Construction Expeditor', 'https://robohash.org/reiciendisveldolor.png?size=50x50&set=set1');
+INSERT INTO users (id, first_name, last_name, email, password, username, brith_date, category_id, avatar) VALUES (2, 'Charity', 'Marrett', 'cmarrett1@oakley.com', 'rzn8hi1qxL', 'cmarrett1', DATE '1997/3/20', 2, 'https://robohash.org/reiciendisveldolor.png?size=50x50&set=set1');
 
-INSERT INTO users (id, first_name, last_name, email, password, username, brith_date, category_id, avatar) VALUES (3, 'Yulma', 'Pakes', 'ypakes2@uol.com.br', 'WnDFOOXl', 'ypakes2', '9/22/1991', 'Supervisor', 'https://robohash.org/velitautaspernatur.png?size=50x50&set=set1');
+INSERT INTO users (id, first_name, last_name, email, password, username, brith_date, category_id, avatar) VALUES (3, 'Yulma', 'Pakes', 'ypakes2@uol.com.br', 'WnDFOOXl', 'ypakes2', DATE '1991/9/22', 2, 'https://robohash.org/velitautaspernatur.png?size=50x50&set=set1');
 
-INSERT INTO users (id, first_name, last_name, email, password, username, brith_date, category_id, avatar) VALUES (4, 'Roxanne', 'Russell', 'rrussell3@reddit.com', '37GCglt9Fra', 'rrussell3', '11/11/1993', 'Subcontractor', 'https://robohash.org/verooccaecativitae.png?size=50x50&set=set1');
+INSERT INTO users (id, first_name, last_name, email, password, username, brith_date, category_id, avatar) VALUES (4, 'Roxanne', 'Russell', 'rrussell3@reddit.com', '37GCglt9Fra', 'rrussell3', DATE '1993/11/19', 2, 'https://robohash.org/verooccaecativitae.png?size=50x50&set=set1');
 
-INSERT INTO users (id, first_name, last_name, email, password, username, brith_date, category_id, avatar) VALUES (5, 'Ben', 'Gino', 'bgino4@devhub.com', 'UbO5B6sN3B', 'bgino4', '5/28/1998', 'Construction Foreman', 'https://robohash.org/estipsumneque.png?size=50x50&set=set1');
+INSERT INTO users (id, first_name, last_name, email, password, username, brith_date, category_id, avatar) VALUES (5, 'Ben', 'Gino', 'bgino4@devhub.com', 'UbO5B6sN3B', 'bgino4', DATE '1998/5/28', 2, 'https://robohash.org/estipsumneque.png?size=50x50&set=set1');
 
-INSERT INTO users (id, first_name, last_name, email, password, username, brith_date, category_id, avatar) VALUES (6, 'Brucie', 'Dallaway', 'bdallaway5@dailymail.co.uk', 'HOlqCtQGkL', 'bdallaway5', '11/10/1995', 'Project Manager', 'https://robohash.org/similiqueeumea.png?size=50x50&set=set1');
+INSERT INTO users (id, first_name, last_name, email, password, username, brith_date, category_id, avatar) VALUES (6, 'Brucie', 'Dallaway', 'bdallaway5@dailymail.co.uk', 'HOlqCtQGkL', 'bdallaway5', DATE '1995/8/12', 2, 'https://robohash.org/similiqueeumea.png?size=50x50&set=set1');
 
-INSERT INTO users (id, first_name, last_name, email, password, username, brith_date, category_id, avatar) VALUES (7, 'Bevan', 'Marchand', 'bmarchand6@live.com', 'yr9iGVg5DLT', 'bmarchand6', '4/1/2000', 'Surveyor', 'https://robohash.org/eumautet.png?size=50x50&set=set1');
+INSERT INTO users (id, first_name, last_name, email, password, username, brith_date, category_id, avatar) VALUES (7, 'Bevan', 'Marchand', 'bmarchand6@live.com', 'yr9iGVg5DLT', 'bmarchand6', DATE '2000/7/15', 2, 'https://robohash.org/eumautet.png?size=50x50&set=set1');
 
-INSERT INTO users (id, first_name, last_name, email, password, username, brith_date, category_id, avatar) VALUES (8, 'Walker', 'Lanceter', 'wlanceter7@bigcartel.com', 'VaBrwxaVmP', 'wlanceter7', '4/22/1991', 'Engineer', 'https://robohash.org/quialaborumquod.png?size=50x50&set=set1');
+INSERT INTO users (id, first_name, last_name, email, password, username, brith_date, category_id, avatar) VALUES (8, 'Walker', 'Lanceter', 'wlanceter7@bigcartel.com', 'VaBrwxaVmP', 'wlanceter7', DATE'1991/4/22', 2, 'https://robohash.org/quialaborumquod.png?size=50x50&set=set1');
 
-INSERT INTO users (id, first_name, last_name, email, password, username, brith_date, category_id, avatar) VALUES (9, 'Andria', 'Jaszczak', 'ajaszczak8@sphinn.com', 'X0HGi8iXdBR4', 'ajaszczak8', '11/9/1991', 'Construction Manager', 'https://robohash.org/porroharumquisquam.png?size=50x50&set=set1');
+INSERT INTO users (id, first_name, last_name, email, password, username, brith_date, category_id, avatar) VALUES (9, 'Andria', 'Jaszczak', 'ajaszczak8@sphinn.com', 'X0HGi8iXdBR4', 'ajaszczak8', DATE '1991/9/9', 2, 'https://robohash.org/porroharumquisquam.png?size=50x50&set=set1');
 
-INSERT INTO users (id, first_name, last_name, email, password, username, brith_date, category_id, avatar) VALUES (10, 'Ulrikaumeko', 'Shooter', 'ushooter9@hc360.com', 'Yy0wkg2Zj04', 'ushooter9', '1/13/1995', 'Architect', 'https://robohash.org/doloresinventoresaepe.png?size=50x50&set=set1');
+INSERT INTO users (id, first_name, last_name, email, password, username, brith_date, category_id, avatar) VALUES (10, 'Ulrikaumeko', 'Shooter', 'ushooter9@hc360.com', 'Yy0wkg2Zj04', 'ushooter9', DATE '1990/1/20', 2, 'https://robohash.org/doloresinventoresaepe.png?size=50x50&set=set1');
+
+-- Tabla de User-categories
+
+INSERT INTO user_categories (id, category_name) VALUES (1, 'admin');
+
+INSERT INTO user_categories (id, category_name) VALUES (2, 'usuario');
+
 
 -- Tabla de Product-categories
 
