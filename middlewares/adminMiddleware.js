@@ -10,7 +10,7 @@ const db = require("../database/models");
 function adminMiddleware(req, res, next) {
     
 if (req.session.userLogged){
-   let user = req.session.userLogged.categoria;
+   let user = req.session.userLogged.category_id;  
     
 
   if (user == 1) {
