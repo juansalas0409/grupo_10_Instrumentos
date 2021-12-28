@@ -37,16 +37,19 @@
                     <a href="/">
                         <li>Home <i class="fas fa-home"></i></li>
                     </a>
-                    <a href="../users/logout">
+                    <a href="/users/logout">
                         <li> Cerrar Sesión <i class="fas fa-user-circle"></i></li>
                     </a>
-                    <a href="../users/profile">
+                    <a href="/users/profile">
                         <li> Mi Perfil <i class="fas fa-user-circle"></i></li>
                     </a>
-                    <a href="../products/create">
-                        <li>Vendé <i class="fas fa-dollar-sign"></i></li>
+                    <a href="/products/create">
+                        <li>Crear producto <i class="fas fa-dollar-sign"></i></li>
                     </a>
-                    <a href="../products/carrito">
+                    <a href="/products/editList">
+                        <li>Editar producto <i class="fas fa-dollar-sign"></i></li>
+                    </a>
+                    <a href="/products/carrito">
                         <li>Carrito <i class="fas fa-shopping-cart"></i></li>
                     </a>
                 </ul>
@@ -55,13 +58,16 @@
                         <a href="/">
                             <li>Home <i class="fas fa-home"></i></li>
                         </a>
-                        <a href="../users/profile">
+                        <a href="/users/profile">
                             <li>Ingresá <i class="fas fa-user-circle"></i></li>
                         </a>
-                        <a href="../products/create">
-                            <li>Vendé <i class="fas fa-dollar-sign"></i></li>
+                        <a href="/products/create">
+                            <li>Crear producto <i class="fas fa-dollar-sign"></i></li>
                         </a>
-                        <a href="../products/carrito">
+                        <a href="/products/editList">
+                            <li>Editar producto <i class="fas fa-dollar-sign"></i></li>
+                        </a>
+                        <a href="/products/carrito">
                             <li>Carrito <i class="fas fa-shopping-cart"></i></li>
                         </a>
                     </ul>
@@ -73,25 +79,25 @@
             <a ><i class="fas fa-user-circle profile-pic"></i></a>
             <% if (locals.isLogged){%>
             <ul class="profile-controls">
-                <a href="../users/profile">
+                <a href="/users/profile">
                     <li>Mi Perfil</li>
                 </a>
                 <br>
-                <a href="../users/logout">
+                <a href="/users/logout">
                     <li>Cerrar Sesión</li>
                 </a>
             </ul>
             <%} else {%>
                 <ul class="profile-controls">
                 
-                    <a href="../users/login">
+                    <a href="/users/login">
                         <li>Ingresá</li>
                     </a>
                    
                 </ul>
             <%} %>
             </div>
-            <a href="../products/carrito"><i class="fas fa-shopping-cart"></i></a>
+            <a href="/products/carrito"><i class="fas fa-shopping-cart"></i></a>
         </div>
     </nav>
 </header>
