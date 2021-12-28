@@ -19,20 +19,31 @@
         </div>
         <div class="edit-form">
             <form class="edit-items" action="/products/edit/<%= productToEdit.id %>?_method=PATCH " method="POST" >
+                
                 <!-- < productsToEdit.id %> -->
                 <div class="edit-name">
                     <label for="name">Nombre del producto:</label>
-                    <input type="text" name="name" id="name" placeholder="Ej: Guitarra Fender" value='<%= productToEdit.product_name %> '>
+                    <input type="text" name="nombre" id="name" placeholder="Ej: Guitarra Fender" value='<%= productToEdit.product_name %> '>
+                    <% if (locals.errors && errors.nombre) { %>
+                        <div class= "err-rojo"><%= errors.nombre.msg %></div>
+                    <% } %>
                 </div>
                 <div class="edit-price">
                     <label for="price">Precio del producto:</label>
-                    <input type="number" id="price" name="price" placeholder="1234" value='<%= productToEdit.price %> '>
+                    <input type="text" id="price" name="precio" placeholder="1234" value='<%= productToEdit.price %>'>
+                    <% if (locals.errors && errors.precio) { %>
+                        <div class= "err-rojo"><%= errors.precio.msg %></div>
+                    <% } %>
                 </div>
                 <div class="edit-description">
                     <label for="description">Descripción:</label>
-                    <textarea name="description" id="description"value='<%= productToEdit.description %> '></textarea>
+                    <textarea name="description" id="description"><%= productToEdit.description %></textarea>
+                    <% if (locals.errors && errors.description) { %>
+                        <div class= "err-rojo"><%= errors.description.msg %></div>
+                    <% } %>
                     <!-- < productToEdit.description %> -->
                 </div>
+                
                 <div class="edit-submit">
                     <button type="submit">Guardar</button>
                 </div>

@@ -53,7 +53,13 @@ const productsController = {
      res.redirect("/");
             }
      },
-
+     // edit list
+     editList: (req,res) => {
+      db.Producto.findAll().then((productos) => 
+      res.render("./products/editList", {productos})
+      )
+     },
+      
   // edit form
   edit: (req, res) => {
     db.Producto.findByPk(req.params.id)
@@ -64,17 +70,32 @@ const productsController = {
 
   // update product
   update: (req, res) => {
+    let resultValidation = validationResult(req);
+    // console.log(resultValidation)
+    //  console.log(req.body)
+    
+
+       if (resultValidation.errors.length > 0) {
+        db.Producto.findByPk(req.params.id)
+        .then((productToEdit) => { res.render("./products/edit",{
+          errors: resultValidation.mapped(),
+          oldData: req.body,
+          productToEdit
+        })
+
+         
+          })} else {
+
     db.Producto.update({
-      product_name: req.body.name,
-      price: req.body.price,
-      product_category: req.body.categorias,
+      product_name: req.body.nombre,
+      price: req.body.precio,
       description: req.body.description,
     },
     {
       where:{id: req.params.id}
     })
     res.redirect('/');
-  },
+  }},
 
   // delete
   delete: (req, res) => {

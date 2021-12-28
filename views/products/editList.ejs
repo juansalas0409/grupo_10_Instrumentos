@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- head -->
+<%- include('../partials/head', {title: 'Edición'}); %>
+<!-- head -->
+
+<body class="edit-body">
+
+    <!-- Header -->
+    <%- include('../partials/header'); %>
+    <!-- Header -->
+
+
+    <% productos.forEach ( producto => { %>
+
+        <a href="/products/edit/<%= producto.id %>"><li> <%= producto.product_name %> </li></a>
+
+    <% }) %>
+    
+
+    <!-- footer -->
+    <%- include('../partials/footer') %>
+    <!-- footer -->
+
+</body>
+</html>
