@@ -55,13 +55,14 @@ const userController = {
 
   processRegister: (req, res) => {
        let resultValidation = validationResult(req);
-       console.log(resultValidation)
-       console.log(req.body.nombre)
+      //  console.log(resultValidation)
+      //  console.log(req.body.nombre)
 
        if (resultValidation.errors.length > 0) {
          return res.render("./users/registro", {
           errors: resultValidation.mapped(),
-          oldData: req.body
+          oldData: req.body,
+          
          });
       }
     let emailreg = req.body.email

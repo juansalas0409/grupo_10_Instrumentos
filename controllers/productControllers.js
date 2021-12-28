@@ -1,3 +1,4 @@
+const { validationResult } = require("express-validator");
 const fs = require("fs");
 const path = require("path");
 const { brotliDecompressSync } = require("zlib");
@@ -27,15 +28,31 @@ const productsController = {
 
     // store creation
   store: (req, res) => {
-    db.Producto.create({
-      product_name: req.body.nombre,
+    let resultValidation = validationResult(req);
+    // console.log(resultValidation)
+    //  console.log(req.body)
+    
+
+       if (resultValidation.errors.length > 0) {
+         return res.render("./products/creacionDeProducto",{
+           errors: resultValidation.mapped(),
+           oldData: req.body 
+          })
+       
+     
+      
+    } else  {
+    
+      db.Producto.create({
+       product_name: req.body.nombre,
       price: req.body.precio,
-      product_category: req.body.categorias,
-      description: req.body.description,
-      image: req.file.filename,
-    });
-    res.redirect("/");
-  },
+       product_category: req.body.categorias,
+       description: req.body.description,
+       image: req.file.filename,
+     });
+     res.redirect("/");
+            }
+     },
 
   // edit form
   edit: (req, res) => {

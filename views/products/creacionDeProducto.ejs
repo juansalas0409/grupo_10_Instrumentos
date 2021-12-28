@@ -12,34 +12,50 @@
 <main class= "main-crear">
 
     <form action="/products" method="POST" enctype="multipart/form-data" >
+       
     <div class="crear-form-titulo">
         Ingresar nuevo producto
     </div>
     <div class="crear-form-body">
     <div class="create-form1">
         <label for="nombre" class="crear-form-label">Nombre</label>
-        <input type="text" name="nombre" placeholder= "Ex. producto 1" class="crear-form-input">
+        <input type="text" name="nombre" required placeholder= "Ex. producto 1" class="crear-form-input" <% if(locals.oldData) { %>
+            value = <%= oldData.nombre %> 
+        <% } %> />
+            <% if (locals.errors && errors.nombre) { %>
+                <div class= "err-rojo"><%= errors.nombre.msg %></div>
+            <% } %>
      </div>
      <div class="create-form1">
         <label for="precio" class="crear-form-label">Precio</label>
-        <input type="text" name="precio" placeholder="Ex. 100" class="crear-form-input">
+        <input type="text" name="precio" placeholder="Ex. 100" class="crear-form-input" <% if(locals.oldData) { %> value = <%= oldData.precio %> 
+        <% } %>>
+        <% if (locals.errors && errors.precio) { %>
+            <div class= "err-rojo"><%= errors.precio.msg %></div>
+        <% } %>
      </div>  
      <div class="create-form1">
         <label for="description" class="crear-form-label">Descripción</label>
-        <textarea name="description" id="" cols="30" rows="10" class="crear-form-input"></textarea>
+        <textarea name="description" id="" cols="30" rows="10" class="crear-form-input" ><%= locals.oldData ? oldData.description : null %></textarea>
+            <% if (locals.errors && errors.description) { %>
+                <div class= "err-rojo"><%= errors.description.msg %></div>
+            <% } %>
      </div>
      <div class="create-form1">
          <label for="categorias">Elegí una categoría</label>
          <select name="categorias" id="categorias">
-            <option value="4">Pianos</option>
-            <option value="2">Guitarras</option>
-            <option value="3">Viento</option>
-            <option value="1">Batería y Percusión</option>
-            
+            <option value="4" <%= locals.oldData && (oldData.categorias == 4) ? "selected" : null %> >Pianos</option>
+            <option value="2" <%= locals.oldData && (oldData.categorias == 2) ? "selected" : null %>>Guitarras</option>
+            <option value="3" <%= locals.oldData && (oldData.categorias == 3) ? "selected" : null %>>Viento</option>
+            <option value="1" <%= locals.oldData && (oldData.categorias == 1) ? "selected" : null %>>Batería y Percusión</option>
          </select>
+         
      <div class="'create-form1">
      <label for="image">Inserte una imagen</label>
       <input type="file" name="image" />
+      <% if (locals.errors && errors.image) { %>
+        <div class= "err-rojo"><%= errors.image.msg %></div>
+    <% } %>
      </div>
      <div class="create-form1">   
      <div>
