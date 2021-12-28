@@ -2,7 +2,8 @@
     <a href="/"><img src="/images/Logo-astronauta.png" alt="Logo-tienda"></a>
     <nav class="header">
         <div class="menu-desktop">
-            <div class = "publicar">
+            <% if (locals.isLogged && (locals.userLogged.category_id == 1)){%>
+            <div class = "publicar">            
             <p >Productos</p>
                         <ul class="public-controls">
                         
@@ -17,6 +18,7 @@
                     
             
              </div>
+             <%}%>
             <p>Nosotros</p>
             <a href="/contacto">Contáctanos</a>
         </div>
@@ -43,12 +45,14 @@
                     <a href="/users/profile">
                         <li> Mi Perfil <i class="fas fa-user-circle"></i></li>
                     </a>
+                    <% if (locals.userLogged.category_id == 1){%>
                     <a href="/products/create">
                         <li>Crear producto <i class="fas fa-dollar-sign"></i></li>
                     </a>
                     <a href="/products/editList">
                         <li>Editar producto <i class="fas fa-dollar-sign"></i></li>
                     </a>
+                    <%}%>
                     <a href="/products/carrito">
                         <li>Carrito <i class="fas fa-shopping-cart"></i></li>
                     </a>
@@ -60,12 +64,6 @@
                         </a>
                         <a href="/users/profile">
                             <li>Ingresá <i class="fas fa-user-circle"></i></li>
-                        </a>
-                        <a href="/products/create">
-                            <li>Crear producto <i class="fas fa-dollar-sign"></i></li>
-                        </a>
-                        <a href="/products/editList">
-                            <li>Editar producto <i class="fas fa-dollar-sign"></i></li>
                         </a>
                         <a href="/products/carrito">
                             <li>Carrito <i class="fas fa-shopping-cart"></i></li>
