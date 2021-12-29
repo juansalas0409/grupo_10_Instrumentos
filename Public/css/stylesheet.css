@@ -632,6 +632,12 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
   margin: 2px;
 }
 
+.err-rojo-creacion-prod {
+  background-color: darksalmon;
+  color:red;
+  border-radius: 5px;
+}
+
 /* ---Fin CREACION de PROD */
 /* DETALLE DE PRODUCTO */
 
