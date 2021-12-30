@@ -16,7 +16,7 @@
 
             <form action="/users/register" method="POST" enctype="multipart/form-data" >
                       
-                <label for="nombre">Nombre</label>
+                <label for="nombre" class="crear-form-label">Nombre</label>
                 <input class="cuadroBlancoDatos" type="text" name="nombre" id="nombre" placeholder="Nombre" 
                 <% if(locals.oldData) { %>
                     value = <%= oldData.nombre %> 
@@ -26,7 +26,7 @@
                         <div class= "err-rojo"><%= errors.nombre.msg %></div>
                     <% } %>
                 
-                <label for="apellido">Apellido</label>
+                <label for="apellido" class="crear-form-label">Apellido</label>
                 <input class="cuadroBlancoDatos" type="text" name="apellido" id="apellido" placeholder="apellido" 
                 <% if(locals.oldData) { %>
                     value = <%= oldData.apellido %> 
@@ -36,7 +36,7 @@
                         <div class= "err-rojo"><%= errors.apellido.msg %></div>
                     <% } %>
 
-                <label for="email">Correo Electrónico</label>
+                <label for="email" class="crear-form-label">Correo Electrónico</label>
                 <input class="cuadroBlancoDatos" type="email" name="email" id="email" placeholder="Correo Electrónico" 
                 <% if(locals.oldData) { %>
                     value = <%= oldData.email %>
@@ -46,7 +46,7 @@
                         <div class= "err-rojo"><%= errors.email.msg %></div>
                     <% } %>
 
-                <label for="nombreDeUsuario">Nombre de Usuario</label>
+                <label for="nombreDeUsuario" class="crear-form-label">Nombre de Usuario</label>
                 <input class="cuadroBlancoDatos" type="text" name="nombreDeUsuario" id="nombreDesuario" minlength="4" placeholder="Nombre de usuario" 
                 <% if(locals.oldData) { %>
                     value = <%= oldData.nombreDeUsuario %>
@@ -56,7 +56,7 @@
                         <div class= "err-rojo"><%= errors.nombreDeUsuario.msg %></div>
                     <% } %>
 
-                <label for="fecha" class="label-register">Fecha de Nacimiento</label>
+                <label for="fecha" class="label-register crear-form-label">Fecha de Nacimiento</label>
                 <input class="cuadroBlancoDatos" type="date" name="fecha" placeholder="Fecha De Nacimiento" 
                 <% if(locals.oldData) { %>
                     value = <%= oldData.fecha %>
@@ -66,7 +66,7 @@
                         <div class= "err-rojo"><%= errors.fecha.msg %></div>
                     <% } %>
 
-                <label for="categoria">Categoria</label>
+                <label for="categoria" class="crear-form-label">Categoria</label>
                 <input class="cuadroBlancoDatos" type="text" name="categoria" id="categoria" placeholder="Categoria" 
                 <% if(locals.oldData) { %>
                     value = <%= oldData.categoria %>
@@ -76,14 +76,14 @@
                         <div class= "err-rojo"><%= errors.categoria.msg %></div>
                     <% } %>
 
-                <label for="contrasena">Contraseña</label>
+                <label for="contrasena" class="crear-form-label">Contraseña</label>
                 <input class="cuadroBlancoDatos" type="password" name="contrasena" id="contrasena" alt="strongPass" minlength="4" placeholder="Contraseña" />
 
                     <% if (locals.errors && errors.contrasena) { %>
                         <div class= "err-rojo"><%= errors.contrasena.msg %></div>
                     <% } %>
 
-                <label for="avatar">Inserte una imagen</label>
+                <label for="avatar" class="crear-form-label">Inserte una imagen</label>
                 <input type="file" class="cuadroBlancoDatos" name="avatar" />
                     <% if (locals.errors && errors.avatar) { %>
                         <div class= "err-rojo"><%= errors.avatar.msg %></div>
@@ -92,7 +92,7 @@
                         
                 
 
-                <input type="submit" value="REGISTRAR" class="botonRegistroPa">
+                <input type="submit" value="REGISTRAR" class="botonInicioPa">
 
             </form>
             </div>

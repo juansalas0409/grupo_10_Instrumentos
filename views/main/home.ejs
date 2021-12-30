@@ -9,6 +9,9 @@
     
     <!-- main -->
     <main>
+        <div> <img class= "portada" src="/images/Portada 1.jpeg" alt=""></div>
+        <div class= "home-barra-redes-medio"><i class="fab fa-instagram"></i>
+          <i class="fab fa-facebook"></i></div>
         <section class="home_main_Categorias">
           <div class="home_main_Categorias_Divs">
             <a href="/4" class="Home_Categ_Pianos"
@@ -16,14 +19,14 @@
             /></a>
             <% %> 
             <div class="Home_Detalle_categoria_Pianos">
-              <div class="Home_cuadrado">
+              <div class="Home_cuadrado" id=<%= categoria.id %>>
                 <i class="fas fa-square-full"></i>
               </div>
               <h2><%= categoria.category_name %></h2>
               <!-- aca va la tarjeta del producto destacado -->
               <article class="Home_Tarjeta_producto_destacado">
-                <a href="/products/detail/<%= selectedProd.id %> "><img src="/images/products/<%= selectedProd.image %>" /></a>
-                <a href="/products/detail/<%= selectedProd.id %>"><h4><%= selectedProd.product_name %> </h4></a>
+                <a href="/products/detail/<%= selectedProd.id %> " class = "uno"><img src="/images/products/<%= selectedProd.image %>" /></a>
+                <a href="/products/detail/<%= selectedProd.id %>" class = "dos"><h4><%= selectedProd.product_name %> </h4></a>
                 <p>$ <%= selectedProd.price %> </p>
                 <p>20%OFF</p>
               </article>

@@ -14,7 +14,7 @@
     <div class="edit-main">
         <div>
             <div class="edit-title">
-                <h2>Estás editando <%= productToEdit.product_name %></h2>
+                <h2><strong class= "edit-strong-black">Estás editando:</strong> <%= productToEdit.product_name %></h2>
             </div>
         </div>
         <ul id= "errores" class = "err-rojo-creacion-prod"></ul>
@@ -22,22 +22,22 @@
             <form class="edit-items" action="/products/edit/<%= productToEdit.id %>?_method=PATCH " method="POST" >
                 
                 <!-- < productsToEdit.id %> -->
-                <div class="edit-name">
-                    <label for="name">Nombre del producto:</label>
+                <div class="edit-npd">
+                    <label for="name" class="crear-form-label">Nombre del producto:</label>
                     <input type="text" name="nombre" id="name" class = "nombre" placeholder="Ej: Guitarra Fender" value='<%= productToEdit.product_name %> '>
                     <% if (locals.errors && errors.nombre) { %>
                         <div class= "err-rojo"><%= errors.nombre.msg %></div>
                     <% } %>
                 </div>
-                <div class="edit-price">
-                    <label for="price">Precio del producto:</label>
+                <div class="edit-npd">
+                    <label for="price" class="crear-form-label">Precio del producto:</label>
                     <input type="text" id="price" name="precio" class = "precio" placeholder="1234" value='<%= productToEdit.price %>'>
                     <% if (locals.errors && errors.precio) { %>
                         <div class= "err-rojo"><%= errors.precio.msg %></div>
                     <% } %>
                 </div>
-                <div class="edit-description">
-                    <label for="description">Descripción:</label>
+                <div class="edit-npd">
+                    <label for="description" class="crear-form-label">Descripción:</label>
                     <textarea name="description" id="description"><%= productToEdit.description %></textarea>
                     <% if (locals.errors && errors.description) { %>
                         <div class= "err-rojo"><%= errors.description.msg %></div>
@@ -45,8 +45,8 @@
                     <!-- < productToEdit.description %> -->
                 </div>
                 
-                <div class="edit-submit">
-                    <button type="submit">Guardar</button>
+                <div >
+                    <button type="submit" class= "crear-form-button">Guardar</button>
                 </div>
                 
             </form>

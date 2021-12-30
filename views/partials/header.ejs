@@ -1,10 +1,10 @@
 <header>
-    <a href="/"><img src="/images/Logo-astronauta.png" alt="Logo-tienda"></a>
+    <a href="/"><img src="/images/Logo V3.png" alt="Logo-tienda"></a>
     <nav class="header">
         <div class="menu-desktop">
             <% if (locals.isLogged && (locals.userLogged.category_id == 1)){%>
             <div class = "publicar">            
-            <p >Productos</p>
+                        <p >Productos</p>
                         <ul class="public-controls">
                         
                             <a href="/products/create">
@@ -62,9 +62,11 @@
                         <a href="/">
                             <li>Home <i class="fas fa-home"></i></li>
                         </a>
+                        
                         <a href="/users/profile">
                             <li>Ingresá <i class="fas fa-user-circle"></i></li>
                         </a>
+                        
                         <a href="/products/carrito">
                             <li>Carrito <i class="fas fa-shopping-cart"></i></li>
                         </a>
