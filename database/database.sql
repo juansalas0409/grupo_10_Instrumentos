@@ -51,37 +51,15 @@ CREATE TABLE cart_detail (
 );
 
 
-ALTER TABLE users ADD CONSTRAINT FK_bfca6615-3814-4eb3-883e-cbe75c5141af FOREIGN KEY (category_id) REFERENCES user_categories(id)  ;
+ALTER TABLE users ADD CONSTRAINT FK_bfca6615_3814_4eb3_883e_cbe75c5141af FOREIGN KEY (category_id) REFERENCES user_categories(id)  ;
 
-ALTER TABLE products ADD CONSTRAINT FK_b1628f8f-2ae3-47ab-a197-af9a34df69bf FOREIGN KEY (product_category) REFERENCES product_categories(id)  ;
+ALTER TABLE products ADD CONSTRAINT FK_b1628f8f_2ae3_47ab_a197_af9a34df69bf FOREIGN KEY (product_category) REFERENCES product_categories(id)  ;
 
-ALTER TABLE sales ADD CONSTRAINT FK_8eb5ed27-a658-478e-b7c0-9f0857dd800f FOREIGN KEY (user_id) REFERENCES users(id)  ;
+ALTER TABLE sales ADD CONSTRAINT FK_8eb5ed27_a658_478e_b7c0_9f0857dd800f FOREIGN KEY (user_id) REFERENCES users(id)  ;
 
-ALTER TABLE cart_detail ADD CONSTRAINT FK_b6dabc30-eb7e-40e4-8a83-21bcb52235c8 FOREIGN KEY (sales_id) REFERENCES sales(sales_id)  ;
+ALTER TABLE cart_detail ADD CONSTRAINT FK_b6dabc30_eb7e_40e4_8a83_21bcb52235c8 FOREIGN KEY (sales_id) REFERENCES sales(sales_id)  ;
 
-ALTER TABLE cart_detail ADD CONSTRAINT FK_8ea17788-306e-48c3-b073-9a175f86470c FOREIGN KEY (product_id) REFERENCES products(id)  ;
-
--- Tabla de Usuarios
-
-INSERT INTO users (id, first_name, last_name, email, password, username, brith_date, category_id, avatar) VALUES (1, 'Andrew', 'Jantel', 'ajantel0@webnode.com', '9flesdwAgL', 'ajantel0', DATE '1999/4/20', 1, 'https://robohash.org/anemodicta.png?size=50x50&set=set1');
-
-INSERT INTO users (id, first_name, last_name, email, password, username, brith_date, category_id, avatar) VALUES (2, 'Charity', 'Marrett', 'cmarrett1@oakley.com', 'rzn8hi1qxL', 'cmarrett1', DATE '1997/3/20', 2, 'https://robohash.org/reiciendisveldolor.png?size=50x50&set=set1');
-
-INSERT INTO users (id, first_name, last_name, email, password, username, brith_date, category_id, avatar) VALUES (3, 'Yulma', 'Pakes', 'ypakes2@uol.com.br', 'WnDFOOXl', 'ypakes2', DATE '1991/9/22', 2, 'https://robohash.org/velitautaspernatur.png?size=50x50&set=set1');
-
-INSERT INTO users (id, first_name, last_name, email, password, username, brith_date, category_id, avatar) VALUES (4, 'Roxanne', 'Russell', 'rrussell3@reddit.com', '37GCglt9Fra', 'rrussell3', DATE '1993/11/19', 2, 'https://robohash.org/verooccaecativitae.png?size=50x50&set=set1');
-
-INSERT INTO users (id, first_name, last_name, email, password, username, brith_date, category_id, avatar) VALUES (5, 'Ben', 'Gino', 'bgino4@devhub.com', 'UbO5B6sN3B', 'bgino4', DATE '1998/5/28', 2, 'https://robohash.org/estipsumneque.png?size=50x50&set=set1');
-
-INSERT INTO users (id, first_name, last_name, email, password, username, brith_date, category_id, avatar) VALUES (6, 'Brucie', 'Dallaway', 'bdallaway5@dailymail.co.uk', 'HOlqCtQGkL', 'bdallaway5', DATE '1995/8/12', 2, 'https://robohash.org/similiqueeumea.png?size=50x50&set=set1');
-
-INSERT INTO users (id, first_name, last_name, email, password, username, brith_date, category_id, avatar) VALUES (7, 'Bevan', 'Marchand', 'bmarchand6@live.com', 'yr9iGVg5DLT', 'bmarchand6', DATE '2000/7/15', 2, 'https://robohash.org/eumautet.png?size=50x50&set=set1');
-
-INSERT INTO users (id, first_name, last_name, email, password, username, brith_date, category_id, avatar) VALUES (8, 'Walker', 'Lanceter', 'wlanceter7@bigcartel.com', 'VaBrwxaVmP', 'wlanceter7', DATE'1991/4/22', 2, 'https://robohash.org/quialaborumquod.png?size=50x50&set=set1');
-
-INSERT INTO users (id, first_name, last_name, email, password, username, brith_date, category_id, avatar) VALUES (9, 'Andria', 'Jaszczak', 'ajaszczak8@sphinn.com', 'X0HGi8iXdBR4', 'ajaszczak8', DATE '1991/9/9', 2, 'https://robohash.org/porroharumquisquam.png?size=50x50&set=set1');
-
-INSERT INTO users (id, first_name, last_name, email, password, username, brith_date, category_id, avatar) VALUES (10, 'Ulrikaumeko', 'Shooter', 'ushooter9@hc360.com', 'Yy0wkg2Zj04', 'ushooter9', DATE '1990/1/20', 2, 'https://robohash.org/doloresinventoresaepe.png?size=50x50&set=set1');
+ALTER TABLE cart_detail ADD CONSTRAINT FK_8ea17788_306e_48c3_b073_9a175f86470c FOREIGN KEY (product_id) REFERENCES products(id)  ;
 
 -- Tabla de User-categories
 
@@ -89,6 +67,27 @@ INSERT INTO user_categories (id, category_name) VALUES (1, 'admin');
 
 INSERT INTO user_categories (id, category_name) VALUES (2, 'usuario');
 
+-- Tabla de Usuarios
+
+INSERT INTO users (id, first_name, last_name, email, password, username, birth_date, category_id, avatar) VALUES (1, 'Andrew', 'Jantel', 'ajantel0@webnode.com', '9flesdwAgL', 'ajantel0', DATE '1999/4/20', 1, 'https://robohash.org/anemodicta.png?size=50x50&set=set1');
+
+INSERT INTO users (id, first_name, last_name, email, password, username, birth_date, category_id, avatar) VALUES (2, 'Charity', 'Marrett', 'cmarrett1@oakley.com', 'rzn8hi1qxL', 'cmarrett1', DATE '1997/3/20', 2, 'https://robohash.org/reiciendisveldolor.png?size=50x50&set=set1');
+
+INSERT INTO users (id, first_name, last_name, email, password, username, birth_date, category_id, avatar) VALUES (3, 'Yulma', 'Pakes', 'ypakes2@uol.com.br', 'WnDFOOXl', 'ypakes2', DATE '1991/9/22', 2, 'https://robohash.org/velitautaspernatur.png?size=50x50&set=set1');
+
+INSERT INTO users (id, first_name, last_name, email, password, username, birth_date, category_id, avatar) VALUES (4, 'Roxanne', 'Russell', 'rrussell3@reddit.com', '37GCglt9Fra', 'rrussell3', DATE '1993/11/19', 2, 'https://robohash.org/verooccaecativitae.png?size=50x50&set=set1');
+
+INSERT INTO users (id, first_name, last_name, email, password, username, birth_date, category_id, avatar) VALUES (5, 'Ben', 'Gino', 'bgino4@devhub.com', 'UbO5B6sN3B', 'bgino4', DATE '1998/5/28', 2, 'https://robohash.org/estipsumneque.png?size=50x50&set=set1');
+
+INSERT INTO users (id, first_name, last_name, email, password, username, birth_date, category_id, avatar) VALUES (6, 'Brucie', 'Dallaway', 'bdallaway5@dailymail.co.uk', 'HOlqCtQGkL', 'bdallaway5', DATE '1995/8/12', 2, 'https://robohash.org/similiqueeumea.png?size=50x50&set=set1');
+
+INSERT INTO users (id, first_name, last_name, email, password, username, birth_date, category_id, avatar) VALUES (7, 'Bevan', 'Marchand', 'bmarchand6@live.com', 'yr9iGVg5DLT', 'bmarchand6', DATE '2000/7/15', 2, 'https://robohash.org/eumautet.png?size=50x50&set=set1');
+
+INSERT INTO users (id, first_name, last_name, email, password, username, birth_date, category_id, avatar) VALUES (8, 'Walker', 'Lanceter', 'wlanceter7@bigcartel.com', 'VaBrwxaVmP', 'wlanceter7', DATE'1991/4/22', 2, 'https://robohash.org/quialaborumquod.png?size=50x50&set=set1');
+
+INSERT INTO users (id, first_name, last_name, email, password, username, birth_date, category_id, avatar) VALUES (9, 'Andria', 'Jaszczak', 'ajaszczak8@sphinn.com', 'X0HGi8iXdBR4', 'ajaszczak8', DATE '1991/9/9', 2, 'https://robohash.org/porroharumquisquam.png?size=50x50&set=set1');
+
+INSERT INTO users (id, first_name, last_name, email, password, username, birth_date, category_id, avatar) VALUES (10, 'Ulrikaumeko', 'Shooter', 'ushooter9@hc360.com', 'Yy0wkg2Zj04', 'ushooter9', DATE '1990/1/20', 2, 'https://robohash.org/doloresinventoresaepe.png?size=50x50&set=set1');
 
 -- Tabla de Product-categories
 

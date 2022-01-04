@@ -13,7 +13,7 @@ const validations = [
     body('avatar').custom((value, { req }) => {
         let files = req.file;
 
-        let acceptedExtensions = ['.jpg', '.png', '.gif'];
+        let acceptedExtensions = ['.jpg', '.png', '.gif', '.jpeg'];
         
 
         if(!files) {
