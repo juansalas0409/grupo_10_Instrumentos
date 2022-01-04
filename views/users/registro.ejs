@@ -14,7 +14,11 @@
             <h2 class="tituloRegistro">Registrate</h2>
             <div class="formuRegistro">
 
-            <form action="/users/register" method="POST" enctype="multipart/form-data" >
+                <div class="errores">
+                    <ul></ul>
+                </div>
+
+            <form class="register" action="/users/register" method="POST" enctype="multipart/form-data" >
                       
                 <label for="nombre" class="crear-form-label">Nombre</label>
                 <input class="cuadroBlancoDatos" type="text" name="nombre" id="nombre" placeholder="Nombre" 
@@ -47,7 +51,7 @@
                     <% } %>
 
                 <label for="nombreDeUsuario" class="crear-form-label">Nombre de Usuario</label>
-                <input class="cuadroBlancoDatos" type="text" name="nombreDeUsuario" id="nombreDesuario" minlength="4" placeholder="Nombre de usuario" 
+                <input class="cuadroBlancoDatos" type="text" name="nombreDeUsuario" id="nombreDeUsuario" minlength="4" placeholder="Nombre de usuario"
                 <% if(locals.oldData) { %>
                     value = <%= oldData.nombreDeUsuario %>
                 <% } %> />
@@ -57,7 +61,7 @@
                     <% } %>
 
                 <label for="fecha" class="label-register crear-form-label">Fecha de Nacimiento</label>
-                <input class="cuadroBlancoDatos" type="date" name="fecha" placeholder="Fecha De Nacimiento" 
+                <input class="cuadroBlancoDatos" type="date" name="fecha" id="fecha" placeholder="Fecha De Nacimiento"
                 <% if(locals.oldData) { %>
                     value = <%= oldData.fecha %>
                 <% } %> />
@@ -84,7 +88,7 @@
                     <% } %>
 
                 <label for="avatar" class="crear-form-label">Inserte una imagen</label>
-                <input type="file" class="cuadroBlancoDatos" name="avatar" />
+                <input type="file" class="cuadroBlancoDatos" name="avatar" id="avatar" />
                     <% if (locals.errors && errors.avatar) { %>
                         <div class= "err-rojo"><%= errors.avatar.msg %></div>
                     <% } %>
@@ -100,6 +104,6 @@
 
         <!-- footer -->
         <%- include('../partials/footer') %>
-
+<script src="/js/validationUsersRegister.js"></script>
     </body>
 </html>
