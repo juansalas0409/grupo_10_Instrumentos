@@ -4,7 +4,7 @@
         <div class="menu-desktop">
             <% if (locals.isLogged && (locals.userLogged.category_id == 1)){%>
             <div class = "publicar">            
-                        <p >Productos</p>
+                        <p class="header-texto">Productos</p>
                         <ul class="public-controls">
                         
                             <a href="/products/create">
@@ -19,8 +19,8 @@
             
              </div>
              <%}%>
-            <p>Nosotros</p>
-            <a href="/contacto">Contáctanos</a>
+            <p class="header-texto">Nosotros</p>
+            <a href="/contacto" class="header-texto">Contáctanos</a>
         </div>
         <form class="barraBusqueda" action="/products/search" method="GET">
             <input type="search" name="search" id="search" placeholder="Realizá tu búsqueda">

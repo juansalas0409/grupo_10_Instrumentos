@@ -9,7 +9,8 @@
     
     <!-- main -->
     <main>
-        <div> <img class= "portada" src="/images/Portada 1.jpeg" alt=""></div>
+        <div> <img class= "portada1" src="/images/Portada 1.jpeg" alt=""></div>
+        <div> <img class= "portada2" src="/images/Portada 2.jpg" alt=""></div>
         <div class= "home-barra-redes-medio"><i class="fab fa-instagram"></i>
           <i class="fab fa-facebook"></i></div>
         <section class="home_main_Categorias">
@@ -18,23 +19,7 @@
               ><img src="/images/logo piano.png"
             /></a>
             <% %> 
-            <div class="Home_Detalle_categoria_Pianos">
-              <div class="Home_cuadrado" id=<%= categoria.id %>>
-                <i class="fas fa-square-full"></i>
-              </div>
-              <h2><%= categoria.category_name %></h2>
-              <!-- aca va la tarjeta del producto destacado -->
-              <article class="Home_Tarjeta_producto_destacado">
-                <a href="/products/detail/<%= selectedProd.id %> " class = "uno"><img src="/images/products/<%= selectedProd.image %>" /></a>
-                <a href="/products/detail/<%= selectedProd.id %>" class = "dos"><h4><%= selectedProd.product_name %> </h4></a>
-                <p>$ <%= selectedProd.price %> </p>
-                <p>20%OFF</p>
-              </article>
-              <!-- pongo una imagen, despues lo hago bien con el ejs -->
-              <div class="Home_Boton_categoria">
-                <a href="/products/category/<%= categoria.id %> "><p>Ir a Categoría</p></a>
-              </div>
-            </div>
+            
           </div>
           <div class="home_main_Categorias_Divs">
             <a href="/2" class="Home_Categ_Guitarras"
@@ -57,7 +42,25 @@
             /></a>
           </div> -->
         </section>
-        <section class="Home_Detalle_categoria"></section>
+        <section class="Home_Detalle_categoria">
+          <div class="Home_Detalle_categoria_Pianos">
+            <div class="Home_cuadrado" id=<%= categoria.id %>>
+              <i class="fas fa-square-full"></i>
+            </div>
+            <h2><%= categoria.category_name %></h2>
+            <!-- aca va la tarjeta del producto destacado -->
+            <article class="Home_Tarjeta_producto_destacado">
+              <a href="/products/detail/<%= selectedProd.id %> " class = "uno"><img src="/images/products/<%= selectedProd.image %>" /></a>
+              <a href="/products/detail/<%= selectedProd.id %>" class = "dos"><h4><%= selectedProd.product_name %> </h4></a>
+              <p>$ <%= selectedProd.price %> </p>
+              <p>20%OFF</p>
+            </article>
+            <!-- pongo una imagen, despues lo hago bien con el ejs -->
+            <div class="Home_Boton_categoria">
+              <a href="/products/category/<%= categoria.id %> "><p>Ir a Categoría</p></a>
+            </div>
+          </div>
+        </section>
         <!-- DESKTOP -->
         <section class="Home_Desktop">
           <h2>¿Qué buscas?</h2>

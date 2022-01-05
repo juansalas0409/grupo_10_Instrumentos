@@ -194,7 +194,6 @@ header a img {
 }
 /* HOME */
 main {
-  /* padding: 10px 5px; */
   display: flex;
   flex-direction: column;
 }
@@ -243,6 +242,8 @@ main {
 
 .Home_Detalle_categoria {
   height: 150vw;
+  
+  padding: 20px 4px;
 }
 .Home_Detalle_categoria_Pianos {
   display: flex;
@@ -254,9 +255,7 @@ main {
   width: 97%;
   align-items: center;
   border: #1F1E1E solid 2px;
-  position: absolute;
-  top: 200vw;
-  left: 1vw;
+  margin: auto;
 }
 
 .Home_Detalle_categoria_Pianos h2 {
@@ -399,10 +398,14 @@ main {
   display: none;
 }
 
-.portada {
+.portada1 {
   width: 100%;
   height: 50vh;
   margin-bottom: 30px;
+  
+}
+.portada2 {
+  display: none;
   
 }
 
@@ -1117,92 +1120,6 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
 
 
 /*---MEDIA QUERI---*/
-@media (min-width: 769px) {
-  /* header */
-  header {  
-    background-color: #603718;
-    padding: 0 30px;
-    display: flex;
-    justify-content: flex-start;
-  }
-
-  header img {
-    width: 15%;
-  }
-
-  .header {
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-  }
-
-  .menu-desktop {
-    display: flex;
-    justify-content: space-around;
-    width: 70%;
-  }
-
-  .menu-desktop a {
-    color: #1F1E1E;
-    font-weight: bold;
-    font-size: 1.8vw;
-    text-decoration: none
-  }
-
-  .barraBusqueda {
-    display: none;
-  }
-
-  .bars {
-    display: none;
-  }
-
-  .navbar-icons {
-    display: inline-block;
-    width: 20%;
-    font-size: 22px;
-    display: flex;
-    justify-content: space-around;
-  }
-
-
-  .formu {
-    /* margin-left: 37%;
-    margin-right: 42%; */
-    margin-top: 7%;
-    margin-bottom: 0px;
-  }
-  .formuRegistro {
-    text-align: center;
-    margin-right: 42%;
-    margin-top: 5%;
-    margin-bottom: 0px;
-  }
-  #menuToggle{
-    display: none;
-  }
-  
-  /* LISTADO PRODUCTOS */
-  
-  /* PERFIL USUARIO */
-  .container-user-profile{
-    flex-direction:row;
-    margin-bottom: 20vh;
-    margin-top: 10vw;
-
-  }
-  .profile-img img{
-    margin-right: 10px;
-    padding: 10px;
-    max-width: 40vw;
-    border-radius: 30px;
-  }
-
-  .public-controls{
-    left:26vw;
-    top:8vh
-  }
-}
 
 @media (min-width: 425px) {
   /* HEADER */
@@ -1211,19 +1128,11 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
       justify-content: space-between;
       width: 100%;
       align-items: center;
-      color: #1F1E1E;
-  }
-
-  .menu-desktop{
-      width: 50%;
-      justify-content: space-around;
-  }
-
-  .menu-desktop p{
-      font-weight: 100;
+      padding-left: 10px;
       
   }
 
+  
   .barraBusqueda{
       display: flex;
       width: 30%;
@@ -1260,11 +1169,20 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
   }
 
   header {
-    background-color: #FE771F;
-    padding: 0 30px;
-    display: flex;
-    justify-content: flex-start;
-  }
+        padding: 0 10px;
+      }
+  
+    .header-texto {
+      font-weight: bolder;
+      font-size: 3vw;
+      padding: 0px 2px;
+      color: white;
+      
+    }
+
+    .menu-desktop a {
+      text-decoration: none;
+    }
 
   header img {
     width: 15%;
@@ -1352,13 +1270,7 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
   /* FOOTER */
 
   /* HOME */
-  main {
-    padding: 10px 5px;
-    display: flex;
-    flex-direction: column;
-    align-content: space-around;
-    align-items: center;
-  }
+ 
 
   .home_main_Categorias {
     display: flex;
@@ -1367,58 +1279,17 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
     /* max-width: 425px; */
     justify-content: space-between;
   }
-  .home_main_Categorias_Divs {
-    width: 19%;
-    display: flex;
-    background-color: #fff;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 15px;
-    border-radius: 5px;
-    border: #727171 2px solid;
-    max-height: 140px;
-  }
+  
   .home_main_Categorias > div > a > img {
     width: 15vw;
     max-width: 69px;
   }
-
-  .Home_cuadrado {
-    color: #fff;
-    position: relative;
-    right: 45%;
-    bottom: 40px;
-    font-size: 3em;
-    display: none;
-    
-  }
-
-  .Home_cuadrado i {
-    border-left: #727171 solid 2px;
-    border-top: #727171 solid 2px;
-    transform: rotate(45deg);
-  }
-
+ 
   .Home_Detalle_categoria {
     height: 140vw;
   }
 
-  .Home_Detalle_categoria_Pianos {
-    display: flex;
-    background-color: #fff;
-    flex-direction: column;
-    padding: 15px;
-    border-radius: 5px;
-    height: 0%;
-    width: 97%;
-    align-items: center;
-    border: #727171 solid 2px;
-    position: absolute;
-    top: 50vw;
-    left: 1vw;
-    max-height: 700px;
-  }
+  
   .Home_Detalle_categoria_Guitarras {
     display: none;
     background-color: #fff;
@@ -1479,32 +1350,8 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
     left: 1vw;
     max-height: 700px;
   }
-  .Home_Tarjeta_producto_destacado > a > img {
-    width: 80%;
-    border-bottom: #333 solid 1px;
-    margin-bottom: 5px;
-    padding-bottom: 10px;
-  }
-  .Home_Tarjeta_producto_destacado a {
-    display: flex;
-    justify-content: center;
-  }
-  .Home_Tarjeta_producto_destacado {
-    padding: 10px;
-    height: 60vh;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
-    border: #727171 4px solid;
-    margin: 10px 0;
-  }
-  .Home_Boton_categoria {
-    z-index: 150;
-    width: 50%;
-    background-color: #603718;
-    border-radius: 5px;
-  }
+  
+  
 
   .Home_Boton_categoria a {
     text-decoration: none;
@@ -1542,61 +1389,97 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
 }
 
 @media (min-width: 768px) {
-  /* HEADER */
-  header {
-    background-color: #603718;
-    padding: 0 30px;
-    display: flex;
-    justify-content: flex-start;
-  }
-
-  header img {
-    width: 15%;
-  }
-
-  .header {
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-  }
-
-  .menu-desktop {
-    display: flex;
-    justify-content: space-around;
-    width: 70%;
-  }
-
-  .menu-desktop p {
-    color: #000000;
-    font-weight: bold;
-    font-size: 1.8vw;
-  }
-
-  .barraBusqueda {
-    display: none;
-  }
-
-  .bars {
-    display: none;
-  }
-
-  .navbar-icons {
-    display: inline-block;
-    width: 20%;
-    font-size: 22px;
-    display: flex;
-    justify-content: space-around;
-  }
-  /* FOOTER */
-
+  
+    /* header */
+     
+    
+    header img {
+      width: 15%;
+    } 
+      
+    .menu-desktop p {
+           font-size: 25px;
+         }
+    
+    .menu-desktop a {
+           font-size: 25px;
+         }
+  
+    .barraBusqueda {
+      display: none;
+    }
+  
+    .bars {
+      display: none;
+    }
+  
+    .navbar-icons {
+      display: inline-block;
+      width: 20%;
+      font-size: 22px;
+      display: flex;
+      justify-content: space-around;
+    }
+    
+  
+    .formu {
+      /* margin-left: 37%;
+      margin-right: 42%; */
+      margin-top: 7%;
+      margin-bottom: 0px;
+    }
+    .formuRegistro {
+      text-align: center;
+      margin-right: 42%;
+      margin-top: 5%;
+      margin-bottom: 0px;
+    }
+    #menuToggle{
+      display: none;
+    }
+    /*otros HOME*/
+    .Home_cuadrado {
+      display: none;
+    }
+    .portada1 {
+      display: none;
+      
+    }
+    .portada2 {
+      display: block;
+      width: 100%;
+      height: 60vh;
+      margin-bottom: 10vh;
+      
+      
+    }
+    /* LISTADO PRODUCTOS */
+    
+    /* PERFIL USUARIO */
+    .container-user-profile{
+      flex-direction:row;
+      margin-bottom: 20vh;
+      margin-top: 10vw;
+  
+    }
+    .profile-img img{
+      margin-right: 10px;
+      padding: 10px;
+      max-width: 40vw;
+      border-radius: 30px;
+    }
+  
+    .public-controls{
+      left:26vw;
+      top:8vh
+    }
+ 
   /* HOME */
+  
   main {
-    padding: 10px 5px;
-    display: flex;
-    flex-direction: column;
-    align-content: space-around;
-    align-items: center;
+    background-color: #1F1E1E ;
   }
+
   .Home_Detalle_categoria {
     display: none;
   }
@@ -1608,8 +1491,9 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
     flex-direction: column;
   }
   .Home_Desktop > h2 {
-    color: #727171;
+    color: white;
     font-size: 3em;
+    padding-left: 20px;
   }
 
   .Home_Categorias_Desktop {
@@ -1621,10 +1505,10 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
     background-color: #fff;
     display: flex;
     align-items: center;
-    border-radius: 5px;
-    border: #333 solid 2px;
+    border-radius: 15px;
+    border: #FE771F solid 4px;
     padding: 15px;
-    margin: 5px 0;
+    margin: 15px 30px;
   }
   .Home_Categoria_Art_Desktop_1 {
     background-color: #fff;
@@ -1632,9 +1516,9 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
     flex-direction: row-reverse;
     align-items: center;
     border-radius: 5px;
-    border: #333 solid 2px;
+    border: #FE771F solid 4px;
     padding: 15px;
-    margin: 5px 0;
+    margin: 15px 30px;
   }
   .Home_Categoria_Art_Desktop > img {
     width: 450px;
@@ -1650,8 +1534,8 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
     flex-direction: column;
   }
   .Home_Boton_Ir_Categoria_Desktop {
-    background-color: #603718;
-    border: #000000 solid 2px;
+    background-color: #FE771F;
+    
     border-radius: 6px;
     width: 170px;
     padding: 10px;
@@ -1689,10 +1573,7 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
     justify-content: space-around;
   }
 
-  .menu-desktop p {
-    font-weight: 1000;
-  }
-
+ 
   .barraBusqueda {
     display: flex;
     width: 30%;
@@ -1740,11 +1621,16 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
 
   .footer {
     display: flex;
-    background-color: #727171;
+    background-color: #FE771F;
     justify-content: space-around;
     align-items: center;
     font-size: 1.6vw;
+    color: white;
   }
+  .footer div ul li a{
+    color: white;
+  }
+  .datos { color: white;}
 
   .footer img {
     width: 10%;
@@ -1760,11 +1646,9 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
     text-align: center;
   }
 
-  .datos {
-    color: #000000;
-  }
+  
   /* HOME */
-
+ 
   /* CARRITO */
   
 .carrito-productos-carro {
