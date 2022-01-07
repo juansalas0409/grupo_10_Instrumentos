@@ -7,17 +7,22 @@
 
     <!-- Container -->
     <div class="container-user-profile">
-        
+        <h2>Bienvenido/a <strong><%= user.first_name %></strong> !!!</h2>
         <div class="profile-img">
             <img src="../images/users/<%= user.avatar %> ">
         </div>
         <div class="info-user-profile">
-                <h2>Hi <%= user.nombre %>!</h2>
-                <p>lorem ipsum dolor sit amet, consectetur</p>
+            <h3 class= "profile-subtitulos"> Username: </h3>
+               <p class= "profile-subtitulos-valores"><%= user.username %>!</p>
+               <br>
+               
+            <h3 class= "profile-subtitulos"> Email: </h3>
+                <p class= "profile-subtitulos-valores"><%= user.email %></p>
                 <br>
-                <br>
-            <h3 class="alert alert-success"><%= user.email %> </h3>
-            <br>
+                
+            <h3 class= "profile-subtitulos">Categoria:</h3>
+                <p class= "profile-subtitulos-valores"><%= user.category_id ==1? "Administrador" : "Usuario regular" %></p>
+               
             <!-- <a class="user-edit-delete-profile">Editar</a>
             <br>
             <a class="user-edit-delete-profile">Elimina tu perfil</a> -->

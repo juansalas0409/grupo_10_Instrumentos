@@ -1,26 +1,24 @@
+const { validationResult } = require("express-validator");
 const fs = require("fs");
 const path = require("path");
-
-const productsFilPath = path.join(__dirname, "../data/productosDB.json");
-const products = JSON.parse(fs.readFileSync(productsFilPath, "utf-8"));
-
+const { brotliDecompressSync } = require("zlib");
 const toThousand =  n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+const db = require('../database/models')
+const Op = db.Sequelize.Op
 
 const productsController = {
   products: (req, res) => {
-    let categoria = req.params.category
-    let prods = products.filter(elements => elements.category == categoria);
-    console.log(prods)
-    res.render('./products/productList', {products, categoria, prods, toThousand});  
+    db.ProductCategory.findByPk(req.params.category, {include:[{association: 'productos'}]})
+      .then(function (categoria) {
+        res.render('./products/productList.ejs', {categoria: categoria});
+      })
   },
 
   detalleDeProducto: (req, res) => {
-    let id = req.params.id;
-    console.log(id)
-
-    let product = products.find(element => element.id == id);
-    console.log(product)
-    res.render("./products/detalleDeProducto", {product, toThousand });
+    db.Producto.findByPk(req.params.id)
+    .then(function (product) {
+      res.render("./products/detalleDeProducto", {product, toThousand });
+    })
   },
 
   // create form
@@ -30,58 +28,80 @@ const productsController = {
 
     // store creation
   store: (req, res) => {
-    let newProduct = {
-      id: products[products.length - 1].id + 1,
-      name: req.body.nombre,
+    let resultValidation = validationResult(req);
+    // console.log(resultValidation)
+    //  console.log(req.body)
+    
+
+       if (resultValidation.errors.length > 0) {
+         return res.render("./products/creacionDeProducto",{
+           errors: resultValidation.mapped(),
+           oldData: req.body 
+          })
+       
+     
+      
+    } else  {
+    
+      db.Producto.create({
+       product_name: req.body.nombre,
       price: req.body.precio,
-      category: req.body.categorias,
-      description: req.body.description,
-      image: req.file.filename,
-    };
-
-    products.push(newProduct);
-
-    fs.writeFileSync(productsFilPath, JSON.stringify(products, null, " "));
-    res.redirect("/");
-  },
-
+       product_category: req.body.categorias,
+       description: req.body.description,
+       image: req.file.filename,
+     });
+     res.redirect("/");
+            }
+     },
+     // edit list
+     editList: (req,res) => {
+      db.Producto.findAll().then((productos) => 
+      res.render("./products/editList", {productos})
+      )
+     },
+      
   // edit form
   edit: (req, res) => {
-    let id = req.params.id;
-    let productToEdit = products.find((product) => products.id == id);
-    res.render("./products/edit", { productToEdit });
-  },
+    db.Producto.findByPk(req.params.id)
+      .then((productToEdit) => {
+        res.render("./products/edit", { productToEdit });
+  })
+},
 
   // update product
   update: (req, res) => {
-    let id = req.params.id;
-    let productToEdit = products.find((product) => product.id == id);
+    let resultValidation = validationResult(req);
+    // console.log(resultValidation)
+    //  console.log(req.body)
+    
 
-    productToEdit = {
-      id: productToEdit.id,
-      ...req.body,
-      image: productToEdit.image,
-    };
+       if (resultValidation.errors.length > 0) {
+        db.Producto.findByPk(req.params.id)
+        .then((productToEdit) => { res.render("./products/edit",{
+          errors: resultValidation.mapped(),
+          oldData: req.body,
+          productToEdit
+        })
 
-    let newProducts = products.map((product) => {
-      if (product.id == productTodEdit.id) {
-        return (product = { ...productToEdit });
-      }
-      return product;
-    });
+         
+          })} else {
 
-    fs.writeFileSync(productsFilPath, JSON.stringify(newProducts, null, " "));
-    res.redirect("/");
-  },
+    db.Producto.update({
+      product_name: req.body.nombre,
+      price: req.body.precio,
+      description: req.body.description,
+    },
+    {
+      where:{id: req.params.id}
+    })
+    res.redirect('/');
+  }},
 
   // delete
   delete: (req, res) => {
-    let id = req.params.id;
-
-    let finalProducts = products.filter((product) => product.id != id);
-
-    fs.writeFileSync(productsFilPath, JSON.stringify(finalProducts, null, " "));
-
+    db.Producto.destroy({
+      where:{id:req.params.id}
+      })
     res.redirect("/");
   },
 
@@ -94,10 +114,15 @@ const productsController = {
     let search = req.query.search;
 
     console.log(search)
+    db.Producto.findAll(
+      {
+        where:{product_name: {[Op.like]:'%'+search+'%'}}
+      }
+    ).then(function(products){
+      res.render("./products/search", {products, search, toThousand});
 
-    let productsToSearch = products.filter(product => product.name.toLowerCase().includes(search));
+    })
     
-    res.render("./products/search", {products: productsToSearch, search, toThousand});
   },
 };
 

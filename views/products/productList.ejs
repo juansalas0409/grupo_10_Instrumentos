@@ -14,17 +14,17 @@
 <main>
 <!-- Esta es la pagina de producto "completar" -->
 
-<h3 class="mainTitle_productList"><%= categoria %> </h3>
-<% for(let i = 0; i < prods.length; i++ ) { %>
-<a href="/products/detail/<%= prods[i].id %> " class="main_container_prodList scale-up-hor-left">
+<h3 class="mainTitle_productList"><%= categoria.category_name %> </h3>
+<% for(let i = 0; i < categoria.productos.length; i++) { %>
+<a href="/products/detail/<%= categoria.productos[i].id %> " class="main_container_prodList scale-up-hor-left">
     <div class="containerProds_ProdList">
         <div class="img_prodList">
-            <img src="/images/products/<%= prods[i].image %> " width="100px">
+            <img src="/images/products/<%= categoria.productos[i].image %> " width="100px">
         </div>
         <div class="infoContainer_prodList">
-            <h4 class="title_ProdList"><%= prods[i].name %></h4>
-            <p class="price_prodList">$ <%= prods[i].price %> </p>
-            <p class="description_prodList"><%= prods[i].description %></p>
+            <h4 class="title_ProdList"><%= categoria.productos[i].product_name %></h4>
+            <p class="price_prodList">$ <%= categoria.productos[i].price %> </p>
+            <p class="description_prodList"><%= categoria.productos[i].description %></p>
         </div>
     </div>
 <% } %>

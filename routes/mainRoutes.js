@@ -5,8 +5,6 @@ const path = require('path')
 
 const mainController = require('../controllers/mainControllers');
 
-
-
 routes.get('/', mainController.home);
 routes.get('/contacto', mainController.contactanos)
 routes.get('/:category', mainController.home)

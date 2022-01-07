@@ -5,6 +5,7 @@ const routes = express.Router();
 const multer = require('multer');
 const path = require('path');
 const adminMiddleware = require('../middlewares/adminMiddleware');
+const validations = require("../middlewares/validateProducts");
 
 // Storage
 const storage = multer.diskStorage({
@@ -21,7 +22,8 @@ const upload = multer({storage});
 // Controller
 const productsController = require('../controllers/productControllers.js');
 
-routes.get('/search', adminMiddleware,  productsController.search)
+
+routes.get('/search', productsController.search)//adminMiddleware, 
 
 // all products
 routes.get('/category/:category', productsController.products)
@@ -30,15 +32,16 @@ routes.get('/category/:category', productsController.products)
 routes.get('/detail/:id', productsController.detalleDeProducto);
 
 // Create
-routes.get("/create",adminMiddleware, productsController.create );
-routes.post("/",upload.single('image'), productsController.store );
+routes.get("/create", adminMiddleware, productsController.create );//añadir el adminMiddleware,
+routes.post("/",upload.single('image'), validations, productsController.store );
 
 // edit
-routes.get('/edit/:id',adminMiddleware, productsController.edit);
-routes.patch('/edit/:id',productsController.update);
+routes.get('/editList', adminMiddleware, productsController.editList);//añadir el adminMiddleware,
+routes.get('/edit/:id', adminMiddleware, productsController.edit);//añadir el adminMiddleware,
+routes.patch('/edit/:id', validations, productsController.update);
 
 // delete
-routes.delete('/delete/:id', adminMiddleware, productsController.delete);
+routes.delete('/delete/:id', adminMiddleware, productsController.delete); //adminMiddleware,
 
 routes.get('/carrito', productsController.carrito);
 

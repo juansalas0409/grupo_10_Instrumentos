@@ -1,10 +1,26 @@
 <header>
-    <a href="/"><img src="/images/Logo-astronauta.png" alt="Logo-tienda"></a>
+    <a href="/"><img src="/images/Logo V3.png" alt="Logo-tienda"></a>
     <nav class="header">
         <div class="menu-desktop">
-            <a href="/products/create"><p>Publicá</p></a>
-            <p>Nosotros</p>
-            <a href="../contacto">Contáctanos</a>
+            <% if (locals.isLogged && (locals.userLogged.category_id == 1)){%>
+            <div class = "publicar">            
+                        <p class="header-texto">Productos</p>
+                        <ul class="public-controls">
+                        
+                            <a href="/products/create">
+                                <li>Crear</li>
+                            </a>
+                            <hr>
+                            <a href="/products/editList">
+                                <li>Modificar</li>
+                            </a>
+                        </ul>
+                    
+            
+             </div>
+             <%}%>
+            <p class="header-texto">Nosotros</p>
+            <a href="/contacto" class="header-texto">Contáctanos</a>
         </div>
         <form class="barraBusqueda" action="/products/search" method="GET">
             <input type="search" name="search" id="search" placeholder="Realizá tu búsqueda">
@@ -23,16 +39,21 @@
                     <a href="/">
                         <li>Home <i class="fas fa-home"></i></li>
                     </a>
-                    <a href="../users/logout">
+                    <a href="/users/logout">
                         <li> Cerrar Sesión <i class="fas fa-user-circle"></i></li>
                     </a>
-                    <a href="../users/profile">
+                    <a href="/users/profile">
                         <li> Mi Perfil <i class="fas fa-user-circle"></i></li>
                     </a>
-                    <a href="../products/create">
-                        <li>Vendé <i class="fas fa-dollar-sign"></i></li>
+                    <% if (locals.userLogged.category_id == 1){%>
+                    <a href="/products/create">
+                        <li>Crear producto <i class="fas fa-dollar-sign"></i></li>
                     </a>
-                    <a href="../products/carrito">
+                    <a href="/products/editList">
+                        <li>Editar producto <i class="fas fa-dollar-sign"></i></li>
+                    </a>
+                    <%}%>
+                    <a href="/products/carrito">
                         <li>Carrito <i class="fas fa-shopping-cart"></i></li>
                     </a>
                 </ul>
@@ -41,13 +62,12 @@
                         <a href="/">
                             <li>Home <i class="fas fa-home"></i></li>
                         </a>
-                        <a href="../users/profile">
+                        
+                        <a href="/users/profile">
                             <li>Ingresá <i class="fas fa-user-circle"></i></li>
                         </a>
-                        <a href="../products/create">
-                            <li>Vendé <i class="fas fa-dollar-sign"></i></li>
-                        </a>
-                        <a href="../products/carrito">
+                        
+                        <a href="/products/carrito">
                             <li>Carrito <i class="fas fa-shopping-cart"></i></li>
                         </a>
                     </ul>
@@ -56,28 +76,28 @@
         </nav>
         <div class="navbar-icons">
             <div class="nav-as">
-            <a href="../users/profile"><i class="fas fa-user-circle profile-pic"></i></a>
+            <a ><i class="fas fa-user-circle profile-pic"></i></a>
             <% if (locals.isLogged){%>
             <ul class="profile-controls">
-                <a href="../users/profile">
+                <a href="/users/profile">
                     <li>Mi Perfil</li>
                 </a>
                 <br>
-                <a href="../users/logout">
+                <a href="/users/logout">
                     <li>Cerrar Sesión</li>
                 </a>
             </ul>
             <%} else {%>
                 <ul class="profile-controls">
                 
-                    <a href="../users/profile">
+                    <a href="/users/login">
                         <li>Ingresá</li>
                     </a>
                    
                 </ul>
             <%} %>
             </div>
-            <a href="../products/carrito"><i class="fas fa-shopping-cart"></i></a>
+            <a href="/products/carrito"><i class="fas fa-shopping-cart"></i></a>
         </div>
     </nav>
 </header>

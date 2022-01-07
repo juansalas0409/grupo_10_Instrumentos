@@ -12,34 +12,51 @@
 <main class= "main-crear">
 
     <form action="/products" method="POST" enctype="multipart/form-data" >
+       
     <div class="crear-form-titulo">
         Ingresar nuevo producto
     </div>
+    <ul id= "errores" class = "err-rojo-creacion-prod"></ul>
     <div class="crear-form-body">
     <div class="create-form1">
         <label for="nombre" class="crear-form-label">Nombre</label>
-        <input type="text" name="nombre" placeholder= "Ex. producto 1" class="crear-form-input">
+        <input type="text" name="nombre" placeholder= "Ex. producto 1" class="crear-form-input nombre" <% if(locals.oldData) { %>
+            value = <%= oldData.nombre %> 
+        <% } %> />
+            <% if (locals.errors && errors.nombre) { %>
+                <div class= "err-rojo"><%= errors.nombre.msg %></div>
+            <% } %>
      </div>
      <div class="create-form1">
         <label for="precio" class="crear-form-label">Precio</label>
-        <input type="text" name="precio" placeholder="Ex. 100" class="crear-form-input">
+        <input type="text" name="precio" placeholder="Ex. 100" class="crear-form-input precio" <% if(locals.oldData) { %> value = <%= oldData.precio %> 
+        <% } %>>
+        <% if (locals.errors && errors.precio) { %>
+            <div class= "err-rojo"><%= errors.precio.msg %></div>
+        <% } %>
      </div>  
      <div class="create-form1">
         <label for="description" class="crear-form-label">Descripción</label>
-        <textarea name="description" id="" cols="30" rows="10" class="crear-form-input"></textarea>
+        <textarea name="description" id="" cols="30" rows="10" class="crear-form-input description" ><%= locals.oldData ? oldData.description : null %></textarea>
+            <% if (locals.errors && errors.description) { %>
+                <div class= "err-rojo"><%= errors.description.msg %></div>
+            <% } %>
      </div>
      <div class="create-form1">
          <label for="categorias">Elegí una categoría</label>
-         <select name="categorias" id="categorias">
-            <option value="pianos">Pianos</option>
-            <option value="guitarras">Guitarras</option>
-            <option value="viento">Viento</option>
-            <option value="accesorios">Accesorios</option>
-            <option value="produccion">Producción</option>
+         <select name="categorias" id="categorias" class = "categ">
+            <option value="4" <%= locals.oldData && (oldData.categorias == 4) ? "selected" : null %> >Pianos</option>
+            <option value="2" <%= locals.oldData && (oldData.categorias == 2) ? "selected" : null %>>Guitarras</option>
+            <option value="3" <%= locals.oldData && (oldData.categorias == 3) ? "selected" : null %>>Viento</option>
+            <option value="1" <%= locals.oldData && (oldData.categorias == 1) ? "selected" : null %>>Batería y Percusión</option>
          </select>
+         
      <div class="'create-form1">
      <label for="image">Inserte una imagen</label>
-      <input type="file" name="image" />
+      <input type="file" name="image" class = "image"/>
+      <% if (locals.errors && errors.image) { %>
+        <div class= "err-rojo"><%= errors.image.msg %></div>
+    <% } %>
      </div>
      <div class="create-form1">   
      <div>
@@ -51,5 +68,5 @@
 <!------footer----------->
 <%- include("../partials/footer") %>
 <!-------------------->
-    
+    <script src= "/js/validationsProdsCrear.js" ></script>
 </body>

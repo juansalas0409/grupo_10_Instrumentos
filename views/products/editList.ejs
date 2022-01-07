@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- head -->
+<%- include('../partials/head', {title: 'Edición'}); %>
+<!-- head -->
+
+<body class="edit-body">
+
+    <!-- Header -->
+    <%- include('../partials/header'); %>
+    <!-- Header -->
+
+<main class= "main-editList">
+
+    <h1 class= "editList-titulo">Seleccione el producto que desea editar:</h1>
+
+    <% productos.forEach ( producto => { %>
+
+                <a href="/products/edit/<%= producto.id %>" class="editList-elementos"><li> <%= producto.product_name %> </li></a>
+
+    <% }) %>
+    
+</main>
+    <!-- footer -->
+    <%- include('../partials/footer') %>
+    <!-- footer -->
+
+</body>
+</html>
