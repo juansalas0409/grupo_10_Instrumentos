@@ -1,5 +1,6 @@
 # RETROSPECTIVA
 
+##Sprint 2
 1. Comenzar a hacer.
     Comenzar a realizar reuniones semanales para organizar el trabajo que se va a relaizar durante la misma.
 
@@ -15,9 +16,9 @@
 5. Dejar de hacer.
     Por el momento no tenemos nada para dejar de hacer.
 
-    <!-- Sprint 3 -->
+##Sprint 3
 
-#Obstaculos-Problemas:
+###Obstaculos-Problemas:
 
 
 Juan y Nico-> tiempo.
@@ -39,7 +40,7 @@ nada puntualmente.
 5. Dejar de hacer
 nada puntualmente
 
-<!-- Sprint 4 -->
+##Sprint 4
 
 1. Comenzar a hacer.
     Buscar horarios de reunion comodo para trabajar todos.
@@ -56,7 +57,7 @@ nada puntualmente
 5. Dejar de hacer.
     Por el momento no tenemos nada para dejar de hacer.
 
-<!-- Sprint 5 -->
+##Sprint 5
 
 1. Comenzar a hacer.
     Realizar las reuniones semanales para coordinar nuestro trabajo.
@@ -72,3 +73,21 @@ nada puntualmente
 
 5. Dejar de hacer.
     Por el momento no tenemos nada para dejar de hacer.
+
+##Sprint 6
+
+1. Comenzar a hacer. 
+    Dejar bien en claro las responsabilidades individuales.
+
+2. Hacer más.
+    Comunicación más frecuente.
+
+3. Continuar haciendo.
+    Ayudarnos entre nosotros.
+
+4. Hacer menos.
+    Trabajo individual.
+
+5. Dejar de hacer.
+    Por el momento no tenemos nada para dejar de hacer.
+
