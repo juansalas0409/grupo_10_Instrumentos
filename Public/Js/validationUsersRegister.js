@@ -2,7 +2,6 @@ window.addEventListener('load', function () {
     let formulario = document.querySelector('form.register')
 
     formulario.addEventListener('submit', function (e) {
-        e.preventDefault()
 
         let errores = [];
 
@@ -14,6 +13,7 @@ window.addEventListener('load', function () {
         let categoria = document.querySelector('input#categoria')
         let contrasena = document.querySelector('input#contrasena')
         let avatar = document.querySelector('input#avatar')
+
 
         if (nombre.value == "") {
             errores.push('El campo de nombre tiene que estar completo');
@@ -27,7 +27,7 @@ window.addEventListener('load', function () {
 
         if (email.value == "") {
             errores.push('El campo de email tiene que estar completo');
-        } else if( email.value.include('@') ) {
+        } else if( !email.value.includes('@') ) {
             errores.push('El campo de email debe ser un email')
         }
 
@@ -50,14 +50,16 @@ window.addEventListener('load', function () {
         }
 
         //TODO Ver como asegurar el formato
+        let avatarFormats=['jpg', 'png', 'jpeg', 'gif']
         if (avatar.value == "") {
             errores.push('Debes subir una imagen');
-        } else if (avatar.value.includes('jpg') || avatar.value.includes('png') || avatar.value.includes('JPEG') || avatar.value.includes('gif')){
+        } else if (!avatarFormats.some(el => avatar.value.includes(el))){
             errores.push('Asegurate de subir un archivo con formato JPG, PNG, JPEG o GIF')
+
         }
 
         if (errores.length > 0) {
-
+            e.preventDefault()
             let ulErrores = document.querySelector('div.errores ul')
 
             for (let i = 0; i < errores.length; i++) {

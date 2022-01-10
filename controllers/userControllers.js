@@ -88,7 +88,7 @@ const userController = {
         last_name: req.body.apellido,
         email: req.body.email,
         username: req.body.nombreDeUsuario,
-        brith_date: req.body.fecha,
+        birth_date: req.body.fecha,
         category_id: 2,
         password: bcryptjs.hashSync(req.body.contrasena, 10),
         avatar: req.file.filename
