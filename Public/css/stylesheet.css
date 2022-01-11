@@ -14,6 +14,7 @@ header {
   padding-right: 15vw;
   padding-left: 40px;
   max-height: 150px;
+
 }
 
 header a img {
@@ -1550,6 +1551,11 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
   /* DETALLE DE PRODUCTO */
 
   /* LOGIN */
+  .olvidasteLaClave a{
+    color: white;
+  }
+
+
 
   /* REGISTRO */
 
