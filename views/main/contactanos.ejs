@@ -12,22 +12,22 @@
         <% if(usuario){%>
         <form class="contact">
             <label for="nombre">Nombre</label>
-            <input type="text" name="nombre"value="<%= usuario.nombre %> ">
+            <input class="cuadroBlancoDatos" type="text" name="nombre"value="<%= usuario.nombre %> ">
             <label for="mail">Mail</label>
-            <input type='mail' name="mail" value="<%= usuario.email%>">
+            <input class="cuadroBlancoDatos" type='mail' name="mail" value="<%= usuario.email%>">
             <label for="Mensaje">Mensaje</label>
-            <textarea name="mensaje"type='textarea'rows='5' cols='50'>Escribe Aquí</textarea>
+            <textarea class="cuadroBlancoDatos" name="mensaje" type='textarea' rows='5' cols='50'>Escribe Aquí</textarea>
             <button type="submit">ENVIAR</button>
         </form>
         <%}else{%>
             <form class="contact">
                 <label for="nombre">Nombre</label>
-                <input type="text" name="nombre">
+                <input class="cuadroBlancoDatos" type="text" name="nombre">
                 <label for="mail">Mail</label>
-                <input type='mail' name="mail">
+                <input class="cuadroBlancoDatos" type='mail' name="mail">
                 <label for="Mensaje">Mensaje</label>
-                <textarea name="mensaje"type='textarea'rows='5' cols='50'>Escribe Aquí</textarea>
-                <button type="submit">ENVIAR</button>
+                <textarea class="cuadroBlancoDatos" name="mensaje" type='textarea' rows='5' cols='50'>Escribe Aquí</textarea>
+                <button class="botonInicioPa" type="submit">ENVIAR</button>
             </form>
         <% } %> 
     </main>
