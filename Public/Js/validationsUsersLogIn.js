@@ -18,7 +18,7 @@ window.addEventListener('load', function () {
         }
 
         if (errores.length > 0) {
-
+            e.preventDefault()
             let ulErrores = document.querySelector('div.errores ul')
 
             for (let i = 0; i < errores.length; i++) {

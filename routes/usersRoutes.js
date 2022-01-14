@@ -7,6 +7,7 @@ const path = require('path')
 const guestMiddleware = require("../middlewares/guestMiddleware");
 const authMiddleware = require("../middlewares/authMiddleware");
 const validations = require("../middlewares/validateRegister");
+const validationsLogin = require("../middlewares/validateLogIn")
 
 // -------------------------
 
@@ -29,7 +30,7 @@ const userController = require('../controllers/userControllers');
 const { Router } = require('express');
 
 routes.get('/login', guestMiddleware, userController.login);//guestMiddleware,
-routes.post('/login', userController.loginProcess);
+routes.post('/login', validationsLogin,userController.loginProcess);
 
 routes.get('/register', guestMiddleware, userController.register);// guestMiddleware,
 routes.post('/register', uploadFile.single('avatar'), validations, userController.processRegister);
