@@ -91,3 +91,19 @@ nada puntualmente
 5. Dejar de hacer.
     Por el momento no tenemos nada para dejar de hacer.
 
+##Sprint 7
+
+1. Comenzar a hacer.
+    Hacer los extra.
+
+2. Hacer más.
+    Hacer revisiones más precisas.
+
+3. Continuar haciendo.
+    Comunicación constante.
+
+4. Hacer menos.
+    Por el momento nada.
+
+5. Dejar de hacer.
+    Por el momento nada.
