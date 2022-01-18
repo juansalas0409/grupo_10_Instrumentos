@@ -8,7 +8,20 @@ const apiProductsController = {
             total: resultado.length,
             data: resultado,
         status: 200}));
-      }
+  },
+  show: (req, res) => {
+      db.Producto.findByPk(req.params.id,  {include:[{association: 'categoria'}]})
+          .then(product =>{
+              return res.status(200).json({
+                id: product.id,
+                name: product.product_name,
+                price: product.price,
+                category: product.categoria.category_name,
+                description: product.description,
+                image: "http://localhost:3000/images/products/" + product.image
+              })
+          })
+  }
   }
 
 module.exports = apiProductsController;
