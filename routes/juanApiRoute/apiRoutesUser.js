@@ -3,7 +3,7 @@ const routes = express.Router();
 
 const apiController = require('../../ApiControllerUserList/apiControllerUserList');
 
-routes.get('/users', apiController.list);
-routes.get('/users/:id', apiController.show);
+routes.get('/', apiController.list);
+routes.get('/:id', apiController.show);
 
 module.exports = routes;
