@@ -6,6 +6,7 @@ const toThousand =  n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const db = require('../database/models')
 const Op = db.Sequelize.Op
 
+
 const productsController = {
   products: (req, res) => {
     db.ProductCategory.findByPk(req.params.category, {include:[{association: 'productos'}]})
@@ -106,7 +107,14 @@ const productsController = {
   },
 
   carrito: (req, res) => {
-    res.render("./products/carrito");
+    if(req.session.carrito){
+    db.Producto.findAll(
+      {
+        where:{id: {[Op.in]: req.session.carrito }}
+      }).then( products => res.render("./products/carrito", {products, toThousand}))
+        .catch(error => res.send(error) )}
+        else {res.render("./products/carrito")}
+    
   },
 
   search: (req, res) => {
@@ -124,6 +132,23 @@ const productsController = {
     })
     
   },
+
+  addProduct: (req, res) => {
+      if(req.session && req.session.userLogged){
+
+        req.session.carrito.push(req.params.id);
+        // console.log(req.session.carrito);
+        db.Producto.findAll(
+          {
+            where:{id: {[Op.in]: req.session.carrito }}
+          }).then( products => res.render("./products/carrito", {products, toThousand}))
+            .catch(error => res.send(error) )
+
+      } else { res.redirect("/users/login")}
+      
+
+  }
+
 };
 
 module.exports = productsController;

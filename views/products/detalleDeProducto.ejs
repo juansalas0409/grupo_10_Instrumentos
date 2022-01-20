@@ -19,10 +19,11 @@
             <div class="detail-description">
                 <p><%= product.description %> </p>
             </div>
-            <div class="detail-buy botonInicioPa">
-                <a href="/products/add/<%= product.id %> "  >
-                    <h2>Comprar</h2>
-                </a>
+            <div class="detail-buy">
+                <form  action="/products/detail/<%= product.id %>" method="POST">
+                <input type="submit" class= "botonInicioPa2" href="/products/add/<%= product.id %> " value="COMPRAR" >
+                    
+                </form>
             </div>
             <% if(locals.isLogged && locals.userLogged.category_id == 1) {%>
             <a href="/products/edit/<%= product.id %> " class="detail-editar-prod">Editar Producto</a>
@@ -36,5 +37,6 @@
         </main>
         <!-- footer -->
         <%- include('../partials/footer') %> 
+        
     </body>
 </html>

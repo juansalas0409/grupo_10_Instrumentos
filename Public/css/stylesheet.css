@@ -845,7 +845,7 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
 }
 
 .detail-buy button {
-  background-color: #000000;
+  background-color: #FE771F;
   border: 2px solid #727171;
   border-radius: 10px;
   font-size: 20px;
@@ -988,6 +988,16 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
   background-color: #727171;
   color: black;
 }
+
+.botonInicioPa2 {
+  color: white;
+  border: 1px solid;
+  text-align: center;
+  padding: 10px;
+  background-color: #FE771F;
+  margin-top: 30px;
+}
+
 .botonRegistroPa {
   color: #727171;
   border: 1px solid #727171;
