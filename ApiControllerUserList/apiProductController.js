@@ -3,7 +3,7 @@ const Op = db.Sequelize.Op
 
 const apiProductsController = {
   list: (req, res) => {
-    db.Producto.findAll()
+    db.Producto.findAll( )
         .then(resultado => res.status(200).json({
             total: resultado.length,
             data: resultado,
@@ -18,7 +18,8 @@ const apiProductsController = {
                 price: product.price,
                 category: product.categoria.category_name,
                 description: product.description,
-                image: "http://localhost:3000/images/products/" + product.image
+                image: "http://localhost:3000/images/products/" + product.image,
+                totalCatrgorias: product.categoria.length
               })
           })
   }
