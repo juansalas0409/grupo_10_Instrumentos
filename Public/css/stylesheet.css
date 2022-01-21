@@ -32,6 +32,7 @@ header a img {
   font-size: 50px;
 }
 
+
 /* menumobile */
 #menuToggle
 {
@@ -189,7 +190,11 @@ header a img {
 }
 
 .navbar-icons a i{
-  color: #000
+  color: #1F1E1E
+}
+.nuestros-productos a {
+  text-decoration: none;
+  color: white;
 }
 /* HOME */
 main {
@@ -433,6 +438,17 @@ main {
 .main_contacto{
   padding: 5px;
 }
+
+.main_contacto textarea{
+  border: grey solid 1px; 
+}
+.main_contacto h2 {
+  color: #FE771F ;
+  text-align: center;
+  margin: 20px 0px;
+  font-size: 25px;
+  font-weight: bolder;
+}
 .contact{
   display: flex;
   flex-direction: column;
@@ -458,7 +474,7 @@ main {
   padding: 5px;
   margin: 5px 0;
   text-decoration: none;
-  width: 100vw;
+  width: 100%;
 }
 
 /* animacion */
@@ -522,6 +538,7 @@ main {
   background-color: white;
   border-radius: 10px;
   border: solid 2px #FE771F;
+  width: 100%;
 }
 .title_ProdList{
   color: #000;
@@ -691,9 +708,9 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
 .crear-form-titulo {
   margin: 20px;
   font-weight: bolder ;
-  font-size: 8vw;
+  font-size: 30px;
   border: 2px solid white;
-  padding: 5vw;
+  padding: 20px;
   border-radius: 10px;
 
 }
@@ -721,7 +738,7 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
 .crear-form-button {
   margin: 4px;
   padding: 6px;
-  font-size: 4vw;
+  font-size: 15px;
   border-radius: 10px;
   font-weight: bolder;
   background-color: #FE771F;
@@ -746,7 +763,30 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
   margin: auto;
 }
 
+.insertar-imagen {
+  margin: 20px 0px;
+}
+
 /* ---Fin CREACION de PROD */
+.busqueda-productos-titulo {
+  margin-top: 30px;
+  color: #FE771F ;
+  font-size: 50px;
+}
+.busqueda-productos {
+  color: white;
+  margin: 40px 10px;
+  border: white solid 1px;
+  padding: 5px;
+  border-radius: 15px;
+}
+.busqueda-productos img {
+  height: 15vh;
+}
+.no-hay-productos {
+  color: white;
+  margin: 40px 0px;
+}
 /* DETALLE DE PRODUCTO */
 
 .detail-body {
@@ -754,16 +794,17 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
 }
 
 .detail-main {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: center;
+  margin: auto;
+    width: 90%;
+    padding: 20px 0px;
+    text-align: center;
 }
 
 .detail-title {
-  font-size: 22px;
-  color: #727171;
-  padding: 10px 0;
+  font-size: 24px;
+  color: white;
+  padding: 20px;
+
 }
 
 .detail-product-image img {
@@ -777,32 +818,34 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
 
 .detail-price h3 {
   font-size: 20px;
+  color: white;
 }
 
 .detail-price p,
 .detail-description p {
-  font-size: 20px;
-}
-
-.detail-price h3 {
-  color: #727171;
+  font-size: 15px;
+  color: white;
 }
 
 .detail-description {
-  width: 75vw;
+  
   height: 30vh;
   border: 2px solid #727171;
   border-radius: 10px;
 }
 
 .detail-buy {
-  padding: 30px;
+  padding: 20px;
   display: flex;
   justify-content: center;
 }
+.detail-buy h2 {
+  text-decoration: none;
+  color: white;
+}
 
 .detail-buy button {
-  background-color: #000000;
+  background-color: #FE771F;
   border: 2px solid #727171;
   border-radius: 10px;
   font-size: 20px;
@@ -811,13 +854,23 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
   height: 65px;
   transition: all, 40ms;
 }
-
+.detail-main form button {
+  padding: 0px 5px;
+  font-size: 20px;
+}
 .detail-buy button:active {
   background-color: #727171;
   color: #000000;
   border: 2px solid #000000;
 }
-
+.detail-main a {
+  text-decoration: none;
+  color: white;
+  }
+  .detail-editar-prod {
+    margin: 10px 0px;
+    font-size: 20px;
+  }
 .fa-whatsapp {
   color: #00a758;
   font-size: 40px;
@@ -881,7 +934,7 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
 }
 .formu {
   text-align: center;
-  margin-top: 20%;
+  margin-top: 100px;
   
   margin-bottom: 30px;
   padding-left: 20px;
@@ -935,6 +988,16 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
   background-color: #727171;
   color: black;
 }
+
+.botonInicioPa2 {
+  color: white;
+  border: 1px solid;
+  text-align: center;
+  padding: 10px;
+  background-color: #FE771F;
+  margin-top: 30px;
+}
+
 .botonRegistroPa {
   color: #727171;
   border: 1px solid #727171;
@@ -983,6 +1046,7 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
   font-size: 22px;
   color: #FE771F;
   padding: 5vw;
+  text-align: center;
 
 }
 .edit-npd {
@@ -1155,6 +1219,7 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
       width: 40vw;
       border-radius: 10px;
       font-size: 2.5vh;
+      text-align: center;
   }
 
   .barraBusqueda button {
@@ -1225,8 +1290,8 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
   }
   .profile-controls{
     display: none;
-    background-color:rgb(221, 215, 215);
-    border: 1px solid #000;
+    background-color: rgb(221, 215, 215) ;
+    border: 1px solid #1F1E1E;
     padding:10px;
     border-radius: 5px;
     position: absolute;
@@ -1234,7 +1299,7 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
     top:8vh
   }
   .profile-controls a {
-    color: #000000;
+    color: #FE771F ;
     text-decoration: none;
     list-style-type: none;
   }
@@ -1246,7 +1311,7 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
   .public-controls{
     display: none;
     background-color:rgb(221, 215, 215);
-    border: 1px solid #000;
+    border: 1px solid #1F1E1E;
     padding:10px;
     border-radius: 5px;
     position: absolute;
@@ -1254,7 +1319,7 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
     top:7vh
   }
   .public-controls a {
-    color: #000000;
+    color: #FE771F;
     text-decoration: none;
     list-style-type: none;
   }
@@ -1263,9 +1328,16 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
 
   }
 
+/* Contactanos */
 
-
-  
+  .main_contacto form{
+    width: 80%;
+    margin: auto;
+    background-color: #1F1E1E;
+  }
+  .main_contacto form label{
+    color: #727171;
+  }
   /* FOOTER */
 
   /* HOME */
@@ -1383,7 +1455,7 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
   /* REGISTRO */
 
   /* LISTADO PRODUCTOS */
-
+  
   /* PERFIL USUARIO */
 }
 
@@ -1422,16 +1494,17 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
     
   
     .formu {
-      /* margin-left: 37%;
-      margin-right: 42%; */
-      margin-top: 7%;
-      margin-bottom: 0px;
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+      
     }
     .formuRegistro {
+      width: 60%;
+      margin: auto;
       text-align: center;
-      margin-right: 42%;
-      margin-top: 5%;
-      margin-bottom: 0px;
+      margin-top: 50px;
+      margin-bottom: 50px;
     }
     #menuToggle{
       display: none;
@@ -1447,18 +1520,27 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
     .portada2 {
       display: block;
       width: 100%;
-      height: 60vh;
+      height: 82vh;
       margin-bottom: 10vh;
       
       
     }
     /* LISTADO PRODUCTOS */
+    .mainTitle_productList{
     
+      color: white;
+    }
+    /* CONTACTANOS */
+    .main_contacto form{
+      width: 50%;
+      height: 60vh;
+      justify-content: center    
+      ; } 
     /* PERFIL USUARIO */
     .container-user-profile{
-      flex-direction:row;
-      margin-bottom: 20vh;
-      margin-top: 10vw;
+      width: 60%;
+      margin: auto;
+      margin-top: 20px;
   
     }
     .profile-img img{
@@ -1547,18 +1629,52 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
   /* CARRITO */
 
   /* DETALLE DE PRODUCTO */
-
+  .detail-description {
+    margin: 0px 15px;
+  }
+  .detail-main {
+    width: 60%;
+  }
+  .detail-product-image img {
+    width: 90%
+  }
   /* LOGIN */
   .olvidasteLaClave a{
     color: white;
   }
+  
 
 
 
   /* REGISTRO */
+  .crear-form-label{
+    font-size: 25px;
+       
+  }
+  
+  .cuadroBlancoDatos {
+    width: 100%;
+  
+    
+  }
 
   /* LISTADO PRODUCTOS */
-
+ 
+  .main-crear form {
+    width: 80%;
+    margin: auto;
+  }
+  .crear-form-titulo {
+    font-size: 50px;
+    padding: 30px;
+  }
+  .crear-form-button {
+    font-size: 30px;
+  }
+  .edit-form {
+    width: 60%;
+    margin: auto;
+  }
   /* PERFIL USUARIO */
 }
 
@@ -1596,19 +1712,14 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
     font-size: 2vw;
   }
 
-  #search {
-    height: 5vh;
-    width: 40vw;
-    border-radius: 10px;
-    font-size: 2.5vh;
-  }
+ 
 
   .barraBusqueda button {
     background-color: rgba(0, 0, 0, 0);
     border: none;
     border-radius: 10px;
     font-size: 20px;
-    color: #000000;
+    color: #1F1E1E;
     width: max-content;
     padding: 10px;
   }
@@ -1628,7 +1739,7 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
     background-color: #FE771F;
     justify-content: space-around;
     align-items: center;
-    font-size: 1.6vw;
+    font-size: 1.4vw;
     color: white;
   }
   .footer div ul li a{
@@ -1793,67 +1904,6 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
 /*------------------Fin Carrito-----------------------------------*/
 /* DETALLE DE PRODUCTO */
 
-  .detail-main {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .detail-title {
-    position: absolute;
-    top: 15vw;
-    right: 16vw;
-  }
-
-  .detail-product-image {
-    width: max-content;
-    padding: 50px;
-  }
-
-  .detail-product-image img {
-    width: 50vw;
-  }
-
-  .detail-price {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 24vw;
-    position: absolute;
-    top: 20vw;
-    right: 12vw;
-  }
-
-  .detail-title {
-    font-size: 2.6vw;
-  }
-
-  .detail-buy {
-    position: absolute;
-    bottom: 10vw;
-    right: 3.5vw;
-  }
-  .detail-buy button {
-    width: 35vw;
-    height: min-content;
-  }
-  .detail-price h3 {
-    font-size: 2.5vw;
-  }
-  .detail-price p,
-  .detail-description p {
-    font-size: 2vw;
-  }
-
-  .detail-buy h2 {
-    font-size: 2.6vw;
-  }
-
-  .detail-description {
-    position: relative;
-    left: 12vw;
-    margin: 20px;
-  }
 
   .whatsapp {
     width: 5vw;
@@ -1868,9 +1918,16 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
   
 
   /* LOGIN */
-
+  .formu {
+    width: 40%;
+    
+    
+  }
   /* REGISTRO */
-
+  .formuRegistro {
+    width: 40%;
+    
+  }
   /* LISTADO PRODUCTOS */
 
   /* PERFIL USUARIO */

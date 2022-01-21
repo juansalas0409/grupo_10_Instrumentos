@@ -18,6 +18,12 @@ module.exports = {
     db.User
         .findByPk(req.params.id)
         .then(users => {
+            let imagen
+            
+             if( users.avatar.includes("http")) {
+                    imagen = users.avatar
+             } else { imagen = "http://localhost:3000/images/users/"+users.avatar}
+
             return res.status(200).json({
                 id: users.id,
                 first_name: users.first_name,
@@ -25,7 +31,7 @@ module.exports = {
                 email: users.email,
                 username: users.username,
                 birth_date: users.birth_date,
-                avatar: users.avatar
+                avatar: imagen
             })
         })
     }

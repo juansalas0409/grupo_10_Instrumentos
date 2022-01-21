@@ -45,4 +45,8 @@ routes.delete('/delete/:id', adminMiddleware, productsController.delete); //admi
 
 routes.get('/carrito', productsController.carrito);
 
+// Agregar productos al carrito de compras
+routes.post("/detail/:id", productsController.addProduct)
+
+
 module.exports = routes

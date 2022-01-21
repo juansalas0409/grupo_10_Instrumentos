@@ -21,7 +21,7 @@ console.log(image)
 //console.log(formulario)
 
  formulario.addEventListener("submit", function(event) {
-    event.preventDefault()
+    // event.preventDefault()
  let errors = []
 
     // validacion campo nombre-------------------

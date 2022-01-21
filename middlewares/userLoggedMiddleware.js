@@ -9,6 +9,7 @@ function userLoggedMiddleware (req, res, next) {
         if(req.session && req.session.userLogged){
             res.locals.isLogged = true
             res.locals.userLogged = req.session.userLogged
+            res.locals.carrito = req.session.carrito
 // 
         }
         // -- para el logueo automatico con cookies--
@@ -26,6 +27,7 @@ function userLoggedMiddleware (req, res, next) {
 
             res.locals.isLogged = true;
             res.locals.userLogged = req.session.userLogged;
+            res.locals.carrito = req.session.carrito;
 
         }}
         ).catch(function(errors){

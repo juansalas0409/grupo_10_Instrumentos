@@ -9,15 +9,16 @@
     
     <!-- main -->
     <main class="main_contacto">
+        <h2>Dejanos tu consulta y te estaremos contactando a la brevedad.</h2>
         <% if(usuario){%>
         <form class="contact">
             <label for="nombre">Nombre</label>
-            <input class="cuadroBlancoDatos" type="text" name="nombre"value="<%= usuario.nombre %> ">
-            <label for="mail">Mail</label>
+            <input class="cuadroBlancoDatos" type="text" name="nombre"value="<%= usuario.first_name %> ">
+            <label for="mail">Email</label>
             <input class="cuadroBlancoDatos" type='mail' name="mail" value="<%= usuario.email%>">
-            <label for="Mensaje">Mensaje</label>
-            <textarea class="cuadroBlancoDatos" name="mensaje" type='textarea' rows='5' cols='50'>Escribe Aquí</textarea>
-            <button type="submit">ENVIAR</button>
+            <label for="Mensaje">Dejanos tu mensaje!</label>
+            <textarea class="cuadroBlancoDatos" name="mensaje" type='textarea' rows='5' cols='50'></textarea>
+            <button type="submit" class="botonInicioPa">ENVIAR</button>
         </form>
         <%}else{%>
             <form class="contact">
@@ -25,8 +26,8 @@
                 <input class="cuadroBlancoDatos" type="text" name="nombre">
                 <label for="mail">Mail</label>
                 <input class="cuadroBlancoDatos" type='mail' name="mail">
-                <label for="Mensaje">Mensaje</label>
-                <textarea class="cuadroBlancoDatos" name="mensaje" type='textarea' rows='5' cols='50'>Escribe Aquí</textarea>
+                <label for="Mensaje">Dejanos tu mensaje!</label>
+                <textarea class="cuadroBlancoDatos" name="mensaje" type='textarea' rows='5' cols='50'></textarea>
                 <button class="botonInicioPa" type="submit">ENVIAR</button>
             </form>
         <% } %> 

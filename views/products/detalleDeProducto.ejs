@@ -12,7 +12,7 @@
                 <img src= "/images/products/<%= product.image %> " alt="">
             </div>
             <div class="detail-price">
-                <h3><%= toThousand(product.price) %> </h3>
+                <h3>$ <%= toThousand(product.price) %> </h3>
                 <br>
                 <p>Cuotas sin Interés</p>
             </div>
@@ -20,21 +20,23 @@
                 <p><%= product.description %> </p>
             </div>
             <div class="detail-buy">
-                <a href="/products/add/<%= product.id %> "  >
-                    <h2>
-                        Comprar
-                    </h2>
-                </a>
+                <form  action="/products/detail/<%= product.id %>" method="POST">
+                <input type="submit" class= "botonInicioPa2" href="/products/add/<%= product.id %> " value="COMPRAR" >
+                    
+                </form>
             </div>
-            <a href="/products/edit/<%= product.id %> ">Editar Producto</a>
+            <% if(locals.isLogged && locals.userLogged.category_id == 1) {%>
+            <a href="/products/edit/<%= product.id %> " class="detail-editar-prod">Editar Producto</a>
             <form action="/products/delete/<%= product.id %>?_method=DELETE" method="post">
                 <button type="submit">Eliminar</button>
             </form>
+            <%}%>
             <div class="whatsapp">
                 <i class="fab fa-whatsapp"></i>
             </div>
         </main>
         <!-- footer -->
         <%- include('../partials/footer') %> 
+        
     </body>
 </html>

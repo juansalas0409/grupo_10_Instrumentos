@@ -18,11 +18,30 @@
         <%- include('../partials/header.ejs'); %> 
         <!-- main -->
         <main class="carrito-main">
+            <% if(locals.carrito) { %>
+            <% products.forEach(function(product) { %>
+                <% let finalPrice = product.price %>
+                <div>
+                  <section class="busqueda-productos">
+                    <a href="/products/detail/<%= product.id %>">
+                    <figure>
+                      <img src="/images/products/<%= product.image %>" alt="<%= product.image %>">
+                    </figure>
+                  </a>
+                    <article>
+                      <h2>$<%= toThousand(finalPrice) %> </h2>
+                      <p><%= product.product_name %></p>
+                    </article>
+                  </section>
+                </div>
+                <% }) %> 
+                <% } %>
             <section class="carrito-prods" >
                 <article class="carrito-productos-carro">
                     <img src="/Images/guitar.jpg" alt="Articulo 1">
                     <div class="carrito-detalle">
                         <h3>Guitarra Fender</h3>
+                        
                         <h6>Guitarra criolla clásica Gracia M1 natural</h4>
                             <h4>$40.000</h5>
                             </div>
