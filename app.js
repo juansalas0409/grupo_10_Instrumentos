@@ -7,6 +7,7 @@ const productRoutes = require('./routes/productsRoutes');
 const userRoutes = require('./routes/usersRoutes');
 const apiUserRoutes = require('./routes/juanApiRoute/apiRoutesUser');
 const apiProductRoutes = require('./routes/juanApiRoute/apiRoutesProduct');
+const apiCategoryRoutes = require('./routes/juanApiRoute/apiRoutesCategory')
 const session = require('express-session');
 const cookies = require('cookie-parser');
 const User = require('./models/User');
@@ -39,6 +40,7 @@ app.use('/products', productRoutes);
 app.use('/users', userRoutes);
 app.use('/api/users', apiUserRoutes);
 app.use('/api/products', apiProductRoutes);
+app.use('/api/category', apiCategoryRoutes)
 
 // Server
 app.listen(process.env.PORT || 3000, function(){console.log("Se esta corriendo el servidor en http://localhost:3000")});
