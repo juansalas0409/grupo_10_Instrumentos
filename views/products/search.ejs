@@ -10,7 +10,7 @@
     <main>
       <div>
         <div>
-          <h2 class="busqueda-productos-titulo">Resultados de la búsqueda: <%= search %></h2>
+          <h2 class="busqueda-productos-titulo">Resultados de la búsqueda: <strong>"<%= search %>"</strong></h2>
         </div> 
         <% if(products.length > 0) { %>
           <% products.forEach(function(product) { %>
