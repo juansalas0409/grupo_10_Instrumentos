@@ -8,6 +8,7 @@ module.exports = {
             .then(category => {
                 return res.status(200).json({
                     total: category.length,
+                    data: category,
                     status:200
                 })
             })
