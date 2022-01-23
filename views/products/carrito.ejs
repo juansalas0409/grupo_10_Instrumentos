@@ -18,12 +18,25 @@
         <%- include('../partials/header.ejs'); %> 
         <!-- main -->
         <main class="carrito-main">
-            <% if(locals.carrito) { %>
-            <% products.forEach(function(product) { %>
+            <!-- <% if(locals.carrito && products.length >0) { %>
+                 <div class="busqueda-productos" >
+                <label for="contador">Cantidad de SKUs: </label>
+                <div name="contador" id="contador"><%= products.length %></div>
+            </div>
+            <%}%> -->
+            
+            
+            <% if(locals.carrito && products.length >0) { %>
+                <div class="carrito75">
+                    <div>
+                        <h2 class="busqueda-productos-titulo">Resumen del carrito</h2>
+                      </div>
+            <% products.forEach(function(product,i) { %>
                 <% let finalPrice = product.price %>
+                   
                 <div>
-                  <section class="busqueda-productos">
-                    <a href="/products/detail/<%= product.id %>">
+                  <section class="busqueda-productos productoCarrito<%=i%>">
+                    <a >
                     <figure>
                       <img src="/images/products/<%= product.image %>" alt="<%= product.image %>">
                     </figure>
@@ -32,57 +45,45 @@
                       <h2>$<%= toThousand(finalPrice) %> </h2>
                       <p><%= product.product_name %></p>
                     </article>
+                    <!-- <label for="cantidad">Cantidad</label>
+
+                    <input type="number" name="cantidad" value="1" > -->
+                    
                   </section>
                 </div>
                 <% }) %> 
-                <% } %>
-            <section class="carrito-prods" >
-                <article class="carrito-productos-carro">
-                    <img src="/Images/guitar.jpg" alt="Articulo 1">
-                    <div class="carrito-detalle">
-                        <h3>Guitarra Fender</h3>
-                        
-                        <h6>Guitarra criolla clásica Gracia M1 natural</h4>
-                            <h4>$40.000</h5>
-                            </div>
-                            <div class="carrito-boton-carro">
-                        <div>+</div>
-                        <div class="carrito-num">1</div>
-                        <div>-</div>
-                    </div>
-                </article>
-                <article class="carrito-productos-carro">
-                    <img src="/Images/cableGuitarra.jpg" alt="cable guitarra">
-                    <div class="carrito-detalle">
-                        <h3>Cable</h3>
-                        <h6>Cable para instrumentos plug plug</h4>
-                            <h4>$950</h5>
-                            </div>
-                            <div class="carrito-boton-carro">
-                                <div>+</div>
-                                <div class="carrito-num">2</div>
-                                <div>-</div>
-                            </div>
-                        </article>
-                    </section>
-                    <section class="carrito-resumen">
-                        <div class="carrito-caja">
+            </div>
+                <section class="carrito-resumen">
+                 <div class="carrito-caja">
+               
+                        <% 
+                        this.sum = 0  
+                        %>
+                        <% products.forEach(function(product,i) { %>
+                            <% let finalPrice = product.price %>
+                            <% 
+                            this.sum += Number(product.price) %>
                             <div class="carrito-a1">
-                                <p>Guitarra Fender 1u</p><p><strong>$40.000</strong></p>
-                </div>
-                <div class="carrito-a2">
-                    <p>Cable 2u</p><p><strong>$1900</strong></p>
-                </div>
-                <div class="carrito-a3">
-                    <p>Envio</p><p><strong>$500</strong></p>
-                </div>
-                <div class="carrito-a4">
-                    <p><strong>Total</strong></p><p><strong>$42.400</strong></p>
-                </div>
-                <div class="carrito-boton">
-                    Finalizar Compra
-                </div>
-            </div> 
+                                <p><%= product.product_name %> 1u</p><p><strong>$<%= toThousand(finalPrice) %></strong></p>
+                             </div>
+                        <% }) %>
+                            <div class="carrito-a3">
+                                 <p>Envio</p><p><strong>$500</strong></p>
+                            </div>
+                            <div class="carrito-a4">
+                                 <p><strong>Total</strong></p><p><strong>$<%= toThousand(this.sum +500) %>  </strong></p>
+                            </div>
+                            <div class="carrito-boton">
+                                 Finalizar Compra
+                            </div>
+                        <% } else { %>
+                            
+                            <div class= "carrito-vacio">
+                                No tienes productos en tu carrito.
+                            </div>
+
+                        <% } %>
+                    </div> 
         </section>
     </main>
     <!-- footer -->
