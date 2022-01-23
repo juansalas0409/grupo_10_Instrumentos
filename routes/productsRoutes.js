@@ -6,6 +6,7 @@ const multer = require('multer');
 const path = require('path');
 const adminMiddleware = require('../middlewares/adminMiddleware');
 const validations = require("../middlewares/validateProducts");
+const validationsEdit = require ("../middlewares/validateEditProducts")
 
 // Storage
 const storage = multer.diskStorage({
@@ -38,7 +39,7 @@ routes.post("/",upload.single('image'), validations, productsController.store );
 // edit
 routes.get('/editList', adminMiddleware, productsController.editList);//añadir el adminMiddleware,
 routes.get('/edit/:id', adminMiddleware, productsController.edit);//añadir el adminMiddleware,
-routes.patch('/edit/:id', validations, productsController.update);
+routes.patch('/edit/:id', validationsEdit, productsController.update);
 
 // delete
 routes.delete('/delete/:id', adminMiddleware, productsController.delete); //adminMiddleware,

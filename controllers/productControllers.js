@@ -1,3 +1,4 @@
+const { localsName } = require("ejs");
 const { validationResult } = require("express-validator");
 const fs = require("fs");
 const path = require("path");
@@ -144,7 +145,10 @@ const productsController = {
           }).then( products => res.render("./products/carrito", {products, toThousand}))
             .catch(error => res.send(error) )
 
-      } else { res.redirect("/users/login")}
+      } else {
+        let mensaje = ["Inicia sesión para poder comprar productos."]
+        res.locals.mensaje = "error"
+        res.render("./users/login", {mensaje})}
       
 
   },

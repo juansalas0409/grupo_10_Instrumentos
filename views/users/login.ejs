@@ -7,6 +7,9 @@
       <%- include('../partials/header') %> 
       <!-- main -->
       <main class="mainLogIn">
+        <% if(locals.mensaje) {%>
+            <h2 class="err-rojo-creacion-prod login-error"><i class="fas fa-exclamation-triangle"></i> Inicia sesión para disfrutar de los mejores productos musicales!</h2>
+        <% } %>
         <h2 class="tituloLogin">Iniciar Sesión</h2>
           <div class="errores">
               <ul class = "err-rojo-creacion-prod"></ul>

@@ -1,0 +1,249 @@
+[33mcommit f02626c8e7e0170bd2aac2783b357e75ef309687[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: 7c3ebff 9851b13
+Author: juanm35 <jjmigone@gmail.com>
+Date:   Sat Jan 22 23:09:49 2022 -0300
+
+    Merge branch 'master' of https://github.com/juansalas0409/grupo_10_Instrumentos
+
+[33mcommit 7c3ebff75a947648efbbf9cddad09b53891f59a0[m
+Author: juanm35 <jjmigone@gmail.com>
+Date:   Sat Jan 22 23:09:19 2022 -0300
+
+    agrego funcionalidad para eliminar productos del carrito
+
+[33mcommit 9851b1361653311c03903165eb427320c157dd0e[m
+Merge: 001c600 3a18de2
+Author: Marco Checa <checa.marco2002@gmail.com>
+Date:   Sat Jan 22 22:09:53 2022 -0300
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 001c600396940c5efbc638f12e6f4ffdf345b47e[m
+Author: Marco Checa <checa.marco2002@gmail.com>
+Date:   Sat Jan 22 20:51:26 2022 -0300
+
+    Api categoria fix
+
+[33mcommit 3a18de23a46875851396efdd8ec38479f78d148a[m
+Author: juanm35 <jjmigone@gmail.com>
+Date:   Sat Jan 22 17:33:43 2022 -0300
+
+    ajustes de diseño
+
+[33mcommit ce6a22f7a09fadcc6a49621bfefa631fcf840459[m
+Merge: 1884b21 4bb913e
+Author: juanm35 <jjmigone@gmail.com>
+Date:   Fri Jan 21 01:45:37 2022 -0300
+
+    Merge branch 'master' of https://github.com/juansalas0409/grupo_10_Instrumentos
+
+[33mcommit 1884b2177b02ba26eecdc2512b11b8d5016f473d[m
+Author: juanm35 <jjmigone@gmail.com>
+Date:   Fri Jan 21 01:45:16 2022 -0300
+
+    agrego ajustes de funcionalidad del carrito de compras
+
+[33mcommit 4bb913e124aa91e28c908573eb51c585d21b6d9e[m
+Merge: 29b2e88 784c0a4
+Author: Marco Checa <checa.marco2002@gmail.com>
+Date:   Thu Jan 20 21:49:50 2022 -0300
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 29b2e887e945b7cffaf4b2e1d8bb3d114314b8d4[m
+Author: Marco Checa <checa.marco2002@gmail.com>
+Date:   Thu Jan 20 21:49:15 2022 -0300
+
+    Api categoria
+
+[33mcommit 784c0a48b67ae8d4264e9b9b45a273f9ef97f237[m
+Author: juanm35 <jjmigone@gmail.com>
+Date:   Thu Jan 20 20:23:45 2022 -0300
+
+    agrego estilo a los mensajes de validaciones de front de login y registro
+
+[33mcommit 8723f96bd96da80a51e23eafeee0c6df3f37d55e[m
+Author: juanm35 <jjmigone@gmail.com>
+Date:   Thu Jan 20 20:19:37 2022 -0300
+
+    agrego primera version de funcionalidad de carrito
+
+[33mcommit 122ce7a6073e351685b447cdbd8f73c8a541e44c[m
+Author: juanm35 <jjmigone@gmail.com>
+Date:   Thu Jan 20 00:48:47 2022 -0300
+
+    nuevos ajustes de diseño y responsiveness
+
+[33mcommit 464f0cbc29b9881b38dbf5eee3c00e30e8bc3868[m
+Author: juanm35 <jjmigone@gmail.com>
+Date:   Thu Jan 20 00:02:23 2022 -0300
+
+    agrego ajustes varios para la responsividad del sitio
+
+[33mcommit 7ad0ff9233a24729e1faeb3ccdf983b65c118cf6[m
+Author: juanm35 <jjmigone@gmail.com>
+Date:   Wed Jan 19 10:42:51 2022 -0300
+
+    imagen ultimo prod
+
+[33mcommit ea4b44f49852d43cebee6668d14265c59a2eff1e[m
+Author: juanm35 <jjmigone@gmail.com>
+Date:   Tue Jan 18 21:25:21 2022 -0300
+
+    agrego correccion para las url de las imagenes de usuario
+
+[33mcommit 7229c17241f1f6302125f18ce261adfcc7f3c04b[m
+Author: Marco Checa <checa.marco2002@gmail.com>
+Date:   Tue Jan 18 17:19:18 2022 -0300
+
+    Api producto
+
+[33mcommit 5d15f0a44c2df2ec98e66000ba83b4630a7d9e5d[m
+Author: juanm35 <jjmigone@gmail.com>
+Date:   Tue Jan 18 16:36:23 2022 -0300
+
+    agrego la api para la consulta de productos
+
+[33mcommit a206183f6db9e9b45ea5e130ad4057d0a5c89a76[m
+Author: juansalas0409 <juan.salas0409@gmail.com>
+Date:   Tue Jan 18 15:59:19 2022 -0300
+
+    Endpoint Lista de Usuarios
+
+[33mcommit b2b9dbdeb1366be72bf3113ba7009600b1f4de3f[m
+Author: juansalas0409 <juan.salas0409@gmail.com>
+Date:   Sat Jan 15 18:20:08 2022 -0300
+
+    Retro Sprint 7
+
+[33mcommit 2d2b19ab16f77f519ab5d66eb4a61a7b84768aee[m
+Author: Marco Checa <checa.marco2002@gmail.com>
+Date:   Fri Jan 14 20:40:06 2022 -0300
+
+    fix log in validation front
+
+[33mcommit 62d3682af281a491da23b6ec591d6b1d6fd34e79[m
+Author: Marco Checa <checa.marco2002@gmail.com>
+Date:   Fri Jan 14 15:27:27 2022 -0300
+
+    validacions back login
+
+[33mcommit cd7f4b013ba77033f60f3260b4881f7acbcf3ed4[m
+Author: juansalas0409 <juan.salas0409@gmail.com>
+Date:   Thu Jan 13 22:35:53 2022 -0300
+
+    Fix Validación de Login
+
+[33mcommit 5db26543877d9b468b4a046842987ebffb9001bb[m
+Author: Marco Checa <88787190+marcocheca@users.noreply.github.com>
+Date:   Tue Jan 11 12:13:35 2022 -0300
+
+    Delete .idea directory
+
+[33mcommit 6e71c632294a9decfd5256148d37ba9c11751f36[m
+Merge: 0e278e6 0900342
+Author: Marco Checa <88787190+marcocheca@users.noreply.github.com>
+Date:   Tue Jan 11 12:12:21 2022 -0300
+
+    Merge pull request #3 from juansalas0409/sprint6
+    
+    created Login validation, Fixed Register Validation
+
+[33mcommit 0900342a1ab7e3829bb886c19317870dab776eab[m[33m ([m[1;31morigin/sprint6[m[33m)[m
+Author: Marco Checa <checa.marco2002@gmail.com>
+Date:   Mon Jan 10 18:11:24 2022 -0300
+
+    created Login validation, Fixed Register Validation
+
+[33mcommit 0e278e653c82d51ac1fa7708bce6ab17c4f0651a[m
+Author: juansalas0409 <juan.salas0409@gmail.com>
+Date:   Sat Jan 8 13:17:37 2022 -0300
+
+    Retro Sprint 6
+
+[33mcommit 911aa15c127e733d1a2ea3ebd2eaca27a6c30ff5[m
+Merge: f586cc5 d1a432d
+Author: Juan Salas <89041020+juansalas0409@users.noreply.github.com>
+Date:   Thu Jan 6 23:10:02 2022 -0300
+
+    Merge pull request #2 from juansalas0409/sprint6
+    
+    Sprint6
+
+[33mcommit d1a432d5189bb6a5301c1efc7fa9e08bcd3d9bad[m[33m ([m[1;32msprint6[m[33m)[m
+Author: juanm35 <jjmigone@gmail.com>
+Date:   Wed Jan 5 20:00:50 2022 -0300
+
+    Nuevos ajustes de diseño y responsiveness para home header y footer.
+
+[33mcommit 96e2c93973491713d4ee28e461a5840d6c1613c2[m
+Author: juansalas0409 <juan.salas0409@gmail.com>
+Date:   Tue Jan 4 00:11:43 2022 -0300
+
+    Validaciones Front End del registro de usuarios
+
+[33mcommit 93f8d65112e0a383705cf84c91ae89c726f627a3[m
+Author: juansalas0409 <juan.salas0409@gmail.com>
+Date:   Mon Jan 3 22:51:10 2022 -0300
+
+    Modificación del script de la base de datos. Lanzaba un error.
+
+[33mcommit 58dcd5184eee9d1f53a40fad847359520f243544[m
+Author: juanm35 <jjmigone@gmail.com>
+Date:   Thu Dec 30 17:02:16 2021 -0300
+
+    Subo nuevo diseño - Solamente para mobile, falta el diseño desktop y hacerlo responsive
+
+[33mcommit 4466398e1a43827926550559a7ed7a515e36ad95[m
+Author: juanm35 <jjmigone@gmail.com>
+Date:   Wed Dec 29 12:32:42 2021 -0300
+
+    Agrego las validaciones de los formularios de creación y edicion de productos del lado del FRONT
+
+[33mcommit b548c37468731bab9c167bacf29a5ec733811f2a[m
+Author: juanm35 <jjmigone@gmail.com>
+Date:   Tue Dec 28 19:29:18 2021 -0300
+
+    ajusto header para mostrar las opciones de admin solamente si sos admin
+
+[33mcommit 6e5510e4f1bc6ebbebeb5e7c96e1b27b7dddf7c5[m
+Author: juanm35 <jjmigone@gmail.com>
+Date:   Tue Dec 28 19:18:23 2021 -0300
+
+    corrijo errores en enlaces del header
+
+[33mcommit 7b0c045d5b9fcbce959ba83d37f32b8339f3d705[m
+Author: juanm35 <jjmigone@gmail.com>
+Date:   Tue Dec 28 18:44:00 2021 -0300
+
+    agrego pagina de lista para edicion de peliculas y completo validaciones desde el lado del back para formularios de creacion y de edicion de productos
+
+[33mcommit a47772d0bcefe3df5148b308c12cd83554a99a2e[m
+Author: juanm35 <jjmigone@gmail.com>
+Date:   Tue Dec 28 12:34:40 2021 -0300
+
+    agrego validaciones de back para el  formulario de creacion de productos
+
+[33mcommit 22aa7e349fc1211b4fc0bd370a998760bce53370[m
+Author: juanm35 <jjmigone@gmail.com>
+Date:   Thu Dec 23 20:56:19 2021 -0300
+
+    ajustes en redirección a la pagina de contactanos
+
+[33mcommit 1d2cf042e4a0912be8aad54c52eed093ee1386e5[m
+Author: juanm35 <jjmigone@gmail.com>
+Date:   Mon Dec 20 16:52:50 2021 -0300
+
+    corrijo link de productos en resultado de busqueda hacia la pagina de detalle de producto
+
+[33mcommit a76349992653974f0d18b42eb2e4552b69318f76[m
+Author: juanm35 <jjmigone@gmail.com>
+Date:   Mon Dec 20 16:46:40 2021 -0300
+
+    saco middleware de admin para la ruta de busqueda de productos
+
+[33mcommit 2aceed01945b4915f8a0f5a243535eae6e6aaa87[m
+Author: juanm35 <jjmigone@gmail.com>
+Date:   Mon Dec 20 16:22:24 2021 -0300
+
+    agrego ajustes de categorias pa

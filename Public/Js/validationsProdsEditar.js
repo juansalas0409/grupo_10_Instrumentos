@@ -19,9 +19,9 @@ let description = document.querySelector ("textarea")
 //console.log(formulario)
 
  formulario.addEventListener("submit", function(event) {
-    event.preventDefault()
+    
  let errors = []
-
+  
     // validacion campo nombre-------------------
   if ( nombre.value == "" ){
       errors.push ("Debe ingresar un nombre")

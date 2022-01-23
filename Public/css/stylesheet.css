@@ -446,8 +446,9 @@ main {
   color: #FE771F ;
   text-align: center;
   margin: 20px 0px;
-  font-size: 25px;
+  font-size: 30px;
   font-weight: bolder;
+  margin-top: 60px;
 }
 .contact{
   display: flex;
@@ -526,7 +527,7 @@ main {
 }
 .img_prodList{
   
-  max-width: 100px;
+  
   max-height: 100px;
   margin-right: 5px;
   max-height: 100%;
@@ -718,7 +719,14 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
   justify-content: center;
   padding-top: 100px; 
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
 
+}
+.carrito-vacio i {
+  margin-top: 70px;
+  font-size: 120px;
 }
 /*------------------Fin Carrito-----------------------------------*/
 /* CREACION de PROD  */
@@ -734,10 +742,10 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
 }
 
 .crear-form-titulo {
-  margin: 20px;
+  margin-top: 20px;
   font-weight: bolder ;
   font-size: 30px;
-  border: 2px solid white;
+  
   padding: 20px;
   border-radius: 10px;
 
@@ -875,6 +883,7 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
 .detail-product-image img {
   width: 75vw;
   border-radius: 10px;
+  
 }
 
 .detail-price {
@@ -955,6 +964,9 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
 }
 
 /* REGISTRO y LOGIN */
+.login-error {
+  margin-top: 20px;
+}
 .mainDeRegistro {
   height: 100%;
 }
@@ -1028,7 +1040,7 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
   /* background-color: black; */
   color: #727171;
   width: 90%;
-  margin: 20px 0;
+  margin: 12px 0;
   
 }
 
@@ -1038,6 +1050,7 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
   color: #727171;
   text-align: center;
   padding-top: 50px;
+  font-size: 35px;
 }
 .botonInicioPa {
   color: white;
@@ -1081,6 +1094,7 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
   color: #727171;
   text-align: center;
   margin-top: 50px;
+  font-size: 35px;
 }
 .olvidasteLaClave {
   color: #727171;
@@ -1110,7 +1124,7 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
 .edit-title {
   font-size: 22px;
   color: #FE771F;
-  padding: 5vw;
+  padding-top: 50px;
   text-align: center;
 
 }
@@ -1559,13 +1573,13 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
     
   
     .formu {
-      width: 60%;
+      width: 40%;
       margin-left: auto;
       margin-right: auto;
       
     }
     .formuRegistro {
-      width: 60%;
+      width: 40%;
       margin: auto;
       text-align: center;
       margin-top: 50px;
@@ -1597,9 +1611,9 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
     }
     /* CONTACTANOS */
     .main_contacto form{
-      width: 50%;
+      width: 30%;
       height: 60vh;
-      justify-content: center    
+      justify-content: start    
       ; } 
     /* PERFIL USUARIO */
     .container-user-profile{
@@ -1755,7 +1769,7 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
 
   /* REGISTRO */
   .crear-form-label{
-    font-size: 25px;
+    font-size: 20px;
        
   }
   
@@ -1779,7 +1793,7 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
     font-size: 30px;
   }
   .edit-form {
-    width: 60%;
+    width: 40%;
     margin: auto;
   }
   /* PERFIL USUARIO */
@@ -1960,13 +1974,16 @@ div.carrito-detalle {
 
   /* LOGIN */
   .formu {
-    width: 40%;
+    width: 30%;
     
     
   }
   /* REGISTRO */
+  .crear-form-body {
+    width: 70%;
+  }
   .formuRegistro {
-    width: 40%;
+    width: 30%;
     
   }
   /* LISTADO PRODUCTOS */
