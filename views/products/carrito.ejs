@@ -36,15 +36,20 @@
                    
                 <div>
                   <section class="busqueda-productos productoCarrito<%=i%>">
-                    <a >
-                    <figure>
-                      <img src="/images/products/<%= product.image %>" alt="<%= product.image %>">
-                    </figure>
-                  </a>
-                    <article>
-                      <h2>$<%= toThousand(finalPrice) %> </h2>
-                      <p><%= product.product_name %></p>
-                    </article>
+                         <a >
+                             <figure>
+                                 <img src="/images/products/<%= product.image %>" alt="<%= product.image %>">
+                             </figure>
+                         </a>
+                         <div class="ficha-carrito-prod">
+                             <article>
+                                 <h2>$<%= toThousand(finalPrice) %> </h2>
+                                <p><%= product.product_name %></p>
+                            </article>
+                            <form action="/products/carrito/<%=product.id%>" method="POST">
+                                <button type="submit" ><i class="fas fa-trash-alt"></i></button>
+                            </form>
+                        </div>
                     <!-- <label for="cantidad">Cantidad</label>
 
                     <input type="number" name="cantidad" value="1" > -->
@@ -64,7 +69,7 @@
                             <% 
                             this.sum += Number(product.price) %>
                             <div class="carrito-a1">
-                                <p><%= product.product_name %> 1u</p><p><strong>$<%= toThousand(finalPrice) %></strong></p>
+                                <p><%= product.product_name %> <em >(1u)</em></p><p><strong>$<%= toThousand(finalPrice) %></strong></p>
                              </div>
                         <% }) %>
                             <div class="carrito-a3">

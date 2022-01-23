@@ -147,6 +147,18 @@ const productsController = {
       } else { res.redirect("/users/login")}
       
 
+  },
+
+  eliminarDelCarro: (req,res) => {
+    let filtrado = req.session.carrito.filter(id =>  id != req.params.id)
+    req.session.carrito = filtrado
+
+    db.Producto.findAll(
+      {
+        where:{id: {[Op.in]: req.session.carrito }}
+      }).then( products => res.render("./products/carrito", {products, toThousand}))
+        .catch(error => res.send(error) )
+
   }
 
 };
