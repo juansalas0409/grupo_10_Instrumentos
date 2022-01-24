@@ -17,7 +17,7 @@
         <form class="logIn" action="/users/login" method="POST">
             <div class="formu">
 
-                <input class=cuadroBlancoDatos type="text" name="email" id="email" required
+                <input class=cuadroBlancoDatos type="text" name="email" id="email" 
                     placeholder="Email"><br>
 
                     <% if(locals.errors && errors.email) {%>
@@ -25,7 +25,7 @@
                     <% } %>
 
                 <input class=cuadroBlancoDatos type="password" name="contrasena" id="contrasena" alt="strongPass"
-                     required placeholder="Contraseña"><br>
+                      placeholder="Contraseña"><br>
 
                 <input type="checkbox" name="remember_user" class= "checkbox" >
                 <label for="remember_user">Recordar Usuario</label>

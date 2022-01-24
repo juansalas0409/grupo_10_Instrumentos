@@ -797,6 +797,7 @@ div.carrito-a1 p, div.carrito-a2 p, div.carrito-a3 p, div.carrito-a4 p {
   width: 80%;
   text-align: center;
   margin: auto;
+  list-style-type: none;
 }
 
 .insertar-imagen {
